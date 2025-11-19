@@ -25,7 +25,7 @@ function twoSum( nums , target ){
     // 3.Check if the current num[i] is already in map
     // 4.If num[i] is in map return the index in map and curent index
     // 5.If not calculate the complement
-    // 6.Set the complement as the key and the value as the index
+    // 6.Seet the complement as the key and the value as the index
 
     if( nums === null || nums.length < 1 || target === null ){
         return[]
@@ -35,7 +35,7 @@ function twoSum( nums , target ){
     const map = new Map()
 
     while( index < nums.length){
-        
+
         console.log("index", index, nums[index], "mapp", map )
         console.log("mppp", map.get(nums[index]))
 
