@@ -46,7 +46,15 @@ function romanTointeger(s){
     // 2. initialize a roman to int map
     // 3. loop from the last char in s
     // 4. store the last char from previous loop or if at start put it at 0
-    // 4. check if the currentchar is less than previous char
+    // 5. initialize a total at 0
+    // 6. check if the currentchar is greater than previous char
+    // 7. if greater subtract the current char from total
+    // 8. If less add to total.
+
+    if( s === null || s === undefined ){
+        return 0
+    }
+
 
     const romanMap = {
         "I":1,
@@ -58,7 +66,26 @@ function romanTointeger(s){
         "M":1000
     }
 
+    let previous = 0
+    let total = 0
+    let index =  s.length
+
+    while( index >= 0 ){
+
+        let current = romanMap[ s[ index ] ]
+
+        if( current > previous ){
+            total -= current
+        } else{
+            total += current
+        }
+
+        previous = current
+        index -= 1
+
+    }
 
 
+    return total
 
 }
