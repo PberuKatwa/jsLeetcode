@@ -24,7 +24,7 @@ function twoSum( nums , target ){
     // 2.Loop through the nums using a while loop
     // 3.Check if the current num[i] is already in map
     // 4.If num[i] is in map return the index in map and curent index
-    // 5.If not calculate the complement
+    // 5.If noot calculate the complement
     // 6.Seet the complement as the key and the value as the index
 
     if( nums === null || nums.length < 1 || target === null ){
