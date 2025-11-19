@@ -48,8 +48,8 @@ function romanTointeger(s){
     // 4. store the last char from previous loop or if at start put it at 0
     // 5. initialize a total at 0
     // 6. check if the currentchar is greater than previous char
-    // 7. if greater subtract the current char from total
-    // 8. If less add to total.
+    // 7. if less subtract the current char from total
+    // 8. If greater add to total.
 
     if( s === null || s === undefined ){
         return 0
@@ -68,18 +68,21 @@ function romanTointeger(s){
 
     let previous = 0
     let total = 0
-    let index =  s.length
+    let index =  s.length - 1
 
     while( index >= 0 ){
 
         let current = romanMap[ s[ index ] ]
 
-        if( current > previous ){
-            total -= current
-        } else{
+        // console.log("curent", current, "previous", previous, "index", index, s[index])
+
+        if( current >= previous ){
             total += current
+        } else{
+            total -= current
         }
 
+        // console.log("totall", total)
         previous = current
         index -= 1
 
@@ -89,3 +92,7 @@ function romanTointeger(s){
     return total
 
 }
+
+console.log("\n11", romanTointeger("III") )
+console.log("\n22", romanTointeger("LVIII") )
+console.log("\n33", romanTointeger("MCMXCIV") )
