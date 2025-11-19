@@ -28,13 +28,37 @@
 // Input: s = "III"
 // Output: 3
 // Explanation: III = 3.
-// Example 2:
 
+// Example 2:
 // Input: s = "LVIII"
 // Output: 58
 // Explanation: L = 50, V= 5, III = 3.
-// Example 3:
 
+// Example 3:
 // Input: s = "MCMXCIV"
 // Output: 1994
 // Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
+
+function romanTointeger(s){
+
+    // Plan
+    // 1. exit early if s is null or undefined
+    // 2. initialize a roman to int map
+    // 3. loop from the last char in s
+    // 4. store the last char from previous loop or if at start put it at 0
+    // 4. check if the currentchar is less than previous char
+
+    const romanMap = {
+        "I":1,
+        "V":5,
+        "X":10,
+        "L":50,
+        "C":100,
+        "D":500,
+        "M":1000
+    }
+
+
+
+
+}
