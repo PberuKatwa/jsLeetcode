@@ -46,5 +46,37 @@ function validParenthesis(s){
     // 8. If same continue with loop
     // 9. If not same return false.
 
+    const parenthesisMap = {
+        ")":"(",
+        "}":"{",
+        "]":"["
+    }
+
+    const stack = []
+
+    for( let i = 0; i < s.length() ; i++ ){
+
+        if( parenthesisMap[ s[i] ] !== undefined ){
+
+            let stackVal = stack.pop()
+            let actualVal = parenthesisMap[ s[i] ]
+
+            if( stackVal !== actualVal ){
+                return false
+            }
+
+
+        }
+
+        stack.push(s[i])
+
+    }
+
+    return true
 
 }
+
+console.log("111", validParenthesis("()"))
+console.log("222", validParenthesis("()[]{}"))
+console.log("333", validParenthesis("(]"))
+console.log("333", validParenthesis("([)]"))
