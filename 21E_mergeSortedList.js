@@ -35,7 +35,7 @@ class ListNode{
 class LinkedList{
     
     constructor(head = null){
-        this.head = new ListNode(head)
+        this.head = head
     }
 
     createFromArray(list){
@@ -59,7 +59,7 @@ class LinkedList{
             //     console.log("vall", current.val)
             // }
             // console.log("nodee", list[i])
-            current = new ListNode(list[i])
+            current.next = new ListNode(list[i])
             current = current.next
         }
 
@@ -75,13 +75,13 @@ class LinkedList{
         let current = this.head
         console.log("curr vall", this.head.val)
 
-        while( current.next ){
+        while( current ){
             console.log( "list", current.val )
-            output += `->${current.val}`
+            output += `${current.val}->`
             current = current.next
         }
 
-        output +="->NULL"
+        output +="NULL"
         return output
     }
 
