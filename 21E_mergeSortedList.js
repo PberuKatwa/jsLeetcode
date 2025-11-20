@@ -19,21 +19,51 @@
 // Output: [0]
 
 class ListNode{
-    constructor(val = null, next = null){
+    constructor(val = null){
         this.val = val
-        this.next = next
+        this.next = null
     }
 }
 
 class LinkedList{
     constructor(head = null){
-        this.head = head
+        this.head = ListNode(head)
     }
 
     createFromArray(list){
 
-        if(!this.head) return null
+        let current = this.head
+        if(this.head){
 
+            while( current.next !== undefined || current.next !== null  ){
+                current = current.next
+            }
+
+        }
+
+        for(const item in list){
+            current.next = ListNode(item)
+            current = current.next
+        }
+
+        return this.head
+
+    }
+
+    printList(){
+
+        if(this.head) return ""
+
+        const output = ""
+        let current = this.head
+
+        while( current.next !==undefined || current.next !== null ){
+            console.log( "list", output )
+            output += `->${current.val}`
+        }
+
+        output +="->NULL"
+        return output
     }
 
 
