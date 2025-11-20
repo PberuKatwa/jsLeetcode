@@ -15,13 +15,14 @@
 function checkPrefix(strs, length){
 
 
-    const checkValue = strs[0].subString(0,length)
+    const checkValue = strs[0].substring(0,length)
 
-    console.log("check val", checkValue)
+    // console.log("check val", checkValue)
 
-    for( let i = 1 ; i > strs.length ; i++ ){
+    for( let i = 1 ; i < strs.length ; i++ ){
 
-        if( checkValue !== strs[i].subString(0,length) ){
+        // console.log("compp value", strs[i].substring(0,length))
+        if( checkValue !== strs[i].substring(0,length) ){
             return false
         }
 
@@ -35,7 +36,7 @@ function longestCommonPrefix(strs){
     // Plan
     // 1. Get the shortest length in the array and put it as max length
     // 2. Create a binary search with high as max and low as 0.
-    // 3. create while loop with the exit condition being low >= high.
+    // 3. create while loop with the exit condition being high >= low.
     // 3. Use a sliding window checking the sts[0] with the rest.
     // 4. If exact match increase low by mid + 1.
     // 5. If wrong match decrease high by 1.
@@ -54,17 +55,24 @@ function longestCommonPrefix(strs){
     let high = maxLength
     let low = 0
 
-    while( low >= high ){
+    while( high >= low ){
 
         let mid = Math.floor( ( low + high ) / 2 )
 
+        // console.log("\nbeginning check", "high", high, "low", low, "mid", mid)
         if( checkPrefix( strs, mid ) ){
+            // console.log("foundd ", strs[0].substring(0,mid))
             low = mid + 1
         }  else {
+            // console.log("not founddd highh")
             high = mid - 1
         }
 
     }
+
+    // console.log("highhh", high, "low", low)
+
+    return strs[0].substring(0,high)
 
 }
 
