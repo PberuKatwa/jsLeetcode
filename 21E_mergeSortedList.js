@@ -18,7 +18,14 @@
 // Input: list1 = [], list2 = [0]
 // Output: [0]
 
+/**
+ * @class ListNode
+ */
+
 class ListNode{
+    /**
+     * @param {number} val
+     */
     constructor(val = null){
         this.val = val
         this.next = null
@@ -26,23 +33,33 @@ class ListNode{
 }
 
 class LinkedList{
+    
     constructor(head = null){
-        this.head = ListNode(head)
+        this.head = new ListNode(head)
     }
 
     createFromArray(list){
 
-        let current = this.head
-        if(this.head){
-
-            while( current.next !== undefined || current.next !== null  ){
-                current = current.next
-            }
-
+        if(list.length < 1){
+            return this.head
         }
 
-        for(const item in list){
-            current.next = ListNode(item)
+        if(this.head === null) this.head = new ListNode(list[0])
+            
+        let current = this.head
+        // console.log("vall", current.val)
+
+        while( current.next ) { 
+            // console.log("current", current.val)
+            current = current.next 
+        }
+
+        for( let i=1; i < list.length ;i++ ){
+            // if(current.val!== null && current.val !== undefined){
+            //     console.log("vall", current.val)
+            // }
+            // console.log("nodee", list[i])
+            current = new ListNode(list[i])
             current = current.next
         }
 
@@ -52,14 +69,16 @@ class LinkedList{
 
     printList(){
 
-        if(this.head) return ""
+        if(!this.head) return ""
 
-        const output = ""
+        let output = ""
         let current = this.head
+        console.log("curr vall", this.head.val)
 
-        while( current.next !==undefined || current.next !== null ){
-            console.log( "list", output )
+        while( current.next ){
+            console.log( "list", current.val )
             output += `->${current.val}`
+            current = current.next
         }
 
         output +="->NULL"
@@ -68,3 +87,7 @@ class LinkedList{
 
 
 }
+
+const head1 = new LinkedList(null)
+head1.createFromArray([1,2,4])
+console.log("111", head1.printList())
