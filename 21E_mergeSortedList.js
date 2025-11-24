@@ -85,10 +85,46 @@ function mergeSortedList( list1, list2 ){
     // 3. Use 2 pointers each starting at the head of each list.
     // 4. Create an empty Linked list.
     // 5. Check the curent val of each pointer.
-    // 6. Put the lesser val as the next node 
+    // 6. Put the lesser val as the next node in the empty list
+    // 7. Return new list
 
+    if(!list1) return list2
+    if(!list2) return list1
+    if(!list1 && !list2 ) return null
+
+    let c1 = list1.head
+    let c2 = list2.head
+    let c3 = new ListNode(0)
+    let output = ""
+    let current = c3
+
+    while( c1 && c2 ){
+
+        
+        if(c1.val >= c2.val){
+
+            console.log("valls", c1.val, "22", c2.val)
+            current.next = new ListNode(c1.val)
+            c1 = c1.next
+        
+        }else {
+
+            current.next = new ListNode(c2.val)
+            c2 = c2.next
+        }
+
+        current = current.next
+        c2 = c2.next
+        c1 = c1.next
+
+    }
+
+    c3 = c3.next
+    return new LinkedList(c3)
 
 }
 
+const merged = mergeSortedList(list_1,list_2)
 console.log("111", list_1.printList() )
 console.log("222", list_2.printList() )
+console.log("333", merged.printList() )
