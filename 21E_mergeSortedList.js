@@ -100,22 +100,22 @@ function mergeSortedList( list1, list2 ){
 
     while( c1 && c2 ){
 
-        
-        if(c1.val >= c2.val){
+        console.log("\n val", c1.val, "22", c2.val)
 
-            console.log("valls", c1.val, "22", c2.val)
+        if(c1.val <= c2.val){
+
+            console.log("found val", c1.val, "22", c2.val)
             current.next = new ListNode(c1.val)
             c1 = c1.next
         
         }else {
+            console.log("nottt val", c1.val, "22", c2.val)
 
             current.next = new ListNode(c2.val)
             c2 = c2.next
         }
 
         current = current.next
-        c2 = c2.next
-        c1 = c1.next
 
     }
 
