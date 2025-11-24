@@ -119,6 +119,18 @@ function mergeSortedList( list1, list2 ){
 
     }
 
+    while(c1){
+        current.next = new ListNode(c1.val)
+        current = current.next
+        c1 = c1.next 
+    }
+
+    while(c2){
+        current.next = new ListNode(c2.val)
+        current = current.next
+        c2 = c2.next 
+    }
+
     c3 = c3.next
     return new LinkedList(c3)
 
