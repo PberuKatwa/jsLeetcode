@@ -74,11 +74,19 @@ function removeElements(nums, val){
             p1 += 1
         } else if ( nums[p1] !== val && nums[p2] !== val ){
             p1 += 1
+        } else if ( nums[p1] !== val && nums[p2] === val ){
+            p2 -= 1
         }
+
+        console.log("in lp", "lstt", nums, "p1", p1, "p2", p2)
+
 
     }
 
-    return p1 + 1
+    console.log("listt", nums)
+
+    return p1
 }
 
-console.log("111", removeElements([3,2,2,3]) )
+// console.log("111", removeElements([3,2,2,3],3) )
+console.log("222", removeElements([0,1,2,2,3,0,4,2],2) )
