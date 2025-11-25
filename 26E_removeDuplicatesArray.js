@@ -35,3 +35,20 @@
 // Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3,
 // and 4 respectively.
 // It does not matter what you leave beyond the returned k (hence they are underscores)
+
+/**
+ * @param {Array}
+ * @returns {number}
+ */
+
+function removeDuplicates(nums){
+    // Plan
+    // 1.Check if nums array exists or is empty.
+    // 2.Create two pointers( p1 & p2 ) one from the the start(0) and the other from the second(1)
+    // 3.Loop through the array 
+    // 4.Check if the current value at p1 === current value at p2 .
+    // 5.If they are equal, increase p2 index by 1.
+    // 6.If they are not equal add the index of p1 + 1.
+    // 7.Replace p1 with the value at p2.
+    // 8.Return p1 + 1.
+}
