@@ -36,12 +36,12 @@ function firstOccurrence( haystack, needle ){
     if( needle.length > haystack.length ) return -1
 
     const needleLength = needle.length 
-    console.log("needle", needleLength)
+    // console.log("needle", needleLength)
     for( let i = 0; i < haystack.length ; i++ ){
 
         if( needleLength > ( haystack.length - i ) ) return -1
 
-        console.log("i", i, "nl", needleLength, "current",haystack.substring( i, ( i + needleLength ) ))
+        // console.log("i", i, "nl", needleLength, "current",haystack.substring( i, ( i + needleLength ) ))
         if( needle === haystack.substring( i , ( i + needleLength ) ) ){
             return i
         }
@@ -56,4 +56,4 @@ console.log("111", firstOccurrence( "sadbutsad", "sad" ))
 console.log("222", firstOccurrence( "leetcode", "leeto" ))
 console.log("333", firstOccurrence( "sadbutsad", "d" ))
 console.log("444", firstOccurrence( "sa", "sad" ))
-// console.log("111", firstOccurrence( "sadbutsad", "sad" ))
+console.log("555", firstOccurrence( "adbutsad", "sad" ))
