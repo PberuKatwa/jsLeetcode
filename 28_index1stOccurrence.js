@@ -33,12 +33,18 @@ function firstOccurrence( haystack, needle ){
     if(!haystack) return -1
     if(!needle) return -1
 
-    const totalLength = needle.length 
+    const needleLength = needle.length 
 
     for( let i = 0; i < haystack.length ; i++ ){
+
+        if( needle === haystack.substring( 0, needleLength ) ){
+            return i
+        }
 
     }
 
     return -1
 
 }
+
+console.log("111", firstOccurrence( "sadbutsad", "sad" ))
