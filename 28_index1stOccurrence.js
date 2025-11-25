@@ -28,14 +28,18 @@ function firstOccurrence( haystack, needle ){
     // 4.Compare the entire needle with the substring from the current char in the loop( needle === haystack.substring(i,needle.length) )
     // 5.If they are equal return the current index
     // 6.If not continue with the loop
-    // 7. if loop ends return -1.
+    // 7.If the remaining items on haystack are less than the length of needle return -1.
+    // 8. if loop ends return -1.
 
     if(!haystack) return -1
     if(!needle) return -1
+    if( needle.length > haystack.length ) return -1
 
     const needleLength = needle.length 
     console.log("needle", needleLength)
     for( let i = 0; i < haystack.length ; i++ ){
+
+        if( needleLength > ( haystack.length - i ) ) return -1
 
         console.log("i", i, "nl", needleLength, "current",haystack.substring( i, ( i + needleLength ) ))
         if( needle === haystack.substring( i , ( i + needleLength ) ) ){
@@ -51,5 +55,5 @@ function firstOccurrence( haystack, needle ){
 console.log("111", firstOccurrence( "sadbutsad", "sad" ))
 console.log("222", firstOccurrence( "leetcode", "leeto" ))
 console.log("333", firstOccurrence( "sadbutsad", "d" ))
-// console.log("111", firstOccurrence( "sadbutsad", "sad" ))
+console.log("444", firstOccurrence( "sa", "sad" ))
 // console.log("111", firstOccurrence( "sadbutsad", "sad" ))
