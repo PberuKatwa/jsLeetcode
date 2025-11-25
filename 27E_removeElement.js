@@ -54,5 +54,31 @@ function removeElements(nums, val){
     // 2.Create two pointers( p1 & p2 ) , one at the start and one at the end.
     // 3.Initialize a while loop with the exit condition being p1 < p2.
     // 4.Check if the value at p1 or/and p2 is equal to val.
-    // 5.If the value at p1 is equal to val and p2 is tnot equal to val 
+    // 5.If nums[p1] === val and nums[p2] != val ,replace the val at p1 with p2 and p1 += 1
+    // 6.If nums[p1] === val and nums[p2] === val, reduce p2 by 1
+    // 7.If nums[p1] !== val and nums[p2] !== val, increase p1 by 1
+    // 7.return p1 + 1
+
+    if(!nums) return 0
+    if(!val) return 0
+
+    let p1 = 0
+    let p2 = ( nums.length ) - 1
+
+    while( p1 < p2 ){
+
+        if( nums[p1] === val && nums[p2] === val ){
+            p2 -= 1
+        } else if( nums[p1] === val && nums[p2] !== val ){
+            nums[p1] = nums[p2]
+            p1 += 1
+        } else if ( nums[p1] !== val && nums[p2] !== val ){
+            p1 += 1
+        }
+
+    }
+
+    return p1 + 1
 }
+
+console.log("111", removeElements([3,2,2,3]) )
