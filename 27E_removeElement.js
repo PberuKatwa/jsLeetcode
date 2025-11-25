@@ -101,4 +101,5 @@ console.log("111", removeElements([3,2,2,3],3) )
 console.log("222", removeElements([0,1,2,2,3,0,4,2],2) )
 console.log("333", removeElements([2,2,2],3) )
 console.log("444", removeElements([3],2) )
+console.log("555", removeElements([2],2) )
 
