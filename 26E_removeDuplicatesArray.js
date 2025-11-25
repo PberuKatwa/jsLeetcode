@@ -73,3 +73,6 @@ function removeDuplicates(nums){
     return p1 + 1
 
 }
+
+console.log("111", removeDuplicates([1,1,2]) )
+console.log("222", removeDuplicates([0,0,1,1,1,2,2,3,3,4]) )
