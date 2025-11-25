@@ -37,11 +37,12 @@
 // It does not matter what you leave beyond the returned k (hence they are underscores)
 
 /**
- * @param {Array}
+ * @param {Array<number>} nums
  * @returns {number}
  */
 
 function removeDuplicates(nums){
+
     // Plan
     // 1.Check if nums array exists or is empty.
     // 2.Create two pointers( p1 & p2 ) one from the the start(0) and the other from the second(1)
@@ -51,4 +52,24 @@ function removeDuplicates(nums){
     // 6.If they are not equal add the index of p1 + 1.
     // 7.Replace p1 with the value at p2.
     // 8.Return p1 + 1.
+
+    if(nums.length === 0) return []
+
+    let p1 = 0
+    let p2 = 1
+
+    for( let i = 0; i < nums.length; i++ ){
+
+        if( nums[p1] === nums[p2] ){
+            p2 += 1
+        } else{
+            p1 += 1
+            p2 += 1
+            nums[p1] = nums[p2]
+        }
+
+    }
+
+    return p1 + 1
+
 }
