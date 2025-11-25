@@ -62,8 +62,14 @@ function removeElements(nums, val){
     if(nums.length === 0) return 0
     if(!val) return 0
 
+    if(nums.length === 1 ){
+        // console.log("single", nums, "length", nums.length,"val", nums[0] )
+        if(nums[0] !== val) return 1; else return 0;
+    }
+
     let p1 = 0
     let p2 = ( nums.length ) - 1
+
 
     while( p1 < p2 ){
 
@@ -94,5 +100,5 @@ function removeElements(nums, val){
 console.log("111", removeElements([3,2,2,3],3) )
 console.log("222", removeElements([0,1,2,2,3,0,4,2],2) )
 console.log("333", removeElements([2,2,2],3) )
-console.log("444", removeElements([],2) )
+console.log("444", removeElements([3],2) )
 
