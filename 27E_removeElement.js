@@ -54,12 +54,12 @@ function removeElements(nums, val){
     // 2.Create two pointers( p1 & p2 ) , one at the start and one at the end.
     // 3.Initialize a while loop with the exit condition being p1 < p2.
     // 4.Check if the value at p1 or/and p2 is equal to val.
-    // 5.If nums[p1] === val and nums[p2] != val ,replace the val at p1 with p2 and p1 += 1
+    // 5.If nums[p1] === val and nums[p2] != val ,replace the val at p1 with p2 and p1 += 1, p2-=1
     // 6.If nums[p1] === val and nums[p2] === val, reduce p2 by 1
     // 7.If nums[p1] !== val and nums[p2] !== val, increase p1 by 1
     // 7.return p1 + 1
 
-    if(!nums) return 0
+    if(nums.length === 0) return 0
     if(!val) return 0
 
     let p1 = 0
@@ -72,21 +72,27 @@ function removeElements(nums, val){
         } else if( nums[p1] === val && nums[p2] !== val ){
             nums[p1] = nums[p2]
             p1 += 1
+            p2 -= 1
         } else if ( nums[p1] !== val && nums[p2] !== val ){
             p1 += 1
         } else if ( nums[p1] !== val && nums[p2] === val ){
             p2 -= 1
         }
 
-        console.log("in lp", "lstt", nums, "p1", p1, "p2", p2)
+        // console.log("in lp", "lstt", nums, "p1", p1, "p2", p2)
 
 
     }
 
     console.log("listt", nums)
 
+    if(p1===0) p1 = 0; else p1 = p1+1;
+
     return p1
 }
 
-// console.log("111", removeElements([3,2,2,3],3) )
+console.log("111", removeElements([3,2,2,3],3) )
 console.log("222", removeElements([0,1,2,2,3,0,4,2],2) )
+console.log("333", removeElements([2,2,2],3) )
+console.log("444", removeElements([],2) )
+
