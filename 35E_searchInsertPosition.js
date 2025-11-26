@@ -28,36 +28,37 @@ function searchInsertPosition(nums,target){
     // 2. Intialize two pointers one(p1) at the start(0) and the 2nd(p2) at the 2nd item(1).
     // 3. Initalize a while loop with the exit condition being p1 < p2
     // 4. Check if( Condition A ) the value at p1 is less than the target( nums[p1] < target ) and p2 greater or equal to target( nums[p2]>= target ).
-    // 5. Check if( Condition B ) the target is greater than the value at p1( target > mums[p1] ) and greater than val at p2(target > nums[p2])
+    // 5. Check if( Condition B ) p1 is at the start and the value is greater than the target( p1===0 && nums[p1] > target )
     // 6. If condition A is true return p2.
+    // 7. If condition B is true return p1.
+    // 8. If loop completes return p2 + 1
 
-
-
-
-    // 2. Initialize a loop over the array.
-    // 3. Check if the current value( nums[i] ) is either greater or equal to the target.
-    // 4. If equal to the target return the current index.
-    // 5. If greater than curent( target > nums[i] ) but less than the next return index minus 1 (i - 1 ).
-    // 6. If equal( target === nums[i] ) return i.
-    // 7. If loop completes return -1.
-
-    if(!nums) return -1
-    if(!target) return -1
+    if( !nums ) return -1
+    if( target < 0 ) return -1
 
     let p1 = 0
     let p2 = 1
 
-    for( i= 0; i < nums.length ; i++){
+    while(  p2 < nums.length - 1 && p1 < p2 ){
 
-        if( nums[i] === target ){
-            return i
-        }else if ( nums[i] < target && nums[i+1] > target ){
-            return i - 1
+        if( nums[p1] < target && nums[p2] >= target ){
+            return p2
+        } else if( p1 === 0 && nums[p1] > target ){
+            return p1
         }
+
+        p1 += 1
+        p2 += 1
 
     }
 
-    return -1
+
+
+    return p2 + 1
 }
 
-console.log("111", searchInsertPosition( [1,3,5,6], 7 ))
+console.log("111", searchInsertPosition( [1,3,5,6], 5 ))
+console.log("222", searchInsertPosition( [1,3,5,6], 2 ))
+console.log("333", searchInsertPosition( [1,3,5,6], 7 ))
+console.log("444", searchInsertPosition( [1,3,5,6], 0 ))
+console.log("555", searchInsertPosition( [1,3,5,6], 5 ))
