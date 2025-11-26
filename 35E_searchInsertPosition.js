@@ -36,6 +36,9 @@ function searchInsertPosition(nums,target){
     if( !nums ) return -1
     if( target < 0 ) return -1
 
+    if( nums.length === 1 && nums[0] > target ) return 0
+    if( nums.length === 1 && nums[0] < target ) return 1
+
     let p1 = 0
     let p2 = 1
 
@@ -61,4 +64,5 @@ console.log("111", searchInsertPosition( [1,3,5,6], 5 ))
 console.log("222", searchInsertPosition( [1,3,5,6], 2 ))
 console.log("333", searchInsertPosition( [1,3,5,6], 7 ))
 console.log("444", searchInsertPosition( [1,3,5,6], 0 ))
-console.log("555", searchInsertPosition( [1,3,5,6], 5 ))
+console.log("555", searchInsertPosition( [1], 5 ))
+console.log("666", searchInsertPosition( [7], 5 ))
