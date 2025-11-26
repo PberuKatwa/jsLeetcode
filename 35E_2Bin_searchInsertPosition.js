@@ -61,7 +61,7 @@ function searchInsertPosition(nums,target){
 
     if( nums[high] === target) return high
 
-    return "youre wrong"
+    return -1
 
 }
 
