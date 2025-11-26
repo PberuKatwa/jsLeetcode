@@ -36,13 +36,32 @@ function searchInsertPosition(nums,target){
     // 10. If the target is less than the value at mid set high = mid  - 1.
     // 11. If the target is equal to the value at mid return mid.
 
-    if(!nums) return -1
-    if(!target) return -1
+    if( nums.length === 0 ) return -1
+    if(target < 0) return -1
 
     if( nums[0] > target ) return 0
     if( nums[-1] < target ) return nums.length
 
+    let low = 0
+    let high = nums.length - 1
 
+    while( low < high ){
+
+        let mid = Math.floor( ( low + high ) / 2 )
+
+        if( nums[mid] === target){
+            return mid
+        } else if( target > nums[mid] ){
+            low = mid + 1
+        } else if(target < nums[mid] ){
+            high = mid - 1
+        }
+
+    }
+
+    if( nums[high] === target) return high
+
+    return "youre wrong"
 
 }
 
