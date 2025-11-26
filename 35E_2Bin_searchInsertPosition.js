@@ -25,39 +25,21 @@
 function searchInsertPosition(nums,target){
     // Plan
     // 1. Check if nums or target is null, if either return -1
-    // 2. Intialize two pointers one(p1) at the start(0) and the 2nd(p2) at the 2nd item(1).
-    // 3. Initalize a while loop with the exit condition being p1 < p2
-    // 4. Check if( Condition A ) the value at p1 is less than the target( nums[p1] < target ) and p2 greater or equal to target( nums[p2]>= target ).
-    // 5. Check if( Condition B ) p1 is at the start and the value is greater than the target( p1===0 && nums[p1] > target )
-    // 6. If condition A is true return p2.
-    // 7. If condition B is true return p1.
-    // 8. If loop completes return p2 + 1
+    // 2. Create two pointers low & high which will be used to implement binary search.
+    // 3. low is at 0
+    // 4. high is the length of nums( nums.length )
+    // 5. Create a while loop with the exit condition being low <= high.
+    // 6. Calculate the midpoint( mid = Math.Floor( low + high) ).
+    // 7. If the target is greater than the value at mid set low = mid  + 1.
+    // 8. If the target is less than the value at mid set high = mid  - 1.
+    // 9. If the target is equal to the value at mid return mid.
 
-    if( !nums ) return -1
-    if( target < 0 ) return -1
-
-    if( nums.length === 1 && nums[0] > target ) return 0
-    if( nums.length === 1 && nums[0] < target ) return 1
-
-    let p1 = 0
-    let p2 = 1
-
-    while(  p2 < nums.length - 1 && p1 < p2 ){
-
-        if( nums[p1] < target && nums[p2] >= target ){
-            return p2
-        } else if( p1 === 0 && nums[p1] > target ){
-            return p1
-        }
-
-        p1 += 1
-        p2 += 1
-
-    }
+    // 7. If target the value at mid( nums[mid] ) is either equal(Condition A),greater(Condition B) or lesser(Condition c).
+    // 8. If condition A is true return mid.
+    // 9. If condition B is true set low = mid + 1
+    // 10. If condition C is true set high = mid - 1
 
 
-
-    return p2 + 1
 }
 
 console.log("111", searchInsertPosition( [1,3,5,6], 5 ))
