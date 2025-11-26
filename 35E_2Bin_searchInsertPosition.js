@@ -34,7 +34,7 @@ function searchInsertPosition(nums,target){
     // 8. Calculate the midpoint( mid = Math.Floor( low + high) ).
     // 9. If the target is greater than the value at mid set low = mid  + 1.
     // 10. If the target is less than the value at mid set high = mid  - 1.
-    // 11. If the target is equal to the value at mid return mid.
+    // 11. If the target is equal to the value at mid return midd.
 
     if( nums.length === 0 ) return -1
     if(target < 0) return -1
@@ -68,7 +68,7 @@ function searchInsertPosition(nums,target){
     return low
 
 }
-
+console.log("777", searchInsertPosition( [1,3,5,6,7,9], 8 ))
 console.log("111", searchInsertPosition( [1,3,5,6], 5 ))
 console.log("222", searchInsertPosition( [1,3,5,6], 2 ))
 console.log("333", searchInsertPosition( [1,3,5,6], 7 ))
