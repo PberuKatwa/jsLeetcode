@@ -40,7 +40,8 @@ function searchInsertPosition(nums,target){
     if(target < 0) return -1
 
     if( nums[0] > target ) return 0
-    if( nums[-1] < target ) return nums.length
+    // console.log("nums -1", nums[ nums.length - 1 ])
+    if( nums[ nums.length - 1 ] < target ) return nums.length
 
     let low = 0
     let high = nums.length - 1
@@ -48,26 +49,30 @@ function searchInsertPosition(nums,target){
     while( low < high ){
 
         let mid = Math.floor( ( low + high ) / 2 )
-
-        if( nums[mid] === target){
+        console.log( "\nstart", "low",low, "high", high, "mid", mid, "num", nums[mid] )
+        
+        if(nums[mid] == target){
             return mid
-        } else if( target > nums[mid] ){
+        }
+        else if( target > nums[mid] ){
             low = mid + 1
         } else if(target < nums[mid] ){
             high = mid - 1
         }
+        console.log("end", "low",low, "high", high, "mid", mid, "num", nums[mid] )
+
 
     }
 
-    if( nums[high] === target) return high
 
     return -1
 
 }
 
-console.log("111", searchInsertPosition( [1,3,5,6], 5 ))
+// console.log("111", searchInsertPosition( [1,3,5,6], 5 ))
 console.log("222", searchInsertPosition( [1,3,5,6], 2 ))
-console.log("333", searchInsertPosition( [1,3,5,6], 7 ))
-console.log("444", searchInsertPosition( [1,3,5,6], 0 ))
-console.log("555", searchInsertPosition( [1], 5 ))
-console.log("666", searchInsertPosition( [7], 5 ))
+// console.log("333", searchInsertPosition( [1,3,5,6], 7 ))
+// console.log("444", searchInsertPosition( [1,3,5,6], 0 ))
+// console.log("555", searchInsertPosition( [1], 5 ))
+// console.log("666", searchInsertPosition( [7], 5 ))
+// console.log("777", searchInsertPosition( [1,3,5,6,7,9], 8 ))
