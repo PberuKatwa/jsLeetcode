@@ -25,19 +25,17 @@
 function searchInsertPosition(nums,target){
     // Plan
     // 1. Check if nums or target is null, if either return -1
-    // 2. Create two pointers low & high which will be used to implement binary search.
-    // 3. low is at 0
-    // 4. high is the length of nums( nums.length )
-    // 5. Create a while loop with the exit condition being low <= high.
-    // 6. Calculate the midpoint( mid = Math.Floor( low + high) ).
-    // 7. If the target is greater than the value at mid set low = mid  + 1.
-    // 8. If the target is less than the value at mid set high = mid  - 1.
-    // 9. If the target is equal to the value at mid return mid.
+    // 2. Check if the target is less than the first value ,if true return 0
+    // 3. Check if the target is greater than the last value, if true return the length of the nums
+    // 4. Create two pointers low & high which will be used to implement binary search.
+    // 5. low is at 0
+    // 6. high is the length of nums( nums.length )
+    // 7. Create a while loop with the exit condition being low < high.
+    // 8. Calculate the midpoint( mid = Math.Floor( low + high) ).
+    // 9. If the target is greater than the value at mid set low = mid  + 1.
+    // 10. If the target is less than the value at mid set high = mid  - 1.
+    // 11. If the target is equal to the value at mid return mid.
 
-    // 7. If target the value at mid( nums[mid] ) is either equal(Condition A),greater(Condition B) or lesser(Condition c).
-    // 8. If condition A is true return mid.
-    // 9. If condition B is true set low = mid + 1
-    // 10. If condition C is true set high = mid - 1
 
 
 }
