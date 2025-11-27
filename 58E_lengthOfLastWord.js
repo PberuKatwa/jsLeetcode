@@ -53,6 +53,10 @@ function lengthLastWord(s){
     
 }
 
-console.log( "111", lengthLastWord("Hello World") )
-console.log( "222", lengthLastWord("   fly me   to   the moon  ") )
-console.log( "333", lengthLastWord("luffy is still joyboy") )
+console.log( "case 1 => 'Hello World' ", lengthLastWord("Hello World") )
+console.log( "case 2 => '   fly me   to   the moon  ' ", lengthLastWord('   fly me   to   the moon  ') )
+console.log( "case 3 => 'luffy is still joyboy' ", lengthLastWord("luffy is still joyboy") )
+console.log( "case 4 => '' ", lengthLastWord("") )
+console.log( "case 5 => ' ' ", lengthLastWord(" ") )
+console.log( "case 6 => 't' ", lengthLastWord("t") )
+console.log( "case 7 => 'ti' ", lengthLastWord("ti") )
