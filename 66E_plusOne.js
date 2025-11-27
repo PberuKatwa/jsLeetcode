@@ -24,3 +24,32 @@
 // Explanation: The array represents the integer 9.
 // Incrementing by one gives 9 + 1 = 10.
 // Thus, the result should be [1,0].
+
+/**
+ * @param {Array<number>} digits
+ * @returns {Array<number>}
+ */
+
+function plusOne(digits){
+    // Plan
+    // 1. Check if the list is empty, if so return []
+    // 2. Check if its a single item and if that item is 9.
+    // 3. If its 9 return [1,0].
+    // 4. If less than 9 return the value + 1( digits[0] + 1) 
+    // 5. Create a variable with the number to add which is 1(numAdd = 1)
+    // 6. Find length of the digits array and assign to a variable( digLength = digits.length -1 )
+    // 7. Loop from the last digit.
+    // 8. Create an if exit condition where if numAdd is 0 return digits array.
+    // 9. Create an if condition, Condition A is number is equal to 9 and Condition B Is every other number.
+    // 10. If Condition A is true replace the current digit( digits[i] = 0 ) with 0.
+    // 11. If condition B is true add the curr digit( digit[i] = digit[i] + 1 ).
+    // 12. If loop completes append 0 to digits( digits.append(0) ) and replace the first digit with 1 ( digits[0]=1 ) 
+    // 13. Return digits.
+
+    if(digits.length === 0) return []
+
+    if(digits.length === 1 ){
+        if( digits[0] === 9 ) return [1,0]; else return[ digits[0] + 1 ]
+    }
+
+}
