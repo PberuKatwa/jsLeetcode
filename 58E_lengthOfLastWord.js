@@ -54,3 +54,5 @@ function lengthLastWord(s){
 }
 
 console.log( "111", lengthLastWord("Hello World") )
+console.log( "222", lengthLastWord("   fly me   to   the moon  ") )
+console.log( "333", lengthLastWord("luffy is still joyboy") )
