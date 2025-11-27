@@ -25,4 +25,26 @@
 function lengthLastWord(s){
     // Plan
     // 1. Check if s is null, if so return 0.
+    // 2. Check if the string is only an empty space return 0.
+    // 3. Check if the string has a single character return 1.
+    // 4. Find the length of the array and minus one.
+    // 5. Create a variable(count) for checking the length of 
+    // 6. Loop from the last char.
+    // 7. Check if the last char is an empty string.
+    // 8. If not find the length until the next empty space.
+    // 9. Return count.
+
+    if(!s) return 0
+    if( s === " " ) return 0
+    if( s.length === 1 ) return 1
+
+    const sLength = ( s.length ) - 1
+    let count = 0
+
+    for( let i = sLength ; i < s.length ; i --  ){
+
+    }
+
+    return count
+    
 }
