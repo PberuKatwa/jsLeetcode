@@ -75,3 +75,10 @@ function plusOne(digits){
 }
 
 console.log( "case 1:[1,2,3] =>", plusOne([1,2,3]) )
+console.log( "case 2:[4,3,2,1] =>", plusOne([4,3,2,1]) )
+console.log( "case 3:[9] =>", plusOne([9]) )
+console.log( "case 4:[1] =>", plusOne([1]) )
+console.log( "case 4:[] =>", plusOne([]) )
+console.log( "case 5:[9,9,9] =>", plusOne([9,9,9]) )
+console.log( "case 6:[9,8,9,9] =>", plusOne([9,8,9,9]) )
+console.log( "case 7:[9,9,9,9,9,9,9] =>", plusOne([9,9,9,9,9,9,9]) )
