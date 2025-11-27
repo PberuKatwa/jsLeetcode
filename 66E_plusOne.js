@@ -42,7 +42,7 @@ function plusOne(digits){
     // 8. Create an if exit condition where if numAdd is 0 return digits array.
     // 9. Create an if condition, Condition A is number is equal to 9 and Condition B Is every other number.
     // 10. If Condition A is true replace the current digit( digits[i] = 0 ) with 0.
-    // 11. If condition B is true add the curr digit( digit[i] = digit[i] + 1 ).
+    // 11. If condition B is true add the curr digit( digit[i] = digit[i] + numAdd ) and set numAdd = 0.
     // 12. If loop completes append 0 to digits( digits.append(0) ) and replace the first digit with 1 ( digits[0]=1 ) 
     // 13. Return digits.
 
@@ -52,4 +52,26 @@ function plusOne(digits){
         if( digits[0] === 9 ) return [1,0]; else return[ digits[0] + 1 ]
     }
 
+    let numAdd = 1
+    const digLength = digits.length - 1
+
+    for( let i = digLength; i >=0 ; i-- ){
+
+        if(numAdd === 0) return digits
+
+        if( digits[i] === 9 ){
+            digits[i]=0 ; 
+        } else {
+            digits[i]= digits[i] + numAdd;
+            numAdd = 0;
+        }
+
+    }
+
+    digits.push(0)
+    digits[0] = 1
+
+    return digits
 }
+
+console.log( "case 1:[1,2,3] =>", plusOne([1,2,3]) )
