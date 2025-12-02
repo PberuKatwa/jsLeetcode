@@ -69,9 +69,30 @@ class LinkedList{
 
     }
 
+    pairSwap(){
+
+        let current = this.root;
+        let prev = null;
+
+        this.root = current.next
+
+        while(current){
+
+            let p1 = current
+            let p2 = current.next
+
+            p1.next = p2.next
+            p2.next = p1
+
+        }
+
+
+    }
+
 }
 
 const linked1 = new LinkedList()
 linked1.createList( [1,2,3,4,5,6] )
+linked1.pairSwap()
 
 console.log("111", linked1.printList() )
