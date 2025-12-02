@@ -39,15 +39,15 @@ class LinkedList{
     createList(array){
 
         if(array.length === 0) return 'NULL';
-        if(array.length === 1) return this.root = TreeNode( array[0] );
-        if(this.root === null ) this.root = TreeNode( array[0] );
+        if(array.length === 1) return this.root = new TreeNode( array[0] );
+        if(this.root === null ) this.root = new TreeNode( array[0] );
 
         let current = this.root;
 
         if( current.next != null ) current = current.next;
 
         for(let i = 1; i < array.length ; i ++){
-            current.next = TreeNode( array[i] )
+            current.next = new TreeNode( array[i] )
             current = current.next
         }
 
@@ -64,9 +64,14 @@ class LinkedList{
             current = current.next
         }
 
-        output = `NULL`
+        output += `NULL`
         return output;
 
     }
 
 }
+
+const linked1 = new LinkedList()
+linked1.createList( [1,2,3,4,5,6] )
+
+console.log("111", linked1.printList() )
