@@ -76,13 +76,18 @@ class LinkedList{
 
         this.root = current.next
 
-        while(current){
+        while( current && current.next ){
 
             let p1 = current
             let p2 = current.next
 
             p1.next = p2.next
             p2.next = p1
+
+            if( prev ) prev.next = p2;
+
+            current = p1.next
+            prev = p1
 
         }
 
