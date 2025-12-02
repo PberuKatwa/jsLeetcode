@@ -55,7 +55,18 @@ class LinkedList{
     }
 
     printList(){
-       let current = this.root
+
+        let current = this.root;
+        let output = '';
+
+        while(current){
+            output +=`${current.val}->`
+            current = current.next
+        }
+
+        output = `NULL`
+        return output;
+
     }
 
 }
