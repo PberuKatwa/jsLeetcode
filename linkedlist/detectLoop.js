@@ -64,9 +64,15 @@ class LinkedList{
         let fast = current;
 
         while( slow.next && fast.next.next ){
-            slow = slow.next;
-            fast = fast.next.next;
+
+            
+            slow = slow.next
+            fast = fast.next.next
+            if(slow == fast) return true;
+
         }
+
+        return false
     }
 
 }
@@ -78,4 +84,13 @@ node1.next.next = new TreeNode(4);
 node1.next.next.next = node1.next;
 const linked1 = new LinkedList(node1)
 
-console.log("111", linked1.printList() )
+// 1 -> 8 -> 3 -> 4 
+const node2 = new TreeNode(1);
+node2.next = new TreeNode(8);
+node2.next.next = new TreeNode(3);
+node2.next.next.next = new TreeNode(4);;
+const linked2 = new LinkedList(node2)
+
+// console.log("111", linked1.printList() )
+console.log("111", linked1.detectLoop() )
+console.log("222", linked2.detectLoop() )
