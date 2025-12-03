@@ -18,3 +18,32 @@ class TreeNode{
         this.next = next;
     }
 }
+
+class LinkedList{
+
+    /**
+     * 
+     * @param {TreeNode} root 
+     */
+    constructor(root =null){
+        this.root = root;
+    }
+
+    printList(){
+
+        if(!this.root) return '';
+
+        const current = this.root;
+        let output = '';
+
+        while(current){
+            output +`${current.val}->`
+            current = current.val
+        }
+
+        output += `->NULL`
+        return output
+        
+    }
+
+}
