@@ -53,11 +53,26 @@ class LinkedList{
         while ( current.next ) current = current.next;
 
         for( index; index < input.length; index++ ){
-
+            current.next = new ListNode ( input[index] )
+            current = current.next
         }
 
         return this.head
 
     }
 
+    printList(){
+        
+        if(!this.root)  return '';
+    }
+
 }
+
+// [1,2,3,4,5]
+// [1,2]
+// []
+
+const linked1 = new LinkedList()
+linked1.createList( [1,2,3,4,5] )
+
+console.log("111", linked1.printList() )
