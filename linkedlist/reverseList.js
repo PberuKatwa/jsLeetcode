@@ -81,6 +81,20 @@ class LinkedList{
 
     }
 
+    reverseList(){
+
+        if(!this.head) return null;
+
+        let current = this.head;
+        let prev = null;
+
+        while(current){
+
+        }
+
+        return this.head
+    }
+
 }
 
 // [1,2,3,4,5]
