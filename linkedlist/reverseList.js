@@ -42,14 +42,16 @@ class LinkedList{
     createList(input){
         if(input.length === 0) return this.head;
 
-        let current = this.head;
         let index = 0
 
-        if(! current ){
-            current = new ListNode( input[index] )
+        if(!this.head ){
+            console.log("weree heree")
+            this.head = new ListNode( input[index] )
             index += 1
         }
-        
+
+        let current = this.head;
+       
         while ( current.next ) current = current.next;
 
         for( index; index < input.length; index++ ){
@@ -63,15 +65,19 @@ class LinkedList{
 
     printList(){
         
-        if(!this.head)  return '';
+        if(!this.head)  return 'NULL';
 
         let current = this.head;
         let output =''
 
         while( current ){
-            input += `${current.val}->`
+            // console.log("valll",current.val)
+            output += `${current.val}->`
             current = current.next
         }
+
+        output += `NULL`
+        return output
 
     }
 
