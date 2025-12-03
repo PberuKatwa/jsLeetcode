@@ -1,0 +1,63 @@
+// Given the head of a singly linked list, reverse the list in place and return the new head.
+// Examples:
+
+// Input: head = [1,2,3,4,5]
+// Output: [5,4,3,2,1]
+
+// Input: head = [1,2]
+// Output: [2,1]
+
+// Input: head = []
+// Output: []
+
+// Constraints:
+
+// The number of nodes in the list is in the range [0, 5000].
+
+// -5000 <= Node.val <= 5000
+
+class ListNode{
+    /**
+     * @param {number} val
+     */
+    constructor(val = null){
+        this.val = val;
+        this.next = null;
+    }
+}
+
+
+class LinkedList{
+
+    /**
+     * @param {ListNode} head
+     */
+    constructor( head = null ){
+        this.head = head;
+    }
+
+    /**
+     * @param {Array<number>} input
+     */
+    createList(input){
+        if(input.length === 0) return this.head;
+
+        let current = this.head;
+        let index = 0
+
+        if(! current ){
+            current = new ListNode( input[index] )
+            index += 1
+        }
+        
+        while ( current.next ) current = current.next;
+
+        for( index; index < input.length; index++ ){
+
+        }
+
+        return this.head
+
+    }
+
+}
