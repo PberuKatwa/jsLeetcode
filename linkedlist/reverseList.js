@@ -63,7 +63,16 @@ class LinkedList{
 
     printList(){
         
-        if(!this.root)  return '';
+        if(!this.head)  return '';
+
+        let current = this.head;
+        let output =''
+
+        while( current ){
+            input += `${current.val}->`
+            current = current.next
+        }
+
     }
 
 }
