@@ -6,3 +6,15 @@
 
 // Input: head: 1 -> 8 -> 3 -> 4 -> NULL 
 // Output: false
+
+class TreeNode{
+    /**
+     * 
+     * @param {number} val 
+     * @param {number} next 
+     */
+    constructor( val=null, next=null ){
+        this.val = val;
+        this.next = next;
+    }
+}
