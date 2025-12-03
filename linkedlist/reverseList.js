@@ -45,7 +45,7 @@ class LinkedList{
         let index = 0
 
         if(!this.head ){
-            console.log("weree heree")
+            // console.log("weree heree")
             this.head = new ListNode( input[index] )
             index += 1
         }
@@ -88,10 +88,18 @@ class LinkedList{
         let current = this.head;
         let prev = null;
 
-        while(current){
+        while( current ){
+
+            let p1 = current;
+            let p2 = current.next;
+
+            p1.next = prev;
+            prev = p1;
+            current = p2
 
         }
 
+        this.head = prev;
         return this.head
     }
 
@@ -103,5 +111,6 @@ class LinkedList{
 
 const linked1 = new LinkedList()
 linked1.createList( [1,2,3,4,5] )
+linked1.reverseList()
 
 console.log("111", linked1.printList() )
