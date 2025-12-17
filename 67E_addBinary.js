@@ -43,18 +43,18 @@ function addBinary(a,b){
 
         i -= 1
         j -= 1
-        const bitA = i > 0 ? a[i]  - "0": 0;
-        const bitB = j > 0 ? b[j]  - "0": 0;
-        console.log("bit aaa", bitA)
-        console.log("bit bbb", bitB)
+        const bitA = i >= 0 ? a[i]  - "0": 0;
+        const bitB = j >= 0 ? b[j]  - "0": 0;
+        console.log("aaa", bitA, "bbb", bitB, "carry", carry)
 
         const total = bitA + bitB + carry
+
+        sum += (total%2) + sum 
+        carry = Math.floor( total/2 )
 
         console.log("totalll", total)
 
     }
-
-    console.log("heloooooo")
     
     return sum
 }
