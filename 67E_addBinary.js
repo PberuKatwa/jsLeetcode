@@ -25,16 +25,10 @@ function addBinary(a,b){
     // 7: Find the value for each part for example bitA is the value at current index if the index has gone negative the value is 0.
     // 8. Add up all the values + the carry( a + b + carry ).
     // 9. To get the sum get the remainder of the total( total % 2 ) and add it to the sum( total% 2 + sum).
-
-
-    // 5. Loop from the last index of a and b.
-    // 6. Scenario 1 summation, 0 + 0 = 0. Sum is 0 and carry is 0.
-    // 7. Scenario 2 summation, 1 + 0 = 0. Sum is 1 and carry is 0. 
-    // 8. Scenario 3 summation, 1 + 1 = 0. Sum is 0 and carry is 1.
-    // 9. Scenario 4 summation, 1 + 1 + 1(carry) = 0. Sum is 1 and carry is 1.
-    // 10. Scenario 5 summation, 1 + 0 + 1(carry) = 0. Sum is 0 and carry is 1.
-    // 11. Scenario 6 summation, 1 + 0 + 0(carry) = 0. Sum is 1 and carry is 0. 
-    // 12. Return sum.
+    // NOTE:using the remainder divided by 2 works because the totals can only be 0,1,2,3. By getting the remainder which can only be 0 or 1 you
+    // ensure its always base 2.
+    // 10. To get the carry you divide the total by 2 and getting the absolute value ( total / 2 ).
+    //Note: this works because the totals can only be 0,1,2,3. THe absolute value can only be 0 or 1 ensuring its always base 2.
 
     if(a.length === 0 && b.length > 1) return b;
     if(b.length === 0 && a.length > 1) return a;
