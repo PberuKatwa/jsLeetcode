@@ -47,7 +47,23 @@ function addBinary(a,b){
         maxLength = bLength
     }
 
-    while(){}
- 
+    for( let i = 0; i < maxLength ; i++){
+
+        const charA = Number( a[i] ) ? Number( a[i] ) : 0;
+        const charB = Number( b[i] ) ? Number( b[i] ) : 0;
+
+
+        if ( charA === 1 && charB === 1){
+            sum += 1
+            carry = 0
+        }else if( charA === 1 && charB === 0 ){
+            carry = 1
+        }else if( charA === 0 && charB === 1 ){
+            sum += 1
+            carry = 0
+        }
+
+    }
+    
     return sum
 }
