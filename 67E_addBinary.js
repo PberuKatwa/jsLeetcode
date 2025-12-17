@@ -11,6 +11,7 @@
 /**
  * @param {string} a
  * @param {string} b
+ * @returns {string}
  */
 
 function addBinary(a,b){
@@ -32,7 +33,7 @@ function addBinary(a,b){
 
     if(a.length === 0 && b.length > 1) return b;
     if(b.length === 0 && a.length > 1) return a;
-    if(a.length === 0 && b.length === 0) return null;
+    if(a.length === 0 && b.length === 0) return "";
 
     let sum = "";
     let carry =  0;
@@ -60,6 +61,9 @@ function addBinary(a,b){
     return sum
 }
 
-console.log("case1: a=11, b=1 ==> ", addBinary("11","1"))
-console.log("case2: a=11, b=11 ==> ", addBinary("11","11"))
-console.log("case2: a=11, b=11 ==> ", addBinary("11","11"))
+// console.log("case1: a=11, b=1 ==> ", addBinary("11","1"))
+// console.log("case2: a=11, b=11 ==> ", addBinary("11","11"))
+// console.log("case3: a=1010, b=1011 ==> ", addBinary("1010","1011"))
+console.log("case4: a=0010, b=1011 ==> ", addBinary("0010","1011"))
+console.log("case5: a=, b=1011 ==> ", addBinary("","1011"))
+console.log("case5: a=, b= ==> ", addBinary("",""))
