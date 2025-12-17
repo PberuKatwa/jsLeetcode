@@ -14,6 +14,7 @@
  */
 
 function addBinary(a,b){
+
     // Plan
     // 1. Check if either a or b is null, if either is null return the non null value.
     // 2. If both are null return null.
@@ -26,6 +27,10 @@ function addBinary(a,b){
     // 9. Scenario 4 summation, 1 + 1 + 1(carry) = 0. Sum is 1 and carry is 1.
     // 10. Scenario 5 summation, 1 + 0 + 1(carry) = 0. Sum is 0 and carry is 1.
     // 11. Scenario 6 summation, 1 + 0 + 0(carry) = 0. Sum is 1 and carry is 0. 
+    // 12. Return sum.
+
+    if(a.length === 0 && b.length > 1) return b;
+    if(b.length === 0 && a.length > 1) return a;
  
  
 }
