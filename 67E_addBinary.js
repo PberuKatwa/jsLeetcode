@@ -49,10 +49,10 @@ function addBinary(a,b){
 
         const total = bitA + bitB + carry
 
-        sum += (total%2) + sum 
+        sum = (total%2) + sum 
         carry = Math.floor( total/2 )
 
-        console.log("totalll", total)
+        console.log("totalll", total, "summ", sum)
 
     }
     
@@ -60,3 +60,4 @@ function addBinary(a,b){
 }
 
 console.log("case1: a=11, b=1 ==> ", addBinary("11","1"))
+console.log("case2: a=11, b=11 ==> ", addBinary("11","11"))
