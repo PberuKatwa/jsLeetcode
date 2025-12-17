@@ -31,6 +31,23 @@ function addBinary(a,b){
 
     if(a.length === 0 && b.length > 1) return b;
     if(b.length === 0 && a.length > 1) return a;
+    if(a.length === 0 && b.length === 0) return null;
+
+    let sum = 0;
+    let carry =  0;
+
+    const aLength = a.length;
+    const bLength = b.length;
+
+    let maxLength = 0
+
+    if(aLength > bLength){
+        maxLength = aLength
+    }else{
+        maxLength = bLength
+    }
+
+    while(){}
  
- 
+    return sum
 }
