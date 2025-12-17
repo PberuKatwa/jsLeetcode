@@ -33,37 +33,30 @@ function addBinary(a,b){
     if(b.length === 0 && a.length > 1) return a;
     if(a.length === 0 && b.length === 0) return null;
 
-    let sum = 0;
+    let sum = "";
     let carry =  0;
 
-    const aLength = a.length;
-    const bLength = b.length;
+    let i = a.length;
+    let j = b.length;
 
-    let maxLength = 0
+    while(i >= 0 || j >= 0  || carry){
 
-    if(aLength > bLength){
-        maxLength = aLength
-    }else{
-        maxLength = bLength
-    }
+        i -= 1
+        j -= 1
+        const bitA = i > 0 ? a[i]  - "0": 0;
+        const bitB = j > 0 ? b[j]  - "0": 0;
+        console.log("bit aaa", bitA)
+        console.log("bit bbb", bitB)
 
-    for( let i = 0; i < maxLength ; i++){
+        const total = bitA + bitB + carry
 
-        const charA = Number( a[i] ) ? Number( a[i] ) : 0;
-        const charB = Number( b[i] ) ? Number( b[i] ) : 0;
-
-
-        if ( charA === 1 && charB === 1){
-            sum += 1
-            carry = 0
-        }else if( charA === 1 && charB === 0 ){
-            carry = 1
-        }else if( charA === 0 && charB === 1 ){
-            sum += 1
-            carry = 0
-        }
+        console.log("totalll", total)
 
     }
+
+    console.log("heloooooo")
     
     return sum
 }
+
+console.log("case1: a=11, b=1 ==> ", addBinary("11","1"))
