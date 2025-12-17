@@ -15,11 +15,18 @@
 
 function addBinary(a,b){
 
-    // Plan
+    // Plan.
     // 1. Check if either a or b is null, if either is null return the non null value.
     // 2. If both are null return null.
     // 3. Find the length of both a and b.
     // 4. Initialize  a sum variable and carry vaiable(let sum & let carry).
+    // 5. Intialize two variables each representing the length of each string(let i = a.length && let j = b.length).
+    // 6. Create a while loop with the exit condition being if the index of j or i being less than 0 or carry > 0( i>=0, j>=0, carry ).
+    // 7: Find the value for each part for example bitA is the value at current index if the index has gone negative the value is 0.
+    // 8. Add up all the values + the carry( a + b + carry ).
+    // 9. To get the sum get the remainder of the total( total % 2 ) and add it to the sum( total% 2 + sum).
+
+
     // 5. Loop from the last index of a and b.
     // 6. Scenario 1 summation, 0 + 0 = 0. Sum is 0 and carry is 0.
     // 7. Scenario 2 summation, 1 + 0 = 0. Sum is 1 and carry is 0. 
@@ -45,14 +52,14 @@ function addBinary(a,b){
         j -= 1
         const bitA = i >= 0 ? a[i]  - "0": 0;
         const bitB = j >= 0 ? b[j]  - "0": 0;
-        console.log("aaa", bitA, "bbb", bitB, "carry", carry)
+        console.log("\naaa", bitA, "bbb", bitB, "carry", carry)
 
         const total = bitA + bitB + carry
 
         sum = (total%2) + sum 
         carry = Math.floor( total/2 )
 
-        console.log("totalll", total, "summ", sum)
+        console.log("totalll", total, "summ", sum, "carry aff", carry)
 
     }
     
@@ -60,4 +67,5 @@ function addBinary(a,b){
 }
 
 console.log("case1: a=11, b=1 ==> ", addBinary("11","1"))
+console.log("case2: a=11, b=11 ==> ", addBinary("11","11"))
 console.log("case2: a=11, b=11 ==> ", addBinary("11","11"))
