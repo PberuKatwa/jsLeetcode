@@ -62,6 +62,9 @@ function findSqrt(x){
 }
 
 const tests = [
+    { input:0, expected:0 },
+    { input:1, expected:1 },
+    { input:2, expected:1 },
     { input:25, expected:5 },
     { input:144, expected:12 },
     { input:10, expected:3 },
