@@ -47,7 +47,7 @@ function findSqrt(x){
         mid = Math.floor( (high + low)/2 )
         const square = mid * mid
 
-        if( square == x ){
+        if( square === x ){
             return mid
         }else if( square > x  ){
             high = mid - 1
