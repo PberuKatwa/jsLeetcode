@@ -32,6 +32,6 @@ function findSqrt(x){
     // 6.Check if the square is either equal,greater and less than X.
     // 7.If equal return x
     // 8.if less make low equalto mid.(low = mid)
-    // 9.If greater
+    // 9.If greater make high equal to mid.(high = mid)
 
 }
