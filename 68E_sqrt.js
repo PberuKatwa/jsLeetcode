@@ -19,6 +19,7 @@
 
 /**
  * @param {number} x
+ * @returns {number}
  */
 
 function findSqrt(x){
@@ -43,9 +44,24 @@ function findSqrt(x){
 
     while (high > low){
 
-        mid = (high + low)/2
-        
+        console.log("\n beginng","high", high, "low",low, "mid", mid)
+        mid = Math.floor( (high + low)/2 )
+
+        if( (mid * mid) == x ){
+            return mid
+        }else if( (mid * mid) > x  ){
+            high = mid
+        }else if( (mid * mid) < x  ){
+            low = mid
+        }
+
+        console.log("\n ENDDD","high", high, "low",low, "mid", mid)
+
+
     }
 
+    return high
 
 }
+
+console.log("rt 111", findSqrt(10))
