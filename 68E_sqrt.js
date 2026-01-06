@@ -64,4 +64,31 @@ function findSqrt(x){
 
 }
 
-console.log("rt 111", findSqrt(10))
+const tests = [
+    { input:25, expected:5 },
+    { input:144, expected:12 }
+
+]
+
+tests.forEach( function( { input, expected }, index ){
+    const actual = findSqrt(input)
+})
+
+// /**
+//  * 
+//  * @param {number} actual 
+//  * @param {number} expected 
+//  * @param {string} message 
+//  */
+// function assertResult(actual,expected,message){
+//     if(actual != expected){
+//         console.error(`${message} \n Expected:${expected} \n Actual:${actual}`)
+//     }else{
+//         console.log(`Successfully passed test `)
+//     }
+
+// }
+
+// assertResult(findSqrt(144), 13, "The test has failed")
+
+// // console.log("rt 111", findSqrt(144))
