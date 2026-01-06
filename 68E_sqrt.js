@@ -42,20 +42,21 @@ function findSqrt(x){
     let low = 0
     let mid = 0
 
-    while (high > low){
+    while (high >= low){
 
-        console.log("\n beginng","high", high, "low",low, "mid", mid)
+        // console.log("\n beginng","high", high, "low",low, "mid", mid)
         mid = Math.floor( (high + low)/2 )
+        const square = mid * mid
 
-        if( (mid * mid) == x ){
+        if( square == x ){
             return mid
-        }else if( (mid * mid) > x  ){
-            high = mid
-        }else if( (mid * mid) < x  ){
-            low = mid
+        }else if( square > x  ){
+            high = mid + 1
+        }else if( square < x  ){
+            low = mid - 1
         }
 
-        console.log("\n ENDDD","high", high, "low",low, "mid", mid)
+        // console.log("\n ENDDD","high", high, "low",low, "mid", mid)
 
 
     }
@@ -66,8 +67,9 @@ function findSqrt(x){
 
 const tests = [
     { input:25, expected:5 },
-    { input:144, expected:12 }
-
+    { input:144, expected:12 },
+    { input:10, expected:3 },
+    
 ]
 
 tests.forEach( function( { input, expected }, index ){
@@ -79,21 +81,3 @@ tests.forEach( function( { input, expected }, index ){
     }
 })
 
-// /**
-//  * 
-//  * @param {number} actual 
-//  * @param {number} expected 
-//  * @param {string} message 
-//  */
-// function assertResult(actual,expected,message){
-//     if(actual != expected){
-//         console.error(`${message} \n Expected:${expected} \n Actual:${actual}`)
-//     }else{
-//         console.log(`Successfully passed test `)
-//     }
-
-// }
-
-// assertResult(findSqrt(144), 13, "The test has failed")
-
-// // console.log("rt 111", findSqrt(144))
