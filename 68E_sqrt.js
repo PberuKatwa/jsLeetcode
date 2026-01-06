@@ -41,4 +41,11 @@ function findSqrt(x){
     let low = 0
     let mid = 0
 
+    while (high > low){
+
+        mid = (high + low)/2
+        
+    }
+
+
 }
