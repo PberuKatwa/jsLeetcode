@@ -56,8 +56,6 @@ function findSqrt(x){
             low = mid + 1
         }
 
-        console.log("\n ENDDD", "low", low, "high", high, "mid", mid )
-
 
     }
 
