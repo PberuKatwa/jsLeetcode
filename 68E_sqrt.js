@@ -34,4 +34,11 @@ function findSqrt(x){
     // 8.if less make low equalto mid.(low = mid)
     // 9.If greater make high equal to mid.(high = mid)
 
+    if(x==0) return 0
+    if(!x) return 0
+
+    let high = x
+    let low = 0
+    let mid = 0
+
 }
