@@ -46,7 +46,6 @@ function findSqrt(x){
 
         mid = Math.floor( (high + low)/2 )
         const square = mid * mid
-        console.log("\n BEGININGG", "low", low, "high", high, "mid", mid )
 
         if( square == x ){
             return mid
@@ -55,7 +54,6 @@ function findSqrt(x){
         }else if( square < x  ){
             low = mid + 1
         }
-
 
     }
 
