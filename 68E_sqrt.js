@@ -28,5 +28,10 @@ function findSqrt(x){
     // 2.Initialize the high,low and mid variable. The high is X, low and mid is 0.
     // 3.Initialize a while loop with high>low as the exit condition.
     // 4.Calculate the mid by adding high + low and dividing by 2.(high+low)/2.
+    // 5.Square the mid( mid * mid).
+    // 6.Check if the square is either equal,greater and less than X.
+    // 7.If equal return x
+    // 8.if less make low equalto mid.(low = mid)
+    // 9.If greater
 
 }
