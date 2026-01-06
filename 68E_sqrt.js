@@ -44,19 +44,19 @@ function findSqrt(x){
 
     while (high >= low){
 
-        // console.log("\n beginng","high", high, "low",low, "mid", mid)
         mid = Math.floor( (high + low)/2 )
         const square = mid * mid
+        console.log("\n BEGININGG", "low", low, "high", high, "mid", mid )
 
         if( square == x ){
             return mid
         }else if( square > x  ){
-            high = mid + 1
+            high = mid - 1
         }else if( square < x  ){
-            low = mid - 1
+            low = mid + 1
         }
 
-        // console.log("\n ENDDD","high", high, "low",low, "mid", mid)
+        console.log("\n ENDDD", "low", low, "high", high, "mid", mid )
 
 
     }
