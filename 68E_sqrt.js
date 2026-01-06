@@ -72,6 +72,11 @@ const tests = [
 
 tests.forEach( function( { input, expected }, index ){
     const actual = findSqrt(input)
+    if( expected != actual ){
+        console.log(`FAILED TEST for input:${input}, with EXPECTED:${expected} but with ACTUAL:${actual}`)
+    }else{
+        console.log(`SUCCESSFUL TEST for input:${input}, with EXPECTED:${expected}`)       
+    }
 })
 
 // /**
