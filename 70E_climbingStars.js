@@ -54,6 +54,10 @@ const cases = [
     { input:1 , expected:1 },
     { input:2 , expected:2 },
     { input:3 , expected:3 },
+    { input:7 , expected:7 },
+    { input:50 , expected:7 },
+
+
 ]
 
 cases.forEach(
@@ -66,6 +70,6 @@ cases.forEach(
         }else{
             console.info(`SUCCESS TEST for INPUT:${input} and EXPECTED:${expected} `)
         }
-        
+
     }
 )
