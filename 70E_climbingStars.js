@@ -39,5 +39,20 @@ function climbingStairsWays(n){
     let prev2 = 2;
     let result = 0;
 
+    for( let i = 3; i<=n; i++){
+        const current = prev1 + prev2;
+        prev2 = prev1
+        result = current
+        prev1 = current
+    }
 
+    return result;
 }
+
+const cases = [
+    { input:0 , expected:0 },
+    { input:1 , expected:1 },
+    { input:2 , expected:2 },
+    { input:3 , expected:3 },
+
+]
