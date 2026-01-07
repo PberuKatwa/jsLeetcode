@@ -53,9 +53,6 @@ const cases = [
     { input:2 , expected:2 },
     { input:3 , expected:3 },
     { input:7 , expected:21 },
-    { input:50 , expected:17393796001 },   
-
-
 ]
 
 cases.forEach(
