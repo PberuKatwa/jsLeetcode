@@ -35,4 +35,9 @@ function climbingStairsWays(n){
 
     if(n <= 2) return n;
 
+    let prev1 = 1;
+    let prev2 = 2;
+    let result = 0;
+
+
 }
