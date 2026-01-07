@@ -27,6 +27,6 @@ function climbingStairsWays(n){
     // 2. Initialize a variable for i step back(n-1) called prev1 and two steps(n-2) called prev2.
     // 3. Initialize a variable called result with value 0.
     // 4. Create a for loop with i < n,i++, i=3.
-    // 5. Get rhe cu
+    // 5. Get the curent number of ways by adding prev1 and prev2(current=prev1+prev2)
 
 }
