@@ -22,12 +22,15 @@
  * @returns {number}
  */
 function climbingStairsWays(n){
+    
     // Plan
     // 1. Check if n is less than or equal to 2,if true return n.
     // 2. Initialize a variable for i step back(n-1) called prev1 and two steps(n-2) called prev2.
     // 3. Initialize a variable called result with value 0.
     // 4. Create a for loop with i < n,i++, i=3.
     // 5. Get the curent number of ways by adding prev1 and prev2(current=prev1+prev2).
-    // 6.
+    // 6. Set the prev2 to the value at prev1.
+    // 7. Set prev1 and result as the current ways.
+    // 8. Return result.
 
 }
