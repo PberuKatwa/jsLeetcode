@@ -61,6 +61,8 @@ cases.forEach(
 
         const actual = climbingStairsWays(input)
 
-        
+        if(actual != expected){
+            console.error(`FAILED TEST for input:${input} with EXPECTED result:${expected} but ACTUAL:${actual}`)
+        }
     }
 )
