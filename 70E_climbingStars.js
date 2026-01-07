@@ -55,3 +55,12 @@ const cases = [
     { input:2 , expected:2 },
     { input:3 , expected:3 },
 ]
+
+cases.forEach(
+    function({input,expected}){
+
+        const actual = climbingStairsWays(input)
+
+        
+    }
+)
