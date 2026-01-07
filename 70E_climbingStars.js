@@ -54,8 +54,8 @@ const cases = [
     { input:1 , expected:1 },
     { input:2 , expected:2 },
     { input:3 , expected:3 },
-    { input:7 , expected:7 },
-    { input:50 , expected:7 },
+    { input:7 , expected:18 },
+    { input:50 , expected:17393796001 },
 
 
 ]
