@@ -37,11 +37,14 @@ class LinkedList{
     createFromList(input){
 
         if(input.length <1) return this.root;
-
         let current = this.root
-        if(current.next) current = current.next;
+        if(!current){
+            this.root = new ListNode(input[0])
+        }else{
+            if(current.next) current = current.next;          
+        }
 
-        current.next = ListNode(input[0])
+        current.next = new ListNode(input[0])
         current = current.next
 
         if(input.length === 1) return this.root;
@@ -49,7 +52,7 @@ class LinkedList{
             
         for(let i = 1; i < input.length; i++){
             if(current){
-                current.next = ListNode(input[i])
+                current.next = new ListNode(input[i])
                 current = current.next
             }
         }
@@ -75,3 +78,12 @@ class LinkedList{
 
 
 }
+
+const list1 = new LinkedList()
+list1.createFromList( [1,1,2] )
+
+const list2 = new LinkedList()
+list2.createFromList( [1,1,2,3,3] )
+
+console.log("list 1111", list1.printList() )
+console.log("list 2222", list2.printList() )
