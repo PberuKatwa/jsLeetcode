@@ -48,13 +48,29 @@ class LinkedList{
 
             
         for(let i = 1; i < input.length; i++){
-            if(current.next){
+            if(current){
                 current.next = ListNode(input[i])
                 current = current.next
             }
         }
 
         return this.root
+    }
+
+    printList(){
+        if(!this.root) return 'NULL'
+
+        let output = '';
+        let current = this.root
+
+        while(current){
+            output += `${current.value}->`
+            current = current.next
+        }
+
+        output += 'NULL'
+        return output
+
     }
 
 
