@@ -74,6 +74,22 @@ class LinkedList{
 
     }
 
+    removeDuplicates(){
+
+        if(!this.head) return this.head
+
+        let current = this.head;
+        let prev = null;
+
+        while(current){
+            if(current.value === prev){
+                current = current.next
+            }
+        }
+
+        return this.head
+    }
+
 
 }
 
