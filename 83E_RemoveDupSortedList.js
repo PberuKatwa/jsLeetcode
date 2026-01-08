@@ -42,6 +42,9 @@ class LinkedList{
         if(current.next) current = current.next;
 
         current.next = ListNode(input[0])
+        current = current.next
+
+        if(input.length === 1) return this.root;
 
     }
 
