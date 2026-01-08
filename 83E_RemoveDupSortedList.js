@@ -27,8 +27,8 @@ class ListNode{
 
 class LinkedList{
 
-    constructor(root){
-        this.root = root;
+    constructor(head){
+        this.head = head;
     }
 
     /**
@@ -36,39 +36,38 @@ class LinkedList{
      */
     createFromList(input){
 
-        if(input.length <1) return this.root;
+        if(input.length <1) return this.head;
 
-        let current = this.root
+        let index = 0;
+        let current = this.head
 
         if(!current){
-            this.root = new ListNode(input[0])
-        }else{
+            this.head = new ListNode(input[index])
+            index += 1
+        }
 
-            while(current){
-                current = current.next
-            }     
-            current.next = new ListNode(input[0])
+        if(input.length === 1) return this.head;
+
+        while(current){
             current = current.next
         }
 
-        if(input.length === 1) return this.root;
-
             
-        for(let i = 1; i < input.length; i++){
+        for(let i = index; i < input.length; i++){
             if(current){
                 current.next = new ListNode(input[i])
                 current = current.next
             }
         }
 
-        return this.root
+        return this.head
     }
 
     printList(){
-        if(!this.root) return 'NULL'
+        if(!this.head) return 'NULL'
 
         let output = '';
-        let current = this.root
+        let current = this.head
 
         while(current){
             output += `${current.value}->`
