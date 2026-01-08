@@ -79,7 +79,6 @@ class LinkedList{
         if(!this.head) return this.head
 
         let current = this.head;
-        let prev = null;
 
         while(current){
             if(current.value === current.next.value){
