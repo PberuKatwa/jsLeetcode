@@ -36,26 +36,25 @@ class LinkedList{
      */
     createFromList(input){
 
-        if(input.length <1) return this.head;
+        if(input.length < 1) return this.head;
 
         let index = 0;
-        let current = this.head
-
-        if(!current){
+        if(!this.head){
             this.head = new ListNode(input[index])
             index += 1
         }
 
+        let current = this.head
+
         if(input.length === 1) return this.head;
 
-        while(current){
-            current = current.next
-        }
-
+        while(current.next)current = current.next
             
-        for(let i = index; i < input.length; i++){
+        console.log("wereee hereee")
+           
+        for(index; index < input.length; index++){
             if(current){
-                current.next = new ListNode(input[i])
+                current.next = new ListNode(input[index])
                 current = current.next
             }
         }
