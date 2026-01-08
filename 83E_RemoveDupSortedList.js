@@ -26,7 +26,24 @@ class ListNode{
 }
 
 class LinkedList{
+
     constructor(root){
         this.root = root;
     }
+
+    /**
+     * @param {Array<number>} input
+     */
+    createFromList(input){
+
+        if(input.length <1) return this.root;
+
+        let current = this.root
+        if(current.next) current = current.next;
+
+        current.next = ListNode(input[0])
+
+    }
+
+
 }
