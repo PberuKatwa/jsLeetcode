@@ -17,7 +17,6 @@
 class ListNode{
     /**
      * @param {number} value
-     * @param {number} next
      */
     constructor(value){
         this.value = value
