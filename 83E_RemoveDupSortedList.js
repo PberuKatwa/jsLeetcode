@@ -114,3 +114,11 @@ createListCases.forEach(
         }
     }
 )
+
+const cases = [
+    { input:[], expected:'1->2->NULL' },
+    { input:[1], expected:'1->2->NULL' },
+    { input:[1,1,1,1,1], expected:'1->2->NULL' },
+    { input:[1,1,2], expected:'1->2->NULL' },
+    { input:[1,1,2,3,3], expected:'1->2->3->NULL' },
+]
