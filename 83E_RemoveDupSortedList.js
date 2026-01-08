@@ -49,14 +49,10 @@ class LinkedList{
         if(input.length === 1) return this.head;
 
         while(current.next)current = current.next
-            
-        console.log("wereee hereee")
-           
+                       
         for(index; index < input.length; index++){
-            if(current){
-                current.next = new ListNode(input[index])
-                current = current.next
-            }
+            current.next = new ListNode(input[index])
+            current = current.next
         }
 
         return this.head
