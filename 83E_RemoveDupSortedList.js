@@ -122,3 +122,20 @@ const cases = [
     { input:[1,1,2], expected:'1->2->NULL' },
     { input:[1,1,2,3,3], expected:'1->2->3->NULL' },
 ]
+
+cases.forEach(
+    function({input,expected}){
+ 
+        const list1 = new LinkedList();
+        list1.createFromList( input ) 
+        list1.removeDuplicates()
+        
+        const actual = list1.printList()
+
+        if(actual != expected){
+            console.log(`FAILED TEST for INPUT:${input}, with EXPECTED:${expected} but ACTUAL:${actual}`)
+        }else{
+            console.log(`SUCCESS TEST for INPUT:${input} and EXPECTED:${expected}`)
+        }
+    }
+)
