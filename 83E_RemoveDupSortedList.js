@@ -24,3 +24,9 @@ class ListNode{
         this.next = null
     }
 }
+
+class LinkedList{
+    constructor(root){
+        this.root = root;
+    }
+}
