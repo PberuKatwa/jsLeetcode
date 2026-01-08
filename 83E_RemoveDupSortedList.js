@@ -85,7 +85,7 @@ class LinkedList{
         while(current.next){
 
             if(current.value === current.next.value){
-                
+
                 if(current.next.next){
                     current.next = current.next.next
                 }else(
@@ -110,7 +110,7 @@ const createListCases = [
     { input:[], expected:'NULL' },
 ]
 
-console.log(`\n <============== TEST CASES FOR LINKED LIST CREATION ==============>`)
+console.log(`\n<============== BEGINNING TEST CASES FOR LINKED LIST CREATION ==============>`)
 createListCases.forEach(
     function({input,expected}){
 
@@ -126,8 +126,10 @@ createListCases.forEach(
         }
     }
 )
+console.log(`<============== END TEST CASES FOR LINKED LIST CREATION ==============>`)
 
-console.log(`\n <============== TEST CASES FOR DUPLICATE LIST REMOVAL ==============>`)
+
+console.log(`\n<============== BEGINNING TEST CASES FOR DUPLICATE LIST REMOVAL ==============>`)
 const cases = [
     { input:[], expected:'NULL' },
     { input:[1], expected:'1->NULL' },
@@ -152,3 +154,6 @@ cases.forEach(
         }
     }
 )
+
+console.log(`<============== END TEST CASES FOR DUPLICATE LIST REMOVAL ==============>`)
+
