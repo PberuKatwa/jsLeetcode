@@ -79,12 +79,17 @@ class LinkedList{
         if(!this.head) return this.head
 
         let current = this.head;
+        let prev = current.value
+        current = current.next
 
-        while(current.next){
-            if(current.value === current.next.value){
+        while(current){
+
+            if(current.value === prev){
                 current.next = current.next.next
+            }else{
+                current = current.next
             }
-            current = current.next
+            
         }
 
         return this.head
