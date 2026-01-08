@@ -97,7 +97,5 @@ createListCases.forEach(
         }else{
             console.log(`SUCCESS TEST for INPUT:${input} and EXPECTED:${expected}`)
         }
-
-
     }
 )
