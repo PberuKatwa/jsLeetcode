@@ -37,15 +37,19 @@ class LinkedList{
     createFromList(input){
 
         if(input.length <1) return this.root;
+
         let current = this.root
+
         if(!current){
             this.root = new ListNode(input[0])
         }else{
-            if(current.next) current = current.next;          
-        }
 
-        current.next = new ListNode(input[0])
-        current = current.next
+            while(current){
+                current = current.next
+            }     
+            current.next = new ListNode(input[0])
+            current = current.next
+        }
 
         if(input.length === 1) return this.root;
 
