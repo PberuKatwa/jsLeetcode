@@ -80,7 +80,7 @@ class LinkedList{
 
         let current = this.head;
 
-        while(current){
+        while(current.next){
             if(current.value === current.next.value){
                 current.next = current.next.next
             }
@@ -99,6 +99,7 @@ const createListCases = [
     { input:[], expected:'NULL' },
 ]
 
+console.log(`\n <============== TEST CASES FOR LINKED LIST CREATION ==============>`)
 createListCases.forEach(
     function({input,expected}){
 
@@ -115,10 +116,11 @@ createListCases.forEach(
     }
 )
 
+console.log(`\n <============== TEST CASES FOR DUPLICATE LIST REMOVAL ==============>`)
 const cases = [
-    { input:[], expected:'1->2->NULL' },
-    { input:[1], expected:'1->2->NULL' },
-    { input:[1,1,1,1,1], expected:'1->2->NULL' },
+    { input:[], expected:'NULL' },
+    { input:[1], expected:'1->NULL' },
+    { input:[1,1,1,1,1], expected:'1->NULL' },
     { input:[1,1,2], expected:'1->2->NULL' },
     { input:[1,1,2,3,3], expected:'1->2->3->NULL' },
 ]
