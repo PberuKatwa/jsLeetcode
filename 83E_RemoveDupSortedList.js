@@ -136,6 +136,8 @@ const cases = [
     { input:[1,1,1,1,1], expected:'1->NULL' },
     { input:[1,1,2], expected:'1->2->NULL' },
     { input:[1,1,2,3,3], expected:'1->2->3->NULL' },
+    { input:[1,1,2,2,3,3], expected:'1->2->3->NULL' },
+
 ]
 
 cases.forEach(
