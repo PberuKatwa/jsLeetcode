@@ -46,6 +46,15 @@ class LinkedList{
 
         if(input.length === 1) return this.root;
 
+            
+        for(let i = 1; i < input.length; i++){
+            if(current.next){
+                current.next = ListNode(input[i])
+                current = current.next
+            }
+        }
+
+        return this.root
     }
 
 
