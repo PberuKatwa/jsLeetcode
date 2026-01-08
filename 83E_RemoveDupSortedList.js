@@ -81,7 +81,6 @@ const createListCases = [
     { input:[1,1,2], expected:'1->1->2->NULL' },
     { input:[1,1,2,3,3], expected:'1->1->2->3->3->NULL' },
     { input:[], expected:'NULL' },
-    { input:[1,1,2], expected:'1->1->2->NULL' }
 ]
 
 createListCases.forEach(
