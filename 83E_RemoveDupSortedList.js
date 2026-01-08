@@ -77,11 +77,27 @@ class LinkedList{
 
 }
 
-const list1 = new LinkedList()
-list1.createFromList( [1,1,2] )
+const createListCases = [
+    { input:[1,1,2], expected:'1->1->2->NULL' },
+    { input:[1,1,2,3,3], expected:'1->1->2->3->3->NULL' },
+    { input:[], expected:'NULL' },
+    { input:[1,1,2], expected:'1->1->2->NULL' }
+]
 
-const list2 = new LinkedList()
-list2.createFromList( [1,1,2,3,3] )
+createListCases.forEach(
+    function({input,expected}){
 
-console.log("list 1111", list1.printList() )
-console.log("list 2222", list2.printList() )
+        const list1 = new LinkedList();
+        list1.createFromList( input ) 
+        
+        const actual = list1.printList()
+
+        if(actual != expected){
+            console.log(`FAILED TEST for INPUT:${input}, with EXPECTED:${expected} but ACTUAL:${actual}`)
+        }else{
+            console.log(`SUCCESS TEST for INPUT:${input} and EXPECTED:${expected}`)
+        }
+
+
+    }
+)
