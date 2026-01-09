@@ -59,9 +59,9 @@ function mergeSortedArray(nums1, nums2, m, n){
     // 7.Decrease p3 by 1.
     // 8.Return nums1 after loop exits.
 
-    if( m<1 && n<1 ) return [];
-    if( m<1 ) return nums2;
-    if( n<1 ) return nums1;
+    // if( m<1 && n<1 ) return [];
+    // if( m<1 ) return nums2;
+    // if( n<1 ) return nums1;
 
     let p1 = m-1
     let p2 = n-1
@@ -69,7 +69,6 @@ function mergeSortedArray(nums1, nums2, m, n){
 
     while( p1>=0 && p2>=0 ){
 
-        // console.log(`\nBEGINNING, p1:${p1}, p2:${p2}, p3:${p3}, nums:${nums1}`)
         if( nums2[p2] >= nums1[p1] ){
 
             nums1[p3] =  nums2[p2]
@@ -81,7 +80,6 @@ function mergeSortedArray(nums1, nums2, m, n){
         }
 
         p3 -= 1
-        // console.log(`END, p1:${p1}, p2:${p2}, p3:${p3}, nums:${nums1}`)
     }
 
     while(p2 >= 0){
@@ -108,8 +106,14 @@ cases.forEach(
     function({array1,m,array2,n,expected}){
         const actual = mergeSortedArray(array1, array2, m, n)
 
-        console.log("\nactuall",actual,"expected", expected)
-        if(actual!== expected){
+        const isEqual = ( actual.length === expected.length ) && ( actual.every( function(value,index) { value === expected[index] }) )
+        // if( JSON.stringify(actual)!== JSON.stringify(expected) ){
+        //     console.log(`FAILED TEST for NUMS1:${array1}, NUMS2:${array2}, M:${m}, N:${n}. With EXPECTED:${expected} and ACTUAL:${actual}`)
+        // }else{
+        //     console.log(`SUCCESS TEST for NUMS1:${array1}, NUMS2:${array2}, M:${m}, N:${n}. With EXPECTED:${expected}.`)
+        // }
+
+        if( isEqual ){
             console.log(`FAILED TEST for NUMS1:${array1}, NUMS2:${array2}, M:${m}, N:${n}. With EXPECTED:${expected} and ACTUAL:${actual}`)
         }else{
             console.log(`SUCCESS TEST for NUMS1:${array1}, NUMS2:${array2}, M:${m}, N:${n}. With EXPECTED:${expected}.`)
