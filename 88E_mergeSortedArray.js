@@ -95,3 +95,15 @@ cases = [
     { nums1:[1,1,1,1,0,0,0,0], m:4, nums2:[1,1,1,1], n:4, expected:[1,1,1,1,1,1,1,1] },
     { nums1:[8,9,9,0,0,0], m:3, nums2:[2,5,6], n:3, expected:[2,5,6,8,9,9] }
 ]
+
+cases.forEach(
+    function({nums1,m,nums2,n,expected}){
+        const actual = mergeSortedArray(nums1, nums2, m, n)
+
+        if(actual!= expected){
+            console.log(`FAILED TEST for NUMS1:${nums1}, NUMS2:${nums2}, M:${m}, N:${n}. With EXPECTED:${expected} and ACTUAL:${actual}`)
+        }else{
+            console.log(`SUCCESS TEST for NUMS1:${nums1}, NUMS2:${nums2}, M:${m}, N:${n}. With EXPECTED:${expected}.`)
+        }
+    }
+)
