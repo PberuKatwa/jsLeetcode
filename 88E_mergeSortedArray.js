@@ -36,8 +36,15 @@
 // 1 <= m + n <= 200
 // -109 <= nums1[i], nums2[j] <= 109
  
-
 // Follow up: Can you come up with an algorithm that runs in O(m + n) time?
+
+/**
+ * @param {Array<number>} nums1
+ * @param {Array<number>} nums2
+ * @param {number} m
+ * @param {number} n
+ * @returns {Array<number>}
+ */
 
 function mergeSortedArray(){
 
@@ -50,5 +57,7 @@ function mergeSortedArray(){
     // 5.If Condition A is true replace nums1[p3] with the value at nums2[p2], then decrease p2 by 1.
     // 6.If Condition B is true  replace nums1[p3] with with nums1[p1], then decrease p1 by 1.
     // 7.Return nums1.
+
+    if(m<1) return nu
 
 }
