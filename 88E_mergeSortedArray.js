@@ -48,6 +48,7 @@ function mergeSortedArray(){
     // 3.Create a while loop with the exit condition being either m or n going negative( m>=0 || n>=0 ).
     // 4.Create an if condition with condition A being if nums2[p2] >= nums1[p1] and condition B being the else.
     // 5.If Condition A is true replace nums1[p3] with the value at nums2[p2], then decrease p2 by 1.
-    // 6.IF Condition B is true  replace nums1[p3] with with nums1[p1], then decrease p1 by 1.
+    // 6.If Condition B is true  replace nums1[p3] with with nums1[p1], then decrease p1 by 1.
+    // 7.Return nums1.
 
 }
