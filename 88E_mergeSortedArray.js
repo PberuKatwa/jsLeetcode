@@ -107,11 +107,6 @@ cases.forEach(
         const actual = mergeSortedArray(array1, array2, m, n)
 
         const isEqual = ( actual.length === expected.length ) && ( actual.every( function(value,index) { value === expected[index] }) )
-        // if( JSON.stringify(actual)!== JSON.stringify(expected) ){
-        //     console.log(`FAILED TEST for NUMS1:${array1}, NUMS2:${array2}, M:${m}, N:${n}. With EXPECTED:${expected} and ACTUAL:${actual}`)
-        // }else{
-        //     console.log(`SUCCESS TEST for NUMS1:${array1}, NUMS2:${array2}, M:${m}, N:${n}. With EXPECTED:${expected}.`)
-        // }
 
         if( isEqual ){
             console.log(`FAILED TEST for NUMS1:${array1}, NUMS2:${array2}, M:${m}, N:${n}. With EXPECTED:${expected} and ACTUAL:${actual}`)
