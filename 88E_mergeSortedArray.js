@@ -43,8 +43,9 @@ function mergeSortedArray(){
 
     // Plan
     // 1.Check if either m or n is 0. If m is 0 return nums2, n is 0 return nums1, if both are 0 return [].
-    // 2. Initialize three pointer variables each for the last element on a list.
+    // 2.Initialize three pointer variables each for the last element on a list.
     //    p1 for the last element in nums 1(m-1),p2 for nums2(n-1), p3 for nums1(m+n-1)
     // 3.Create a while loop with the exit condition being either m or n going negative( m>=0 || n>=0 ).
+    // 4.
 
 }
