@@ -46,7 +46,7 @@
  * @returns {Array<number>}
  */
 
-function mergeSortedArray(){
+function mergeSortedArray(nums1, nums2, m, n){
 
     // Plan
     // 1.Check if either m or n is 0. If m is 0 return nums2, n is 0 return nums1, if both are 0 return [].
@@ -58,6 +58,7 @@ function mergeSortedArray(){
     // 6.If Condition B is true  replace nums1[p3] with with nums1[p1], then decrease p1 by 1.
     // 7.Return nums1.
 
-    if(m<1) return nu
+    if( m<1 ) return nums2;
+    if( n<1 ) return nums1;
 
 }
