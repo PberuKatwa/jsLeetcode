@@ -67,8 +67,9 @@ function mergeSortedArray(nums1, nums2, m, n){
     let p2 = n-1
     let p3 = ( m+n ) - 1
 
-    while( p1>=0 || p2>=0 ){
+    while( p1>=0 && p2>=0 ){
 
+        // console.log(`\nBEGINNING, p1:${p1}, p2:${p2}, p3:${p3}, nums:${nums1}`)
         if( nums2[p2] >= nums1[p1] ){
 
             nums1[p3] =  nums2[p2]
@@ -80,7 +81,13 @@ function mergeSortedArray(nums1, nums2, m, n){
         }
 
         p3 -= 1
+        // console.log(`END, p1:${p1}, p2:${p2}, p3:${p3}, nums:${nums1}`)
+    }
 
+    while(p2 >= 0){
+        nums1[p3]= nums2[p2]
+        p3-=1
+        p2-=1
     }
 
     return nums1
@@ -91,7 +98,8 @@ cases = [
     { nums1:[0], m:0, nums2:[2], n:1, expected:[2] },
     { nums1:[1], m:1, nums2:[], n:0, expected:[1] },
     { nums1:[1,2,3], m:3, nums2:[2], n:1, expected:[1,2,2,3] },
-    { nums1:[1,0,0,0,0,0], m:1, nums2:[0,0,1,2,5], n:5, expected:[0,0,1,1,2,5] },
+    { nums1:[1,2,3,0,0,0], m:3, nums2:[2,5,6], n:3, expected:[1,2,2,3,5,6] },
+    { nums1:[1,0,0,0,0,0], m:1, nums2:[1,2,5,5,6], n:5, expected:[1,1,2,5,5,6] },
     { nums1:[1,1,1,1,0,0,0,0], m:4, nums2:[1,1,1,1], n:4, expected:[1,1,1,1,1,1,1,1] },
     { nums1:[8,9,9,0,0,0], m:3, nums2:[2,5,6], n:3, expected:[2,5,6,8,9,9] }
 ]
@@ -100,10 +108,12 @@ cases.forEach(
     function({nums1,m,nums2,n,expected}){
         const actual = mergeSortedArray(nums1, nums2, m, n)
 
-        if(actual!= expected){
+        console.log("\nactuall",actual,"expected", expected)
+        if(actual!== expected){
             console.log(`FAILED TEST for NUMS1:${nums1}, NUMS2:${nums2}, M:${m}, N:${n}. With EXPECTED:${expected} and ACTUAL:${actual}`)
         }else{
             console.log(`SUCCESS TEST for NUMS1:${nums1}, NUMS2:${nums2}, M:${m}, N:${n}. With EXPECTED:${expected}.`)
         }
+
     }
 )
