@@ -38,3 +38,11 @@
  
 
 // Follow up: Can you come up with an algorithm that runs in O(m + n) time?
+
+function mergeSortedArray(){
+
+    // Plan
+    // 1.Check if either m or n is 0. If m is 0 return nums2, n is 0 return nums1, if both are 0 return [].
+    // 2. Initialize three pointer variables each for the last element on a list.p1 for the
+
+}
