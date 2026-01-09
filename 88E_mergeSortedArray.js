@@ -46,6 +46,7 @@ function mergeSortedArray(){
     // 2.Initialize three pointer variables each for the last element on a list.
     //    p1 for the last element in nums 1(m-1),p2 for nums2(n-1), p3 for nums1(m+n-1)
     // 3.Create a while loop with the exit condition being either m or n going negative( m>=0 || n>=0 ).
-    // 4.
+    // 4.Create an if condition with condition A being if nums2[p2] >= nums1[p1] and condition B being the else.
+    // 5.
 
 }
