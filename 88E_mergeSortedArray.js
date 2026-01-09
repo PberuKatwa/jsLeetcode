@@ -94,25 +94,25 @@ function mergeSortedArray(nums1, nums2, m, n){
 }
 
 cases = [
-    { nums1:[0], m:0, nums2:[], n:0, expected:[] },
-    { nums1:[0], m:0, nums2:[2], n:1, expected:[2] },
-    { nums1:[1], m:1, nums2:[], n:0, expected:[1] },
-    { nums1:[1,2,3], m:3, nums2:[2], n:1, expected:[1,2,2,3] },
-    { nums1:[1,2,3,0,0,0], m:3, nums2:[2,5,6], n:3, expected:[1,2,2,3,5,6] },
-    { nums1:[1,0,0,0,0,0], m:1, nums2:[1,2,5,5,6], n:5, expected:[1,1,2,5,5,6] },
-    { nums1:[1,1,1,1,0,0,0,0], m:4, nums2:[1,1,1,1], n:4, expected:[1,1,1,1,1,1,1,1] },
-    { nums1:[8,9,9,0,0,0], m:3, nums2:[2,5,6], n:3, expected:[2,5,6,8,9,9] }
+    { array1:[0], m:0, array2:[], n:0, expected:[] },
+    { array1:[0], m:0, array2:[2], n:1, expected:[2] },
+    { array1:[1], m:1, array2:[], n:0, expected:[1] },
+    { array1:[1,2,3], m:3, array2:[2], n:1, expected:[1,2,2,3] },
+    { array1:[1,2,3,0,0,0], m:3, array2:[2,5,6], n:3, expected:[1,2,2,3,5,6] },
+    { array1:[1,0,0,0,0,0], m:1, array2:[1,2,5,5,6], n:5, expected:[1,1,2,5,5,6] },
+    { array1:[1,1,1,1,0,0,0,0], m:4, array2:[1,1,1,1], n:4, expected:[1,1,1,1,1,1,1,1] },
+    { array1:[8,9,9,0,0,0], m:3, array2:[2,5,6], n:3, expected:[2,5,6,8,9,9] }
 ]
 
 cases.forEach(
-    function({nums1,m,nums2,n,expected}){
-        const actual = mergeSortedArray(nums1, nums2, m, n)
+    function({array1,m,array2,n,expected}){
+        const actual = mergeSortedArray(array1, array2, m, n)
 
         console.log("\nactuall",actual,"expected", expected)
         if(actual!== expected){
-            console.log(`FAILED TEST for NUMS1:${nums1}, NUMS2:${nums2}, M:${m}, N:${n}. With EXPECTED:${expected} and ACTUAL:${actual}`)
+            console.log(`FAILED TEST for NUMS1:${array1}, NUMS2:${array2}, M:${m}, N:${n}. With EXPECTED:${expected} and ACTUAL:${actual}`)
         }else{
-            console.log(`SUCCESS TEST for NUMS1:${nums1}, NUMS2:${nums2}, M:${m}, N:${n}. With EXPECTED:${expected}.`)
+            console.log(`SUCCESS TEST for NUMS1:${array1}, NUMS2:${array2}, M:${m}, N:${n}. With EXPECTED:${expected}.`)
         }
 
     }
