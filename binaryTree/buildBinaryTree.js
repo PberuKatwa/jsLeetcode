@@ -48,13 +48,12 @@ class BinaryTree{
     this.root = new TreeNode(input[index])
     const root = this.root;
     const queue = [root];
-    const result =[input[index]]
     index += 1
 
 
     while ( queue.length > 0 ) {
 
-      const parent = new TreeNode(queue.shift())
+      const parent = queue.shift()
 
       const left = input[ index ] ? input[ index ] : null
       const right = input[ index + 1 ] ? input[ index + 1 ] : null
@@ -66,7 +65,7 @@ class BinaryTree{
 
       if (right) {
         parent.right = new TreeNode(right)
-        queue.push(right)
+        queue.push(parent.right)
       }
 
       index += 2
@@ -84,10 +83,15 @@ class BinaryTree{
     const result = [];
 
     while (queue.length > 0) {
-      const current = queue.shift()
-      result.push(current.val)
 
-      console.log("treee bui")
+      const current = queue.shift()
+
+      if (!current) {
+        result.push(null)
+      }else{
+        result.push(current.val)
+      }
+
       if (current.left) {
         queue.push(current.left)
       }
