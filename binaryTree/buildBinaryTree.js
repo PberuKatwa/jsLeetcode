@@ -45,8 +45,11 @@ class BinaryTree{
 
     let index = 0
     if (!input) return [];
-    const queue = [ input[index] ];
+    this.root = TreeNode(input[index])
+    const root = this.root;
+    const queue = [ root ];
     index += 1
+
 
     while ( index > input.length ) {
 
@@ -55,8 +58,10 @@ class BinaryTree{
       if (index < input.length) {
 
         const left = input[index]
-        parent.left = TreeNode(left)
-        queue.push(parent.left)
+        if (!left) {
+          parent.left = TreeNode(left)
+          queue.push(parent.left)
+        }
         index += 1
 
       }
@@ -64,14 +69,30 @@ class BinaryTree{
       if (index < input) {
 
         const right = input[index]
-        parent.right = TreeNode(right)
-        queue.push(parent.right)
+        if (!right) {
+          parent.right = TreeNode(right)
+          queue.push(parent.right)
+        }
         index +=1
 
       }
+    }
+
+    return this.root;
+  }
+
+  printTree() {
+
+    if (!this.root) return [];
+    const root = this.root;
+    const queue = [root];
+    const result = [];
+
+    while (queue.length > 0) {
 
     }
 
+    return result
   }
 
 }
