@@ -38,7 +38,7 @@ class BinaryTree{
 
   /**
    *
-   * @param {Array<number>} input
+   * @param { Array<number> } input
    */
   buildBinaryTree(input) {
 
@@ -48,6 +48,8 @@ class BinaryTree{
       this.root = input[0]
       index += 1
     }
+
+
 
   }
 
