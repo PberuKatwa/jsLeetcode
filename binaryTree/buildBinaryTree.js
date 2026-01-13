@@ -44,9 +44,7 @@ class BinaryTree{
   buildBinaryTree(input) {
 
     let index = 0
-
     if (!input) return [];
-
     const queue = [ input[index] ];
     index += 1
 
@@ -57,7 +55,18 @@ class BinaryTree{
       if (index < input.length) {
 
         const left = input[index]
+        parent.left = TreeNode(left)
+        queue.push(parent.left)
+        index += 1
 
+      }
+
+      if (index < input) {
+
+        const right = input[index]
+        parent.right = TreeNode(right)
+        queue.push(parent.right)
+        index +=1
 
       }
 
