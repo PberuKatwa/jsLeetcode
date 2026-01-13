@@ -69,7 +69,6 @@ class BinaryTree{
       }
 
       index += 2
-
     }
 
     return this.root;
@@ -86,20 +85,13 @@ class BinaryTree{
 
       const current = queue.shift()
 
-      if (!current) {
+      if (current===null) {
         result.push(null)
-      }else{
-        result.push(current.val)
+        continue;
       }
-
-      if (current.left) {
-        queue.push(current.left)
-      }
-
-      if (current.right) {
-        queue.push(current.right)
-      }
-
+      result.push(current.val)
+      queue.push(current.left)
+      queue.push(current.right)
     }
 
     return result
