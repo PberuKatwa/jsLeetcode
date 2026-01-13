@@ -49,7 +49,14 @@ class BinaryTree{
       index += 1
     }
 
+    const queue = [ input[index] ];
+    index += 1
 
+    while ( index > input.length ) {
+
+      const left =
+
+    }
 
   }
 
