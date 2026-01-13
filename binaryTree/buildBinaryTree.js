@@ -1,5 +1,5 @@
 // Problem:
-// Construct Binary Tree from Level - Order ArrayGiven an array of integers nodes representing the level
+// Construct Binary Tree from Level - Order Array Given an array of integers nodes representing the level
 // - order traversal of a binary tree,construct the tree and return its root node.
 // In this representation, a null value indicates that the corresponding node does not exist.
 // The tree is built level by level, starting from the root, then the left and right children of the root, and so on.
@@ -21,3 +21,34 @@
 
 // Constraints:The number of nodes in the tree is in the range[0, 1000].- 1000 <= nodes[i] <= 1000nodes[i] may be null.
 // Follow - up: Can you implement this using a Queue to ensure $O(n)$ time complexity and $O(n)$ space complexity ?
+
+
+class TreeNode{
+  constructor( left, right ) {
+    this.left = left;
+    this.right = right;
+  }
+}
+
+class BinaryTree{
+
+  constructor(root) {
+    this.root = null
+  }
+
+  /**
+   *
+   * @param {Array<number>} input
+   */
+  buildBinaryTree(input) {
+
+    let index = 0
+
+    if (!this.root) {
+      this.root = input[0]
+      index += 1
+    }
+
+  }
+
+}
