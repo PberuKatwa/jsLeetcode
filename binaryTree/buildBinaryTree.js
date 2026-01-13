@@ -24,9 +24,10 @@
 
 
 class TreeNode{
-  constructor( left, right ) {
-    this.left = left;
-    this.right = right;
+  constructor(val ) {
+    this.val = val;
+    this.left = null;
+    this.right = null;
   }
 }
 
@@ -44,17 +45,21 @@ class BinaryTree{
 
     let index = 0
 
-    if (!this.root) {
-      this.root = input[0]
-      index += 1
-    }
+    if (!input) return [];
 
     const queue = [ input[index] ];
     index += 1
 
     while ( index > input.length ) {
 
-      const left =
+      const parent = TreeNode(queue.shift())
+
+      if (index < input.length) {
+
+        const left = input[index]
+
+
+      }
 
     }
 
