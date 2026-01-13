@@ -43,8 +43,8 @@ class BinaryTree{
    */
   buildBinaryTree(input) {
 
-    let index = 0
     if (!input) return [];
+    let index = 0
     this.root = new TreeNode(input[index])
     const root = this.root;
     const queue = [root];
