@@ -104,28 +104,14 @@ class BinaryTree{
    * @param {TreeNode} node
    * @returns Array<number>
    */
-  traverseTree(node) {
+  traverseTree(node=this.root) {
 
     if (!this.root) return [];
 
-    if (!node) {
-      return this.traverseTree(this.root);
-    }
+    const left = this.traverseTree(node.left)
+    const right = this.traverseTree(node.right)
 
-    console.log("nodeee", node.val)
-    const result = [];
-
-    this.traverseTree(node.left)
-    result.push(node.val)
-    this.traverseTree(node.right)
-    if (node.left) {
-
-    } else if(node.right){
-    }
-
-    result.push(node.val)
-
-    return result;
+    return [left, node.val, right];
 
   }
 
