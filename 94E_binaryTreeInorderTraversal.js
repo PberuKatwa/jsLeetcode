@@ -77,7 +77,8 @@ class BinaryTree{
 
     if (!this.root) return [];
 
-
+    const currentRoot = this.root;
+    const queue = [currentRoot];
 
   }
 
