@@ -83,19 +83,20 @@ class BinaryTree{
 
     while (queue.length > 0) {
 
-      const current = queue.shift()
+      const current = queue.shift();
 
       if (current === null) {
         result.push(null);
         continue;
       }
 
-      result.push(current.val)
-      queue.push(current.left)
-      queue.push(current.left)
+      result.push(current.val);
+      queue.push(current.left);
+      queue.push(current.left);
 
     }
 
+    return result;
   }
 
 }
