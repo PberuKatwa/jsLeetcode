@@ -33,7 +33,13 @@ class TreeNode{
 class BinaryTree{
 
   constructor(root) {
-    this.root = null;
+    this.root = root;
   }
+
+  /**
+   * @param {Array<number>} input
+   */
+
+
 
 }
