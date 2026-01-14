@@ -100,3 +100,9 @@ class BinaryTree{
   }
 
 }
+
+
+const tree = new BinaryTree(null);
+tree.buildTree([1, null, 2, 3]);
+
+console.log("treee", tree.printTree() )
