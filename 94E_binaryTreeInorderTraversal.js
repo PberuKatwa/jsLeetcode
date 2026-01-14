@@ -90,7 +90,9 @@ class BinaryTree{
         continue;
       }
 
-      result.push(current.left)
+      result.push(current.val)
+      queue.push(current.left)
+      queue.push(current.left)
 
     }
 
