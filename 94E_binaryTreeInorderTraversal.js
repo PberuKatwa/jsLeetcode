@@ -99,6 +99,16 @@ class BinaryTree{
     return result;
   }
 
+  /**
+   *
+   * @param {TreeNode} node
+   */
+  traverseTree(node) {
+
+    if (!node)
+
+  }
+
 }
 
 
