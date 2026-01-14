@@ -29,3 +29,11 @@ class TreeNode{
     this.right = null;
   }
 }
+
+class BinaryTree{
+
+  constructor(root) {
+    this.root = null;
+  }
+
+}
