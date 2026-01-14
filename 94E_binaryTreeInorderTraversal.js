@@ -105,7 +105,16 @@ class BinaryTree{
    */
   traverseTree(node) {
 
-    if (!node)
+    if (!this.root) return [];
+
+    if (!node) {
+      return this.traverseTree(this.root);
+    }
+
+    const result = [];
+    if (node.left) {
+
+    }
 
   }
 
