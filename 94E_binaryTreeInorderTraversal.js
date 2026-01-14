@@ -112,11 +112,15 @@ class BinaryTree{
       return this.traverseTree(this.root);
     }
 
+    console.log("nodeee", node.val)
     const result = [];
+
+    this.traverseTree(node.left)
+    result.push(node.val)
+    this.traverseTree(node.right)
     if (node.left) {
-      this.traverseTree(node.left)
+
     } else if(node.right){
-      this.traverseTree(node.right)
     }
 
     result.push(node.val)
