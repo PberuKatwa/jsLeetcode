@@ -113,8 +113,12 @@ class BinaryTree{
 
     const result = [];
     if (node.left) {
-
+      this.traverseTree(node.left)
+    } else if(node.right){
+      this.traverseTree(node.right)
     }
+
+    result.push(node.val)
 
   }
 
