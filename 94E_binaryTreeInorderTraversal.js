@@ -102,6 +102,7 @@ class BinaryTree{
   /**
    *
    * @param {TreeNode} node
+   * @returns Array<number>
    */
   traverseTree(node) {
 
@@ -120,6 +121,8 @@ class BinaryTree{
 
     result.push(node.val)
 
+    return result;
+
   }
 
 }
@@ -128,4 +131,5 @@ class BinaryTree{
 const tree = new BinaryTree(null);
 tree.buildTree([1, null, 2, 3]);
 
+// console.log("treee", tree.printTree());
 console.log("treee", tree.printTree() )
