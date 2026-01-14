@@ -39,7 +39,20 @@ class BinaryTree{
   /**
    * @param {Array<number>} input
    */
+  buildTree(input) {
 
+    if (!input) return this.root;
+    let index = 0;
+    this.root = new TreeNode(input[0]);
+    const root = this.root;
+    const queue = [root]
 
+    index += 1;
+
+    while (queue.length > 0) {
+
+    }
+
+  }
 
 }
