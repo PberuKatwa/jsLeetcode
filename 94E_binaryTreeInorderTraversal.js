@@ -79,6 +79,20 @@ class BinaryTree{
 
     const currentRoot = this.root;
     const queue = [currentRoot];
+    const result = [];
+
+    while (queue.length > 0) {
+
+      const current = queue.shift()
+
+      if (current === null) {
+        result.push(null);
+        continue;
+      }
+
+      result.push(current.left)
+
+    }
 
   }
 
