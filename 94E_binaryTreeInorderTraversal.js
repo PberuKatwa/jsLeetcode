@@ -122,7 +122,7 @@ const tree = new BinaryTree(null);
 tree.buildTree([1, null, 2, 3]);
 
 const tree2 = new BinaryTree(null);
-tree2.buildTree([1, null, 2, 3]);
+tree2.buildTree([1, 2, 3, 4, 5, null, 8, null, null, 6, 7, 9]);
 
 // console.log("treee", tree.printTree());
 console.log("treee", tree.traverseTree());
