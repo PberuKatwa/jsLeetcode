@@ -106,7 +106,7 @@ class BinaryTree{
    */
   traverseTree(node=this.root) {
 
-    if (!this.root) return [];
+    if (node === null) return [];
 
     const left = this.traverseTree(node.left)
     const right = this.traverseTree(node.right)
@@ -120,6 +120,9 @@ class BinaryTree{
 
 const tree = new BinaryTree(null);
 tree.buildTree([1, null, 2, 3]);
+
+const tree2 = new BinaryTree(null);
+tree2.buildTree([1, null, 2, 3]);
 
 // console.log("treee", tree.printTree());
 console.log("treee", tree.traverseTree());
