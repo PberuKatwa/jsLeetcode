@@ -128,6 +128,10 @@ tree.buildTree([1, null, 2, 3]);
 const tree2 = new BinaryTree(null);
 tree2.buildTree([1, 2, 3, 4, 5, null, 8, null, null, 6, 7, 9]);
 
-// console.log("treee", tree.printTree());
-// console.log("treee", tree.traverseTree());
 console.log("treee 2", tree2.traverseTree());
+
+const cases = [
+  { input: [1, null, 2, 3], output: [1, 3, 2] },
+  { input: [1, 2, 3, 4, 5, null, 8, null, null, 6, 7, 9], output: [4,2,6,5,7,1,3,9,8] },
+
+]
