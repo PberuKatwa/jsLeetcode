@@ -133,5 +133,13 @@ console.log("treee 2", tree2.traverseTree());
 const cases = [
   { input: [1, null, 2, 3], output: [1, 3, 2] },
   { input: [1, 2, 3, 4, 5, null, 8, null, null, 6, 7, 9], output: [4,2,6,5,7,1,3,9,8] },
-
 ]
+
+cases.forEach(
+  function ({ input, output }) {
+
+    const binaryTree = new BinaryTree(null)
+    binaryTree.buildTree(input)
+
+  }
+)
