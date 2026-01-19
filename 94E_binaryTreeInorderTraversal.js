@@ -146,6 +146,8 @@ cases.forEach(
 
     if (!isEqual) {
       console.log(`FAILED TEST for INPUT:${input} and EXPECTED:${expected}.`)
+    } else {
+      console.log(`PASSED TEST for INPUT:${input}.`)
     }
 
 
