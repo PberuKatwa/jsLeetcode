@@ -142,8 +142,13 @@ cases.forEach(
     binaryTree.buildTree(input)
 
     const actual = binaryTree.traverseTree()
+    const isEqual = (actual.length === expected.length) && (actual.forEvery((value, index) => (value === expected[index])));
 
-    const isEqual = ( actual.length === expected.length ) &&( actual.forEvery( (value, index) =>() ) )
+    if (!isEqual) {
+      console.log(`FAILED TEST for INPUT:${input} and EXPECTED:${expected}.`)
+    }
+
+
 
   }
 )
