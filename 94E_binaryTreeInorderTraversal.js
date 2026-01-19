@@ -106,7 +106,10 @@ class BinaryTree{
    */
   traverseTree(node=this.root) {
 
-    if (node === null) return [];
+    if (node === null) {
+      console.log("NULLL RETURNING")
+      return [];
+    }
     console.log("were an node start", node.val)
 
     const left = this.traverseTree(node.left)
