@@ -121,6 +121,15 @@ class BinaryTree{
    */
   traverseTreeIterative() {
 
+    // Plan
+    // 1.Check if the root exists in a tree, if not return an empty Array.
+    // 2.Initialize a queue which will hold the order of processing the nodes.
+    // 3.
+
+    if (!this.root) return [];
+
+
+
    }
 
 }
