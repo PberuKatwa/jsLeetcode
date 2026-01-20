@@ -114,8 +114,11 @@ class BinaryTree{
     const right = this.traverseTreeRecursion(node.right)
 
     return [...left, node.val, ...right];
-
   }
+
+  /**
+   * @returns {Array<number>}
+   */
 
 }
 
