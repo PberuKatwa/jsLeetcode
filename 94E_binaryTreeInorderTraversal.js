@@ -119,6 +119,9 @@ class BinaryTree{
   /**
    * @returns {Array<number>}
    */
+  traverseTreeIterative() {
+
+   }
 
 }
 
