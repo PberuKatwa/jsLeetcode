@@ -124,7 +124,14 @@ class BinaryTree{
     // Plan
     // 1.Check if the root exists in a tree, if not return an empty Array.
     // 2.Initialize a queue which will hold the order of processing the nodes.
-    // 3.
+    // 3.Initialize a result array that will store our final result.
+    // 4.Input the root as the first item that will be in the array.
+    // 5.Initialize a while loop that that the exit condition is when the array is empty.
+    // 6.Pop the queue from the left(FIFO) and assign it to a node variable.
+    // 7.Check if the node has a left child, if true append it to the queue and continue the loop(stop execution of remaining lines).
+    // 8.If no left child push the value(node.value) to the result array.
+    // 9.Check if the node has a right child, if they do push the child into the queue.
+    // 10.Once loop terminates return result.
 
     if (!this.root) return [];
 
