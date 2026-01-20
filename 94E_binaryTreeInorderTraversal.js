@@ -104,14 +104,14 @@ class BinaryTree{
    * @param {TreeNode} node
    * @returns Array<number>
    */
-  traverseTree(node=this.root) {
+  traverseTreeRecursion(node=this.root) {
 
     if (node === null) {
       return [];
     }
 
-    const left = this.traverseTree(node.left)
-    const right = this.traverseTree(node.right)
+    const left = this.traverseTreeRecursion(node.left)
+    const right = this.traverseTreeRecursion(node.right)
 
     return [...left, node.val, ...right];
 
@@ -126,7 +126,7 @@ tree.buildTree([1, null, 2, 3]);
 const tree2 = new BinaryTree(null);
 tree2.buildTree([1, 2, 3, 4, 5, null, 8, null, null, 6, 7, 9]);
 
-console.log("treee 2", tree2.traverseTree());
+console.log("treee 2", tree2.traverseTreeRecursion());
 
 const cases = [
   { input: [1, null, 2, 3], expected: [1, 3, 2] },
@@ -139,7 +139,7 @@ cases.forEach(
     const binaryTree = new BinaryTree(null)
     binaryTree.buildTree(input)
 
-    const actual = binaryTree.traverseTree()
+    const actual = binaryTree.traverseTreeRecursion()
     const isEqual = (actual.length === expected.length) && (actual.every((value, index) => (value === expected[index])));
 
     if (!isEqual) {
