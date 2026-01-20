@@ -123,7 +123,7 @@ class BinaryTree{
 
     // Plan
     // 1.Check if the root exists in a tree, if not return an empty Array.
-    // 2.Initialize a queue which will hold the order of processing the nodes.
+    // 2.Initialize a stack which will hold the order of processing the nodes.
     // 3.Initialize a result array that will store our final result.
     // 4.Input the root as the first item that will be in the array.
     // 5.Initialize a while loop that that the exit condition is when the array is empty.
@@ -157,15 +157,6 @@ class BinaryTree{
   }
 
 }
-
-
-const tree = new BinaryTree(null);
-tree.buildTree([1, null, 2, 3]);
-
-const tree2 = new BinaryTree(null);
-tree2.buildTree([1, 2, 3, 4, 5, null, 8, null, null, 6, 7, 9]);
-
-console.log("treee 2", tree2.traverseTreeRecursion());
 
 const cases = [
   { input: [1, null, 2, 3], expected: [1, 3, 2] },
