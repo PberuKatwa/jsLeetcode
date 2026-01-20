@@ -138,22 +138,18 @@ class BinaryTree{
     const stack = [];
     const result = [];
     let current = this.root;
-    stack.push(root)
 
-    while (stack.length > 0) {
+    while ( current !== null || stack.length > 0) {
 
       while (current !== null) {
         stack.push(current);
         current = current.left;
       }
 
-      const node = stack.shift();
-      result.push(node.val)
+      current = stack.pop();
+      result.push(current.val)
 
-      if (current.right !== null) {
-
-      }
-      current = current.right
+      current = current.right;
 
     }
 
