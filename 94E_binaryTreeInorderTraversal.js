@@ -133,9 +133,9 @@ class BinaryTree{
     // 9.Push the current value into the result array ( Since we already reached the last left node and it in order trasversal
     //    (left->val->right) we have our value. )
     // 10.Redeclare the current to be its right child(current.right).
-    // 11.If the right child is null and there are stack is
-    //
-
+    // 11.If the right child is null and the stack is not empty it skips loop 2 and pops and begins processing that node.
+    // 12.If the right child is not null, we enter loop 2 and go deep left until null.
+    // 13.Once the current node is null and stack is empty return the result array.
 
     if (!this.root) return [];
 
@@ -152,9 +152,7 @@ class BinaryTree{
 
       current = stack.pop();
       result.push(current.val)
-
       current = current.right;
-
     }
 
     return result
