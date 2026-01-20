@@ -182,11 +182,13 @@ cases.forEach(
     const binaryTree = new BinaryTree(null)
     binaryTree.buildTree(input)
 
-    const actual = binaryTree.traverseTreeRecursion()
+    // const actual = binaryTree.traverseTreeRecursion()
+    const actual = binaryTree.traverseTreeIterative()
+
     const isEqual = (actual.length === expected.length) && (actual.every((value, index) => (value === expected[index])));
 
     if (!isEqual) {
-      console.log(`FAILED TEST for INPUT:${input} and EXPECTED:${expected}.`)
+      console.log(`FAILED TEST for INPUT:${input} and ACTUAL:${actual} but EXPECTED:${expected}.`)
     } else {
       console.log(`PASSED TEST for INPUT:${input}.`)
     }
