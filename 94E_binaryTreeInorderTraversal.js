@@ -140,9 +140,12 @@ class BinaryTree{
     const root = this.root;
     queue.push(root)
 
+    while (queue.length > 0) {
 
+    }
 
-   }
+    return result
+  }
 
 }
 
