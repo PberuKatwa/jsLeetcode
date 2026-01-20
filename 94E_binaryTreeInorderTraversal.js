@@ -45,25 +45,29 @@ class BinaryTree{
     let index = 0;
     this.root = new TreeNode(input[0]);
     const root = this.root;
-    const queue = [root]
+    const stack = [root]
 
     index += 1;
 
-    while (queue.length > 0) {
+    while (stack.length > 0) {
 
-      const parent = queue.shift();
+      while (current !== null) {
+        stack.push(current);
+      }
+
+      const parent = stack.shift();
 
       const left = input[index] ? input[index] : null;
       const right = input[index + 1] ? input[index + 1] : null;
 
       if (left) {
         parent.left = new TreeNode(left);
-        queue.push(parent.left);
+        stack.push(parent.left);
       }
 
       if (right) {
         parent.right = new TreeNode(right);
-        queue.push(parent.right);
+        stack.push(parent.right);
       }
 
       index += 2;
@@ -135,24 +139,25 @@ class BinaryTree{
 
     if (!this.root) return [];
 
-    const queue = [];
+    const stack = [];
     const result = [];
     const root = this.root;
-    queue.push(root)
+    stack.push(root)
 
-    while (queue.length > 0) {
+    while (stack.length > 0) {
 
-      const current = queue.shift();
+      const current = stack.shift();
 
+      console.log("currenttt", current.val, "my queee", stack)
       if (current.left !== null) {
-        queue.push(current.left);
-        continue
+        stack.push(current.left);
+        // continue
       }
 
       result.push(current.val)
 
       if (current.right !== null) {
-        queue.push(current.right)
+        stack.push(current.right)
       }
 
     }
