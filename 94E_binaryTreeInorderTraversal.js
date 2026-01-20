@@ -135,6 +135,11 @@ class BinaryTree{
 
     if (!this.root) return [];
 
+    const queue = [];
+    const result = [];
+    const root = this.root;
+    queue.push(root)
+
 
 
    }
