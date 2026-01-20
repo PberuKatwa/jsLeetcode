@@ -125,13 +125,17 @@ class BinaryTree{
     // 1.Check if the root exists in a tree, if not return an empty Array.
     // 2.Initialize a stack which will hold the order of processing the nodes.
     // 3.Initialize a result array that will store our final result.
-    // 4.Input the root as the first item that will be in the array.
-    // 5.Initialize a while loop that that the exit condition is when the array is empty.
-    // 6.Pop the queue from the left(FIFO) and assign it to a node variable.
-    // 7.Check if the node has a left child, if true append it to the queue and continue the loop(stop execution of remaining lines).
-    // 8.If no left child push the value(node.value) to the result array.
-    // 9.Check if the node has a right child, if they do push the child into the queue.
-    // 10.Once loop terminates return result.
+    // 4.Create a variable(current) that can be redeclared storing the root(let current = this.root).
+    // 5.Initialize a while loop(loop 1) with the exit condition being if current is null or the stack is empty.
+    // 6.Initialize a while loop(loop 2) within loop 1 with the exit condition this time being current being equal to none
+    // 7.In Loop 2 push the current node into the stack and redeclare the current with the left node(go as deep left until null).
+    // 8.If the loop exits redeclare current to be the last item pushed into the stack( stack.pop() ).
+    // 9.Push the current value into the result array ( Since we already reached the last left node and it in order trasversal
+    //    (left->val->right) we have our value. )
+    // 10.Redeclare the current to be its right child(current.right).
+    // 11.If the right child is null and there are stack is
+    //
+
 
     if (!this.root) return [];
 
