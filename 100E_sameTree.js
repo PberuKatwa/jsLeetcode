@@ -147,3 +147,19 @@ cases = [
   { p: [1, 2], q: [1, null, 2], expected: false },
   { p: [1,2,1], q:[1,1,2], expected:false }
 ]
+
+cases.forEach(
+  ({ p, q, expected }) => {
+
+    const tree1 = new BinaryTree();
+    tree1.buildTree(p);
+
+    const tree2 = new BinaryTree();
+    tree2.buildTree(q);
+
+    const actual = BinaryTree.sameTree(tree1, tree2);
+
+
+
+  }
+)
