@@ -159,7 +159,11 @@ cases.forEach(
 
     const actual = BinaryTree.sameTree(tree1, tree2);
 
-
+    if (actual === expected) {
+      console.log(`FAILED TEST for input P:${p} and Q:${q} with ACTUAL:${actual} but EXPECTED:${expected}`)
+    } else {
+      console.log(`SUCCESS TEST for input P:${p} and Q:${q} with EXPECTED:${expected}`)
+    }
 
   }
 )
