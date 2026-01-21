@@ -101,6 +101,18 @@ class BinaryTree{
     return result;
   }
 
+  /**
+   *
+   * @param {TreeNode} p
+   * @param {TreeNode} q
+   */
+  static sameTree(p, q) {
+
+    if (!p) return false;
+    if (!q) return false;
+
+  }
+
 }
 
 const tree = new BinaryTree();
