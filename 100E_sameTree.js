@@ -42,6 +42,22 @@ class BinaryTree{
    * @param { Array<number> } nums;
    * @returns { BinaryTree };
    */
-  buildTree(nums){}
+  buildTree(nums) {
+
+    if (!nums) return this.root;
+
+    const root = this.root;
+    let index = 0;
+    const queue = [];
+    queue.push(root)
+    index += 1;
+
+    while (queue.length > 0) {
+
+
+
+    }
+
+  }
 
 }
