@@ -30,10 +30,18 @@ class TreeNode{
 
 class BinaryTree{
 
+  /**
+   *
+   * @param {TreeNode | null} root
+   */
   constructor(root) {
     this.root = root;
   }
 
-
+  /**
+   * @param { Array<number> } nums;
+   * @returns { BinaryTree };
+   */
+  buildTree(nums){}
 
 }
