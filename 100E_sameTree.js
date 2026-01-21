@@ -132,4 +132,19 @@ tree2.buildTree([1,2,3])
 // Example 1:
 // Input: p = [1,2,3], q = [1,2,3]
 // Output: true
-console.log("sameee", BinaryTree.sameTree(tree.root,tree2.root))
+console.log("sameee", BinaryTree.sameTree(tree.root, tree2.root))
+
+// Example 2:
+// Input: p = [1,2], q = [1,null,2]
+// Output: false
+
+// Example 3:
+// Input: p = [1,2,1], q = [1,1,2]
+// Output: false
+
+cases = [
+  { p: [1,2,3], q:[1,2,3], expected: true },
+  { p: [1, 2], q: [1, null, 2], expected: false },
+  { p: [1,2,1], q:[1,1,2], expected:false }
+
+]
