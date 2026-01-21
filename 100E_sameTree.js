@@ -16,7 +16,6 @@
 // Constraints:
 // The number of nodes in both trees is in the range [0, 100].
 // -104 <= Node.val <= 104
-//
 
 class TreeNode{
 
@@ -106,3 +105,8 @@ class BinaryTree{
   }
 
 }
+
+const tree = BinaryTree();
+tree.buildTree([1, 2, 3, 4, 5, null, 8, null, null, 6, 7, 9])
+
+console.log("treee", tree.printTree() )
