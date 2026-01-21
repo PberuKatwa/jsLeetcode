@@ -76,4 +76,13 @@ class BinaryTree{
 
   }
 
+  /**
+   * @returns {Array<number>}
+   */
+  printTree(){
+
+    if (this.root) return [];
+
+  }
+
 }
