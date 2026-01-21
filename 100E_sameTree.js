@@ -108,14 +108,28 @@ class BinaryTree{
    */
   static sameTree(p, q) {
 
-    if (!p) return false;
-    if (!q) return false;
+    if (!p && !q) return true;
+    if (!p && q) return false;
+    if (!q && p) return false;
+
+    console.log("ppp", p.value,"qqqq", q.value )
+    return (
+      (p.value === q.value) &&
+      ( this.sameTree(p.left, q.left) ) &&
+      ( this.sameTree(p.right, q.right) )
+    )
 
   }
 
 }
 
 const tree = new BinaryTree();
-tree.buildTree([1, 2, 3, 4, 5, null, 8, null, null, 6, 7, 9])
+tree.buildTree([1,2,3])
 
-console.log("treee", tree.printTree() )
+const tree2 = new BinaryTree();
+tree2.buildTree([1,2,3])
+
+// Example 1:
+// Input: p = [1,2,3], q = [1,2,3]
+// Output: true
+console.log("sameee", BinaryTree.sameTree(tree.root,tree2.root))
