@@ -143,15 +143,18 @@ class BinaryTree{
       if (valP.left && valQ.left) {
         stackP.push(valP.left)
         stackQ.push(valQ.left)
-      } else {
+      } else if (!valP.right && !valQ.right) {
+        console.log("noone")
+      }  else {
         return false
       }
+
 
       if (valP.right && valQ.right) {
         stackP.push(valP.right)
         stackQ.push(valQ.right)
       } else if(!valP.right && !valQ.right) {
-        return true
+        console.log("noone")
       } else {
         return false
       }
