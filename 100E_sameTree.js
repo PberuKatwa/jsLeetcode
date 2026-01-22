@@ -138,6 +138,8 @@ class BinaryTree{
       const valP = stackP.pop()
       const valQ = stackQ.pop()
 
+      if (valP.value !== valQ.value) return false;
+
     }
 
     return true
