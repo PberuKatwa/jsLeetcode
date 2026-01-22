@@ -131,9 +131,12 @@ class BinaryTree{
     if (p && !q) return false;
 
     const stackP = [p]
-    const stackQ = []
+    const stackQ = [q]
 
-    while ( stackP.length !== 0 || stackQ.length !==0  ) {
+    while ( stackP.length !== 0 || stackQ.length !==0   ) {
+
+      const valP = stackP.pop()
+      const valQ = stackQ.pop()
 
     }
 
