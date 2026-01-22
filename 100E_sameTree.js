@@ -173,8 +173,7 @@ class BinaryTree{
     if (!p && q) return false;
     if (p && !q) return false;
 
-    const queueP = [p]
-    const queueQ = [q]
+    const queue = [[p, q]];
 
     while ( queueP.length !== 0 || queueQ.length !==0   ) {
 
