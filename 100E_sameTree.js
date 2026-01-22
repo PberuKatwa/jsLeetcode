@@ -125,6 +125,10 @@ class BinaryTree{
    */
   static sameTreeIterative(p, q) {
 
+    if (!p && !q) return true;
+
+
+
   }
 
 }
