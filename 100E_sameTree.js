@@ -140,6 +140,8 @@ class BinaryTree{
 
       if (valP.value !== valQ.value) return false;
 
+      if( ( valP.left !== null ) )
+
     }
 
     return true
