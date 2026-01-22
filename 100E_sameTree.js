@@ -163,6 +163,49 @@ class BinaryTree{
     return true
   }
 
+  /**
+   *@param {TreeNode} p
+   *@param {TreeNode} q
+   */
+  static sameTreeIterativeClean(p, q) {
+
+    if (!p && !q) return true;
+    if (!p && q) return false;
+    if (p && !q) return false;
+
+    const queueP = [p]
+    const queueQ = [q]
+
+    while ( queueP.length !== 0 || queueQ.length !==0   ) {
+
+      const valP = queueP.pop()
+      const valQ = queueQ.pop()
+
+      if (valP.value !== valQ.value) return false;
+
+      if (valP.left && valQ.left) {
+        queueP.push(valP.left)
+        queueQ.push(valQ.left)
+      } else if (!valP.left && !valQ.left) {
+        console.log("noone")
+      }  else {
+        return false
+      }
+
+
+      if (valP.right && valQ.right) {
+        queueP.push(valP.right)
+        queueQ.push(valQ.right)
+      } else if(!valP.right && !valQ.right) {
+        console.log("noone")
+      } else {
+        return false
+      }
+    }
+
+    return true
+  }
+
 }
 
 cases = [
