@@ -179,7 +179,8 @@ class BinaryTree{
 
       const [nodeP, nodeQ] = queue.pop();
 
-      if (!nodeP && !nodeQ) return false;
+      if (!nodeP && !nodeQ) continue;
+      if (!nodeP || !nodeQ) return false;
 
       const valP = queueP.pop()
       const valQ = queueQ.pop()
