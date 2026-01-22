@@ -120,7 +120,8 @@ class BinaryTree{
   }
 
   /**
-   *
+   *@param {Treenode} p
+   *@param {TreeNode} q
    */
 
 }
