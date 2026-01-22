@@ -145,6 +145,11 @@ class BinaryTree{
         stackQ.push(valQ.left)
       }
 
+      if (valP.right && valQ.right) {
+        stackP.push(valP.right)
+        stackQ.push(valQ.right)
+      }
+
     }
 
     return true
