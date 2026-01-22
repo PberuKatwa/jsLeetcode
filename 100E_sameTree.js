@@ -105,6 +105,7 @@ class BinaryTree{
    *
    * @param {TreeNode} p
    * @param {TreeNode} q
+   * @returns {boolean}
    */
   static sameTree(p, q) {
 
@@ -129,13 +130,13 @@ class BinaryTree{
     if (!p && q) return false;
     if (p && !q) return false;
 
-    const stack = []
+    const stackA = []
 
     while ( p === null && q !== null ) {
 
     }
 
-
+    return true
   }
 
 }
