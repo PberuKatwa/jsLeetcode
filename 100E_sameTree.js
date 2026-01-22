@@ -130,19 +130,19 @@ class BinaryTree{
     if (!p && q) return false;
     if (p && !q) return false;
 
-    const stackP = [p]
-    const stackQ = [q]
+    const queueP = [p]
+    const queueQ = [q]
 
-    while ( stackP.length !== 0 || stackQ.length !==0   ) {
+    while ( queueP.length !== 0 || queueQ.length !==0   ) {
 
-      const valP = stackP.pop()
-      const valQ = stackQ.pop()
+      const valP = queueP.pop()
+      const valQ = queueQ.pop()
 
       if (valP.value !== valQ.value) return false;
 
       if (valP.left && valQ.left) {
-        stackP.push(valP.left)
-        stackQ.push(valQ.left)
+        queueP.push(valP.left)
+        queueQ.push(valQ.left)
       } else if (!valP.right && !valQ.right) {
         console.log("noone")
       }  else {
@@ -151,8 +151,8 @@ class BinaryTree{
 
 
       if (valP.right && valQ.right) {
-        stackP.push(valP.right)
-        stackQ.push(valQ.right)
+        queueP.push(valP.right)
+        queueQ.push(valQ.right)
       } else if(!valP.right && !valQ.right) {
         console.log("noone")
       } else {
