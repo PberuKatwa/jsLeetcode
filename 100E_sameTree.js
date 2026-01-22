@@ -184,10 +184,9 @@ class BinaryTree{
 
       if (nodeP.value !== nodeQ.value) return false;
 
-
-
+      queue.push([nodeP.left, nodeQ.left]);
+      queue.push([nodeP.right, nodeQ.right]);
     }
-
     return true
   }
 
@@ -209,7 +208,8 @@ cases.forEach(
     tree2.buildTree(q);
 
     // const actual = BinaryTree.sameTree(tree1.root, tree2.root);
-    const actual = BinaryTree.sameTreeIterative(tree1.root, tree2.root);
+    // const actual = BinaryTree.sameTreeIterative(tree1.root, tree2.root);
+    const actual = BinaryTree.sameTreeIterativeClean(tree1.root, tree2.root);
 
     if (actual !== expected) {
       console.log(`FAILED TEST for input P:${p} and Q:${q} with ACTUAL:${actual} but EXPECTED:${expected}`)
