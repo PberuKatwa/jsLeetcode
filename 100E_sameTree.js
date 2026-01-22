@@ -129,6 +129,12 @@ class BinaryTree{
     if (!p && q) return false;
     if (p && !q) return false;
 
+    const stack = []
+
+    while ( p === null && q !== null ) {
+
+    }
+
 
   }
 
