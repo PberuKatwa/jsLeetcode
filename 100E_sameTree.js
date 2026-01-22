@@ -127,6 +127,7 @@ class BinaryTree{
 
     if (!p && !q) return true;
     if (!p && q) return false;
+    if (p && !q) return false;
 
 
   }
