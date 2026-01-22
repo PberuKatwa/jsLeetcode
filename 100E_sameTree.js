@@ -182,29 +182,10 @@ class BinaryTree{
       if (!nodeP && !nodeQ) continue;
       if (!nodeP || !nodeQ) return false;
 
-      const valP = queueP.pop()
-      const valQ = queueQ.pop()
-
-      if (valP.value !== valQ.value) return false;
-
-      if (valP.left && valQ.left) {
-        queueP.push(valP.left)
-        queueQ.push(valQ.left)
-      } else if (!valP.left && !valQ.left) {
-        console.log("noone")
-      }  else {
-        return false
-      }
+      if (nodeP.value !== nodeQ.value) return false;
 
 
-      if (valP.right && valQ.right) {
-        queueP.push(valP.right)
-        queueQ.push(valQ.right)
-      } else if(!valP.right && !valQ.right) {
-        console.log("noone")
-      } else {
-        return false
-      }
+
     }
 
     return true
