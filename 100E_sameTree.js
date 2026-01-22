@@ -158,7 +158,6 @@ class BinaryTree{
       } else {
         return false
       }
-
     }
 
     return true
