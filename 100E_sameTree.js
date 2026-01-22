@@ -179,7 +179,9 @@ cases.forEach(
 
     const tree2 = new BinaryTree();
     tree2.buildTree(q);
-    const actual = BinaryTree.sameTree(tree1.root, tree2.root);
+
+    // const actual = BinaryTree.sameTree(tree1.root, tree2.root);
+    const actual = BinaryTree.sameTreeIterative(tree1.root, tree2.root);
 
     if (actual !== expected) {
       console.log(`FAILED TEST for input P:${p} and Q:${q} with ACTUAL:${actual} but EXPECTED:${expected}`)
