@@ -117,7 +117,6 @@ class BinaryTree{
       ( this.sameTree(p.left, q.left) ) &&
       ( this.sameTree(p.right, q.right) )
     )
-
   }
 
 }
