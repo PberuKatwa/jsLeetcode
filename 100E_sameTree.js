@@ -130,9 +130,10 @@ class BinaryTree{
     if (!p && q) return false;
     if (p && !q) return false;
 
-    const stackA = []
+    const stackP = [p]
+    const stackQ = []
 
-    while ( p === null && q !== null ) {
+    while ( stackP.length !== 0 || stackQ.length !==0  ) {
 
     }
 
