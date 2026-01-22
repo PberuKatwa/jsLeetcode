@@ -181,7 +181,6 @@ class BinaryTree{
 
       if (!nodeP && !nodeQ) continue;
       if (!nodeP || !nodeQ) return false;
-
       if (nodeP.value !== nodeQ.value) return false;
 
       queue.push([nodeP.left, nodeQ.left]);
