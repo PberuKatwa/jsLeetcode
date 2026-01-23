@@ -127,10 +127,12 @@ casesBuild.forEach(
     tree.buildTree(input);
     const actual = tree.printTree();
 
-    const isMatch = (actual.length === expected.length) && (actual.every((value, index) => { value === expected[index] }))
+    const isMatch = (actual.length === expected.length) && (actual.every((value, index) => { value === expected[index] }));
 
     if (!isMatch) {
-      cons
+      console.log(`FAILED TEST for INPUT ${input} with EXPECTED:${expected} but ACTUAL:${actual}`)
+    } else {
+      console.log(`SUCCESS TEST for INPUT ${input} with EXPECTED:${expected}.`)
     }
 
 
