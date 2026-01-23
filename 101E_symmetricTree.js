@@ -71,6 +71,10 @@ class BinaryTree{
       const left = input[index] ? input[index] : null;
       const right = input[index + 1] ? input[index + 1] : null;
 
+      if (left) {
+        parent.left = new TreeNode(left);
+      }
+
 
     }
     return root;
