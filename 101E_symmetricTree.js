@@ -110,3 +110,10 @@ class BinaryTree{
   }
 
 }
+
+const casesBuild = [
+
+]
+
+const tree = BinaryTree();
+tree.buildTree()
