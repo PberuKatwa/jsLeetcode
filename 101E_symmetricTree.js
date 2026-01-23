@@ -35,6 +35,18 @@ class BinaryTree{
   buildTree(input) {
 
     //Plan
+    // 1.Check if the input array is empty if so return the root.
+    // 2.Create redeclarable variable for the current index of the array (let index = 0).
+    // 3.Assign the first item in the input array as the root and increment the index by 1.
+    // 4.Create a variable called root to hold the current root(const root = this.root).
+    // 5.Create a queue with the initial item being the root(const queue = [root]).
+    // 6.Initialize a while loop with the exit condition being the queue being empty.
+    // 7.Extract the first item in the queue(const parent = queue.shift() ) and assign it to a variable named variable.
+    // 8.Assign the apparent left child by assigning the value at the current index in the input array(input[index]),if its
+    //    null then assign null as the left child.
+    // 9.Assign the apparent right child by assigning the value at the current index + 1 in the input array(input[index + 1]),if its
+    //    null then assign null as the right child.
+    //
     if (!input) return this.root;
   }
 
