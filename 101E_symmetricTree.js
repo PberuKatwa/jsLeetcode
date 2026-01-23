@@ -91,9 +91,12 @@ class BinaryTree{
     if (!this.root) return [];
     const root = this.root;
     const queue = [root];
+    const result = [];
 
-    while(queue.length > 0){}
+    while (queue.length > 0) {
 
+    }
+    return result;
   }
 
 }
