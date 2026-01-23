@@ -13,3 +13,9 @@
 // -100 <= Node.val <= 100
 
 // Follow up: Could you solve it both recursively and iteratively?
+
+class TreeNode{
+  constructor() {
+
+  }
+}
