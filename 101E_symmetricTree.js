@@ -56,6 +56,7 @@ class BinaryTree{
     // 11.We then check if the right child is not null.If its null we skip if not we assign it as the right child of the parent(parent.right = right).
     //    After assigning we add the right child to the queue to be processed in another loop cycle.
     // 12.The last action in the loop is incrementing the index by 2 (index += 2) since were done with this level.
+    // 13.Once the while loop exits return root, the root of the tree.
     //
     if (!input) return this.root;
   }
