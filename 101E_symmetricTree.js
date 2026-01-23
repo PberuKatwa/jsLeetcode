@@ -28,4 +28,11 @@ class BinaryTree{
     this.root = null;
   }
 
+  /**
+   * @param {Array<number>}
+   */
+  buildTree() {
+
+  }
+
 }
