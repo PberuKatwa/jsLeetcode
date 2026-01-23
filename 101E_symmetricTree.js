@@ -86,6 +86,10 @@ class BinaryTree{
     return root;
   }
 
+  /**
+   *
+   * @returns {Array<number>}
+   */
   printTree() {
 
     if (!this.root) return [];
@@ -118,6 +122,12 @@ const casesBuild = [
 
 casesBuild.forEach(
   function ({ input, expected }) {
+
+    const tree = BinaryTree();
+    tree.buildTree(input);
+    const actual = tree.printTree();
+
+    const isMatch = actual.every()
 
 
 
