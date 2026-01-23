@@ -86,4 +86,14 @@ class BinaryTree{
     return root;
   }
 
+  printTree() {
+
+    if (!this.root) return [];
+    const root = this.root;
+    const queue = [root];
+
+    while(queue.length > 0){}
+
+  }
+
 }
