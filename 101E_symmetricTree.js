@@ -134,8 +134,5 @@ casesBuild.forEach(
     } else {
       console.log(`SUCCESS TEST for INPUT ${input} with EXPECTED:${expected}.`)
     }
-
-
-
   }
 )
