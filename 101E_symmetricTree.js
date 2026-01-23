@@ -29,9 +29,10 @@ class BinaryTree{
   }
 
   /**
-   * @param {Array<number>}
+   * @param {Array<number>} input
+   *
    */
-  buildTree() {
+  buildTree(input) {
 
   }
 
