@@ -17,8 +17,8 @@
 class TreeNode{
   constructor(val) {
     this.val = val;
-    this.left = left;
-    this.right = right;
+    this.left = null;
+    this.right = null;
   }
 }
 
