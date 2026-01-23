@@ -23,5 +23,9 @@ class TreeNode{
 }
 
 class BinaryTree{
-  constructor(){}
+
+  constructor() {
+    this.root = null;
+  }
+
 }
