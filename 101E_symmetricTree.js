@@ -60,7 +60,7 @@ class BinaryTree{
 
     if (!input) return this.root;
     let index = 0;
-    this.root = input[index];
+    this.root = new TreeNode (input[index]);
     const root = this.root;
     const queue = [root];
     index++;
@@ -123,7 +123,7 @@ const casesBuild = [
 casesBuild.forEach(
   function ({ input, expected }) {
 
-    const tree = BinaryTree();
+    const tree =new  BinaryTree();
     tree.buildTree(input);
     const actual = tree.printTree();
 
