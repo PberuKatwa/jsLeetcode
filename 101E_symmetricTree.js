@@ -68,6 +68,8 @@ class BinaryTree{
     while (queue.length > 0) {
 
       const parent = queue.shift();
+      const left = input[index] ? input[index] : null;
+      const right = input[index + 1] ? input[index + 1] : null;
 
 
     }
