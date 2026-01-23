@@ -34,6 +34,8 @@ class BinaryTree{
    */
   buildTree(input) {
 
+    //Plan
+    if (!input) return this.root;
   }
 
 }
