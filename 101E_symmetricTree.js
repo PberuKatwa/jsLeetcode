@@ -73,6 +73,7 @@ class BinaryTree{
 
       if (left) {
         parent.left = new TreeNode(left);
+        queue.push(parent.left)
       }
 
 
