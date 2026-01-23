@@ -117,5 +117,9 @@ const casesBuild = [
 ]
 
 casesBuild.forEach(
+  function ({ input, expected }) {
 
+
+
+  }
 )
