@@ -127,7 +127,11 @@ casesBuild.forEach(
     tree.buildTree(input);
     const actual = tree.printTree();
 
-    const isMatch = actual.every()
+    const isMatch = (actual.length === expected.length) && (actual.every((value, index) => { value === expected[index] }))
+
+    if (!isMatch) {
+      cons
+    }
 
 
 
