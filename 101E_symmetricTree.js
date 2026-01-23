@@ -57,8 +57,12 @@ class BinaryTree{
     //    After assigning we add the right child to the queue to be processed in another loop cycle.
     // 12.The last action in the loop is incrementing the index by 2 (index += 2) since were done with this level.
     // 13.Once the while loop exits return root, the root of the tree.
-    //
+
     if (!input) return this.root;
+    let index = 0;
+    this.root = input[index];
+    const root = this.root;
+
   }
 
 }
