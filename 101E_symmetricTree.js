@@ -96,10 +96,12 @@ class BinaryTree{
     while (queue.length > 0) {
 
       const parent = queue.shift();
+
       if (parent === null) {
         result.push(null);
         continue;
       }
+
       result.push(parent.val);
       queue.push(parent.left);
       queue.push(parent.right)
