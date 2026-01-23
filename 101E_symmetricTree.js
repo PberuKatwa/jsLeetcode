@@ -15,7 +15,7 @@
 // Follow up: Could you solve it both recursively and iteratively?
 
 class TreeNode{
-  constructor() {
-
+  constructor(val) {
+    this.val
   }
 }
