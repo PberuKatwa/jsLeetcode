@@ -62,6 +62,8 @@ class BinaryTree{
     let index = 0;
     this.root = input[index];
     const root = this.root;
+    const queue = [root];
+    index ++;
 
   }
 
