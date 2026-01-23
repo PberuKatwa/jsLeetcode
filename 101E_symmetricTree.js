@@ -116,5 +116,6 @@ const casesBuild = [
   { input:[1,2,2,null,3,null,3], expected:[1,2,2,null,3,null,3] },
 ]
 
-const tree = BinaryTree();
-tree.buildTree()
+casesBuild.forEach(
+
+)
