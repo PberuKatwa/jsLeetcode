@@ -114,12 +114,19 @@ class BinaryTree{
   }
 
   /**
+   * @param {TreeNode} node1
+   * @param {TreeNode} node2
    * @returns {boolean}
    */
-  isSymmetricRecursive() {
+  isSymmetricRecursive( node1, node2 ) {
 
     // Plan
-    //
+    // 1. Check if the root is null, if so return true.
+    // 2. Check if there is no right child and left child(if !parent.left && !parent.right ),if so return true.
+    // 3. Check if either left or right child is absent, if eiher is absent return false.
+    // 4. Do a recursive check by fulfilling 3 chained conditions.
+    // 5. Condition 1 which is the left child value is equal to the right child value.
+    // 6. Condition 2 which is the left child
 
   }
 
