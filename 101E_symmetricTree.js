@@ -136,11 +136,8 @@ class BinaryTree{
     // 10. The recursive function will return true if its symmetric and false otherwise.
 
     if (node1 === value && node2 === value) {
-
-      if (!this.root) {
-
-      }
-
+      if (!this.root) return true;
+      return (this.isSymmetricRecursive(this.root.left, this.root.right));
     }
 
   }
