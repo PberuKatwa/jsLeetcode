@@ -179,3 +179,13 @@ const cases = [
   { input: [1, 2, 2, 3, 4, 4, 3], expected: true },
   { input:[1,2,2,null,3,null,3], expected:false }
 ]
+
+cases.forEach(
+  ({ input, expected }) => {
+
+    const tree = BinaryTree();
+    tree.buildTree(input);
+    const actual = tree.isSymmetricRecursive();
+
+ }
+)
