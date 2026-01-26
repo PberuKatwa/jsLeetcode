@@ -189,6 +189,8 @@ cases.forEach(
 
     if (actual !== expected) {
       console.log(`FAILED TEST for INPUT:${input} with ACTUAL:${actual} but EXPECTED:${expected}`)
+    } else {
+      console.log(`SUCCESS TEST for INPUT:${input} with EXPECTED:${expected}`)
     }
 
  }
