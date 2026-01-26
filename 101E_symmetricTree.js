@@ -122,6 +122,11 @@ class BinaryTree{
 
     // Plan
     // 1. Check if there both no right child and left child(if !parent.left && !parent.right ).
+    // 2. If both are null check if there is a root node for the tree.
+    // 3. If the root is not null, return the same function with the root assigning the right and left child
+    //    ( return isSymmetricRecursive(root.left,root.right) ).
+    // 4. If the root is also null return false.
+    // 5. Check if either left or right child is absent, if either is absent return false.
     //
     //
     // 1. Cheeck if the root is null, if so return true.
