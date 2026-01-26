@@ -113,6 +113,13 @@ class BinaryTree{
     return result;
   }
 
+  /**
+   * @returns {boolean}
+   */
+  isSymmetricRecursive() {
+
+  }
+
 }
 
 const casesBuild = [
