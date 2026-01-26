@@ -125,7 +125,7 @@ class BinaryTree{
     // 2. If both are null check if there is a root node for the tree.
     // 3. If the root is not null, return the same function with the root assigning the nodes with its children
     //    ( return isSymmetricRecursive(root.left,root.right) ).
-    // 4. If the root is also null return false.
+    // 4. If the root is also null return true.
     // 5. Check if either node1 or node2 is absent, if either is absent return false.
     // 6. Do a recursive check by fulfilling 3 chained conditions.
     // 7. Condition 1 which is the node1 value is equal to the node2 value( node1.val === node2.val ).
