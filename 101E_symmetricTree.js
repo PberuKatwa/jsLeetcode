@@ -121,7 +121,7 @@ class BinaryTree{
   isSymmetricRecursive( node1, node2 ) {
 
     // Plan
-    // 1. Check if the root is null, if so return true.
+    // 1. Cheeck if the root is null, if so return true.
     // 2. Check if there is no right child and left child(if !parent.left && !parent.right ),if so return true.
     // 3. Check if either left or right child is absent, if eiher is absent return false.
     // 4. Do a recursive check by fulfilling 3 chained conditions.
