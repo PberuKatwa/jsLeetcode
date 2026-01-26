@@ -118,7 +118,8 @@ class BinaryTree{
    */
   isSymmetricRecursive() {
 
-
+    // Plan
+    //
 
   }
 
