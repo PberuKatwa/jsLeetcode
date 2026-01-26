@@ -128,8 +128,11 @@ class BinaryTree{
     // 4. If the root is also null return false.
     // 5. Check if either node1 or node2 is absent, if either is absent return false.
     // 6. Do a recursive check by fulfilling 3 chained conditions.
-    // 7. Condition 1 which is the node1 value is equal to the node2 value( node1 === node1 ).
-    // 8. Condition 2 which is recursive function with the parameters the left childs left child
+    // 7. Condition 1 which is the node1 value is equal to the node2 value( node1.val === node2.val ).
+    // 8. Condition 2 which is recursive function with the parameters the node1 left child and node2 right child
+    //    ( isSymmetricRecursive( node1.left, node2.right )  ).
+    // 9. Condition 3 which is recursive function with the parameters the node1 right child and node2 left child
+    //    ( isSymmetricRecursive( node1.left, node2.right )  ).
 
   }
 
