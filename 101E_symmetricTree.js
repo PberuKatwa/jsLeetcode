@@ -140,11 +140,10 @@ class BinaryTree{
     //   return (this.isSymmetricRecursive( this.root.left, this.root.right));
     // }
 
-    if (!node1 && node2) return true;
+    if (!node1 && !node2) return true;
     if (!node1) return false;
     if (!node2) return false;
 
-    console.log("helloooo", node1.val, node2.val)
     return (
       ( node1.val === node2.val ) &&
       ( this.isSymmetricRecursive( node1.left, node2.right ) ) &&
