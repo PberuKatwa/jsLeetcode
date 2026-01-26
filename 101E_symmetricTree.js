@@ -133,6 +133,7 @@ class BinaryTree{
     //    ( isSymmetricRecursive( node1.left, node2.right )  ).
     // 9. Condition 3 which is recursive function with the parameters the node1 right child and node2 left child
     //    ( isSymmetricRecursive( node1.left, node2.right )  ).
+    // 10. The recursive function will return true if its symmetric and false otherwise.
 
   }
 
