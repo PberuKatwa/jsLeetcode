@@ -142,6 +142,12 @@ class BinaryTree{
 
     if (node1 === null || node2 === null) return true;
 
+    return (
+      node1.value === node2.value &&
+      this.isSymmetricRecursive( node1.left, node2.right ) &&
+      this.isSymmetricRecursive( node1.right , node2.left )
+    )
+
   }
 
 }
