@@ -142,7 +142,6 @@ class BinaryTree{
       return (this.isSymmetricRecursive( root.left, root.right));
     }
 
-    console.log("we skippped")
     if (node1 === null || node2 === null) return true;
 
     return (
