@@ -173,3 +173,9 @@ class BinaryTree{
 //     }
 //   }
 // )
+//
+
+const cases = [
+  { input: [1, 2, 2, 3, 4, 4, 3], expected: true },
+  { input:[1,2,2,null,3,null,3], expected:false }
+]
