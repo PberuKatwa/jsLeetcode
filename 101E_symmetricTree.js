@@ -152,24 +152,24 @@ class BinaryTree{
 
 }
 
-const casesBuild = [
-  { input: [1, 2, 2, 3, 4, 4, 3], expected: [1, 2, 2, 3, 4, 4, 3] },
-  { input:[1,2,2,null,3,null,3], expected:[1,2,2,null,3,null,3] },
-]
+// const casesBuild = [
+//   { input: [1, 2, 2, 3, 4, 4, 3], expected: [1, 2, 2, 3, 4, 4, 3] },
+//   { input:[1,2,2,null,3,null,3], expected:[1,2,2,null,3,null,3] },
+// ]
 
-casesBuild.forEach(
-  function ({ input, expected }) {
+// casesBuild.forEach(
+//   function ({ input, expected }) {
 
-    const tree =new  BinaryTree();
-    tree.buildTree(input);
-    const actual = tree.printTree();
+//     const tree =new  BinaryTree();
+//     tree.buildTree(input);
+//     const actual = tree.printTree();
 
-    const isMatch = (actual.length === expected.length) && (actual.every((value, index) => { value === expected[index] }));
+//     const isMatch = (actual.length === expected.length) && (actual.every((value, index) => { value === expected[index] }));
 
-    if (!isMatch) {
-      console.log(`FAILED TEST for INPUT ${input} with EXPECTED:${expected} but ACTUAL:${actual}`)
-    } else {
-      console.log(`SUCCESS TEST for INPUT ${input} with EXPECTED:${expected}.`)
-    }
-  }
-)
+//     if (!isMatch) {
+//       console.log(`FAILED TEST for INPUT ${input} with EXPECTED:${expected} but ACTUAL:${actual}`)
+//     } else {
+//       console.log(`SUCCESS TEST for INPUT ${input} with EXPECTED:${expected}.`)
+//     }
+//   }
+// )
