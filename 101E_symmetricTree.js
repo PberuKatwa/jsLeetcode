@@ -140,6 +140,8 @@ class BinaryTree{
       return (this.isSymmetricRecursive(this.root.left, this.root.right));
     }
 
+    if (node1 === null || node2 === null) return true;
+
   }
 
 }
