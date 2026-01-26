@@ -135,19 +135,20 @@ class BinaryTree{
     //    ( isSymmetricRecursive( node1.left, node2.right )  ).
     // 10. The recursive function will return true if its symmetric and false otherwise.
 
-    const root = this.root;
+    // if (!node1 && !node2) {
+    //   if (!this.root) return true;
+    //   return (this.isSymmetricRecursive( this.root.left, this.root.right));
+    // }
 
-    if (!node1 && !node2) {
-      if (!root) return true;
-      return (this.isSymmetricRecursive( root.left, root.right));
-    }
+    if (!node1 && node2) return true;
+    if (!node1) return false;
+    if (!node2) return false;
 
-    if (node1 === null || node2 === null) return true;
-
+    console.log("helloooo", node1.val, node2.val)
     return (
-      node1.val === node2.val &&
-      this.isSymmetricRecursive( node1.left, node2.right ) &&
-      this.isSymmetricRecursive( node1.right , node2.left )
+      ( node1.val === node2.val ) &&
+      ( this.isSymmetricRecursive( node1.left, node2.right ) ) &&
+      ( this.isSymmetricRecursive( node1.right , node2.left ) )
     )
 
   }
@@ -187,8 +188,6 @@ cases.forEach(
 
     const tree = new BinaryTree();
     tree.buildTree(input);
-    console.log("tree", tree.printTree())
-
     const actual = tree.isSymmetricRecursive( tree.root.left, tree.root.right );
 
     if (actual !== expected) {
