@@ -187,5 +187,9 @@ cases.forEach(
     tree.buildTree(input);
     const actual = tree.isSymmetricRecursive();
 
+    if (actual !== expected) {
+      console.log(`FAILED TEST for INPUT:${input} with ACTUAL:${actual} but EXPECTED:${expected}`)
+    }
+
  }
 )
