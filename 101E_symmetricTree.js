@@ -152,6 +152,17 @@ class BinaryTree{
 
   }
 
+  /**
+   * @param {BinaryTree} root;
+   */
+  isSymmetricItiretive(root) {
+    // Plan.
+    // 1. Check if the root is null , if so return false;
+    // 2. Check if both the right child and left child are null and return true.
+    // 3. Check if either the left or right child is null, if any are null return false.
+    // 4. Check if the left childs value is equal to right childs value, if not return false;
+   }
+
 }
 
 // const casesBuild = [
