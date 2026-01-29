@@ -177,27 +177,18 @@ class BinaryTree{
     if (!root.left && !root.right) return true;
     if (!root.left || !root.right) return false;
 
-    if (root.left.val !== root.right.val) return false;
+    // if (root.left.val !== root.right.val) return false;
     const queue = [[root.left, root.right]];
 
     while (queue.length > 0) {
 
       const [node1, node2] = queue.shift();
-      console.log("nodeee 111", node1.val, node1.left,queue);
-      console.log("nodeee 222", node2.val,node2.left)
 
       if (!node1 && !node2) continue;
-      // if (!node1.left || !node2.right || !node1.right || node2.left) return false;
       if (!node1 || !node2) return false;
-
-      if ((node1.left.val === node2.right.val) && (node1.right.val === node2.left.val)) {
-        queue.push([node1.left, node1.right]);
-        queue.push([node2.left, node2.right])
-      } else {
-        return false;
-      }
-
-      console.log("queue", queue)
+      if (node1.val !== node2.val) return false;
+      queue.push([node1.left, node2.right]);
+      queue.push([node1.right, node2.left])
 
     }
 
