@@ -173,6 +173,9 @@ class BinaryTree{
     //
 
     if (!this.root) return false;
+    const root = this.root;
+    if (!root.left && !root.right) return true;
+    if (!root.left || !root.right) return false;
 
 
    }
