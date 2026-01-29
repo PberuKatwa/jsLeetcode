@@ -156,11 +156,23 @@ class BinaryTree{
    * @param {BinaryTree} root;
    */
   isSymmetricItiretive(root) {
+
     // Plan.
     // 1. Check if the root is null , if so return false;
     // 2. Check if both the right child and left child are null and return true.
     // 3. Check if either the left or right child is null, if any are null return false.
-    // 4. Check if the left childs value is equal to right childs value, if not return false;
+    // 4. Check if the left childs value is equal to right childs value, if not return false.
+    // 5. Initialize a queue with the initial values being the left and right child as a pair
+    //    ( const queue = [ [ left,right ] ] );
+    // 6. Initialize a while loop with the exit condition being the queue being empty.
+    // 7. Pop from the left and extract the pair as node1 && node2( const [node1,node2] = queue.shift() ).
+    // 8. Check if both ( node1's left value === node2's right child val ) and ( node1's right child val
+    //    === node2's left child val ).If not return false.
+    // 9. Push two pairs, the first pair being node1's left and right child and pair 2 being node2's left and right child.
+    // 10. If the loop terminates return true.
+    //
+
+
    }
 
 }
