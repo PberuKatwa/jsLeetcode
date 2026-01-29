@@ -183,12 +183,21 @@ class BinaryTree{
     while (queue.length > 0) {
 
       const [node1, node2] = queue.shift();
-      if ((node1.left.val === node2.right.val) && (node2.right.val === node2.left.val)) {
+      console.log("nodeee 111", node1.val, node1.left,queue);
+      console.log("nodeee 222", node2.val,node2.left)
+
+      if (!node1 && !node2) continue;
+      // if (!node1.left || !node2.right || !node1.right || node2.left) return false;
+      if (!node1 || !node2) return false;
+
+      if ((node1.left.val === node2.right.val) && (node1.right.val === node2.left.val)) {
         queue.push([node1.left, node1.right]);
         queue.push([node2.left, node2.right])
       } else {
         return false;
       }
+
+      console.log("queue", queue)
 
     }
 
@@ -231,7 +240,7 @@ cases.forEach(
     const tree = new BinaryTree();
     tree.buildTree(input);
     // const actual = tree.isSymmetricRecursive(tree.root.left, tree.root.right);
-    const actual = tree.isSymmetricRecursive();
+    const actual = tree.isSymmetricItiretive();
 
     if (actual !== expected) {
       console.log(`FAILED TEST for INPUT:${input} with ACTUAL:${actual} but EXPECTED:${expected}`)
