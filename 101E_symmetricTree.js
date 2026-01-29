@@ -182,7 +182,17 @@ class BinaryTree{
 
     while (queue.length > 0) {
 
+      const [node1, node2] = queue.shift();
+
+      if ((node1.left === node2.right) && (node2.right === node2.left)) {
+        queue.push([node1.left, node1.right]);
+        queue.push([node2.left, node2.right])
+      } else {
+        return false;
+      }
     }
+
+    return true;
    }
 
 }
