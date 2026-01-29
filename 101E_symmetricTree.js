@@ -172,6 +172,8 @@ class BinaryTree{
     // 10. If the loop terminates return true.
     //
 
+    if (!this.root) return false;
+
 
    }
 
