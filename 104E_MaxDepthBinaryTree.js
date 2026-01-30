@@ -29,4 +29,32 @@ class BinaryTree{
   constructor() {
     this.root = null;
   }
+
+  /**
+   * @param {Array<number>} input;
+   */
+  buildTree(input) {
+
+    if (!input) return this.root;
+    let index = 0;
+    this.root = new TreeNode(input[0]);
+    const root = this.root;
+    const queue = [root];
+    index += 1;
+
+    while (queue.length > 0) {
+
+      const parent = queue.shift();
+      const left = input[index] ? input[index] : null;
+      const right = input[index + 1] ? input[index + 1] : null;
+
+      if (left) {
+        parent.left = new TreeNode(left);
+        queue.push(parent.left);
+      }
+
+
+    }
+
+  }
 }
