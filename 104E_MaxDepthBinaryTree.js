@@ -44,8 +44,8 @@ class BinaryTree{
     while (queue.length > 0) {
 
       const parent = queue.shift();
-      const left = input[index] ? input[index] : null;
-      const right = input[index + 1] ? input[index + 1] : null;
+      const left = index in input ? input[index] !== null : null;
+      const right = (index + 1) in input ? input[index + 1] !== null : null;
 
       if (left) {
         parent.left = new TreeNode(left);
@@ -118,6 +118,15 @@ class BinaryTree{
 const cases = [
   { input: [3, 9, 20, null, null, 15, 7], expected: 3 },
   { input: [1, null, 2], expected: 2 },
+  { input: [1, 2, null, 3, null, 4], expected: 4 },
+  { input: [1, 2, 3, 4, null, null, null], expected: 3 },
+  { input: [1, 2, 3, 4, 5, null, null, 6], expected: 4 },
+  { input: [1, 2, null, 3, 4, null, null, 5], expected: 4 },
+  { input: [1, 2, null, 3, 4, 6, 7], expected: 4 },
+  { input: [1, 2, null, 3, null, 4, null, 5], expected: 5 },
+  { input: [1, 0, 0, 0], expected: 3 },
+
+
 
 ]
 
@@ -128,7 +137,7 @@ cases.forEach(
     const { count } = tree.buildTree(input);
 
     if (count!==expected) {
-      console.log(`FAILED TEST with INPUT:${input} and ACTUAL:${actual} but EXPECTED:${expected}`);
+      console.log(`FAILED TEST with INPUT:${input} and ACTUAL:${count} but EXPECTED:${expected}`);
     } else {
       console.log(`SUCCESS TEST with INPUT:${input} and EXPECTED:${expected}`)
     }
