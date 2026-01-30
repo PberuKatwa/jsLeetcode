@@ -53,8 +53,14 @@ class BinaryTree{
         queue.push(parent.left);
       }
 
+      if (right) {
+        parent.right = new TreeNode(right);
+        queue.push(parent.right)
+      }
 
+      index +=2
     }
 
+    return this.root;
   }
 }
