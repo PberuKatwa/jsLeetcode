@@ -121,5 +121,4 @@ class BinaryTree{
 const cases = [
   { input: [3, 9, 20, null, null, 15, 7], expected: 3 },
   {input:[1,null,2], expected:2}
-
 ]
