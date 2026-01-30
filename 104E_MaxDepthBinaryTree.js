@@ -89,12 +89,25 @@ class BinaryTree{
 }
 
 const cases = [
-  { input: [3, 9, 20, null, null, 15, 7], output: [3, 9, 20, null, null, 15, 7] },
-  { input: [1,null,2], output: [1,null,2] },
+  { input: [3, 9, 20, null, null, 15, 7], expected: [3, 9, 20, null, null, 15, 7] },
+  { input: [1,null,2], expected: [1,null,2] },
 ]
 
 cases.forEach(
-  function ({ input, output }) {
+  function ({ input, expected }) {
+
+    const tree = new BinaryTree();
+    tree.buildTree(input);
+
+    const actual = tree.printTree();
+
+    const isMatch = (actual.length === expected.length) && (actual.every((value, index) => { value === expected[index] }));
+
+    if (!isMatch) {
+      console.log(`FAILED TEST for INPUT:${input} and ACTUAL:${actual} but EXPECTED${expected}`)
+    } else {
+      console.log(`SUCCESS TEST for INPUT:${input} with EXPECTED:${expected}`)
+    }
 
   }
 )
