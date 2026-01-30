@@ -23,3 +23,10 @@ class TreeNode{
     this.right = null;
   }
 }
+
+class BinaryTree{
+
+  constructor() {
+    this.root = null;
+  }
+}
