@@ -61,6 +61,31 @@ class BinaryTree{
 
     return this.root;
   }
+
+  printTree() {
+
+    if (!this.root) return null;
+    const root = this.root;
+    const queue = [root];
+    const result = [];
+
+    while (queue.length > 0) {
+
+      const parent = queue.shift();
+
+      if (!parent) {
+        result.push(null);
+        continue;
+      }
+
+      result.push(parent.val);
+      queue.push(parent.left);
+      queue.push(parent.right);
+    }
+
+    return result;
+  }
+
 }
 
 const cases = [
