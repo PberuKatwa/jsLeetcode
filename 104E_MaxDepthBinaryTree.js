@@ -20,6 +20,6 @@ class TreeNode{
   constructor(value) {
     this.value = value;
     this.left = null;
-    thi.right = null;
+    this.right = null;
   }
 }
