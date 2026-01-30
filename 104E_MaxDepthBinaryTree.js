@@ -78,7 +78,7 @@ class BinaryTree{
         continue;
       }
 
-      result.push(parent.val);
+      result.push(parent.value);
       queue.push(parent.left);
       queue.push(parent.right);
     }
