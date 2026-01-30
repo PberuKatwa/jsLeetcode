@@ -177,7 +177,6 @@ class BinaryTree{
     if (!root.left && !root.right) return true;
     if (!root.left || !root.right) return false;
 
-    // if (root.left.val !== root.right.val) return false;
     const queue = [[root.left, root.right]];
 
     while (queue.length > 0) {
