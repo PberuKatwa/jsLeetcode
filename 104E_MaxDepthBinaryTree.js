@@ -59,12 +59,9 @@ class BinaryTree{
 
       if (left || right) {
         count += 1;
-        console.log("\nwere countingg", count)
       }
-      console.log("queue", queue, count)
       index += 2;
     }
-    console.log("counttt",count)
     return {root,count};
   }
 
@@ -120,7 +117,8 @@ class BinaryTree{
 //
 const cases = [
   { input: [3, 9, 20, null, null, 15, 7], expected: 3 },
-  {input:[1,null,2], expected:2}
+  { input: [1, null, 2], expected: 2 },
+
 ]
 
 cases.forEach(
