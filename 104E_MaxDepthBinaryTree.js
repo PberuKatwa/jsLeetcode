@@ -92,3 +92,9 @@ const cases = [
   { input: [3, 9, 20, null, null, 15, 7], output: [3, 9, 20, null, null, 15, 7] },
   { input: [1,null,2], output: [1,null,2] },
 ]
+
+cases.forEach(
+  function ({ input, output }) {
+
+  }
+)
