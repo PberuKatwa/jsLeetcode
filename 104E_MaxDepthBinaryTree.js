@@ -93,8 +93,20 @@ class BinaryTree{
     const root = this.root;
     const queue = [root];
     let depth = 0;
+    let count = 0;
 
+    while (queue.length > 0) {
+      depth++;
 
+      let levelSize = queue.length();
+
+      for (let i = 0; i < levelSize; i++){
+
+      }
+
+    }
+
+    return count;
   }
 
 }
