@@ -117,45 +117,17 @@ class BinaryTree{
     return depth;
   }
 
-}
-
-const cases = [
-  { input: [3, 9, 20, null, null, 15, 7], expected: [3, 9, 20, null, null, 15, 7] },
-  { input: [1, null, 2], expected: [1, null, 2] },
-  { input: [1, 0, null, 0, null, 4], expected: [1, 0, null, 0, null, 4] },
-  { input: [1, 0, 0, 0, null, null, null], expected: [1, 0, 0, 0, null, null, null] },
-]
-
-cases.forEach(
-  function ({ input, expected }) {
-
-    const tree = new BinaryTree();
-    tree.buildTree(input);
-    const actual = tree.printTree();
-    const isMatch = (actual.length === expected.length) && (actual.every( (value, index) => (value === expected[index] )) );
-
-    if (!isMatch) {
-      console.log(`FAILED TEST for INPUT:${input} and ACTUAL:${actual} but EXPECTED${expected}`)
-    } else {
-      console.log(`SUCCESS TEST for INPUT:${input} with EXPECTED:${expected}`)
-    }
+  maxDepthRecursiveDFS() {
 
   }
-)
 
-
+}
 
 // const cases = [
-//   { input: [3, 9, 20, null, null, 15, 7], expected: 3 },
-//   { input: [1, null, 2], expected: 2 },
-//   { input: [1, 2, null, 3, null, 4], expected: 4 },
-//   { input: [1, 2, 3, 4, null, null, null], expected: 3 },
-//   { input: [1, 2, 3, 4, 5, null, null, 6], expected: 4 },
-//   { input: [1, 2, null, 3, 4, null, null, 5], expected: 4 },
-//   { input: [1, 2, null, 3, 4, 6, 7], expected: 4 },
-//   { input: [1, 2, null, 3, null, 4, null, 5], expected: 5 },
-//   { input: [1, 0, 0, 0], expected: 3 },
-//   { input: [1, 2, 3, 4, 5, 6, 7], expected: 3 }
+//   { input: [3, 9, 20, null, null, 15, 7], expected: [3, 9, 20, null, null, 15, 7] },
+//   { input: [1, null, 2], expected: [1, null, 2] },
+//   { input: [1, 0, null, 0, null, 4], expected: [1, 0, null, 0, null, 4] },
+//   { input: [1, 0, 0, 0, null, null, null], expected: [1, 0, 0, 0, null, null, null] },
 // ]
 
 // cases.forEach(
@@ -163,13 +135,45 @@ cases.forEach(
 
 //     const tree = new BinaryTree();
 //     tree.buildTree(input);
-//     const actual = tree.maxDepthIterativeBFS()
+//     const actual = tree.printTree();
+//     const isMatch = (actual.length === expected.length) && (actual.every( (value, index) => (value === expected[index] )) );
 
-//     if (actual!==expected) {
-//       console.log(`FAILED TEST with INPUT:${input} and ACTUAL:${actual} but EXPECTED:${expected}`);
+//     if (!isMatch) {
+//       console.log(`FAILED TEST for INPUT:${input} and ACTUAL:${actual} but EXPECTED${expected}`)
 //     } else {
-//       console.log(`SUCCESS TEST with INPUT:${input} and EXPECTED:${expected}`)
+//       console.log(`SUCCESS TEST for INPUT:${input} with EXPECTED:${expected}`)
 //     }
 
 //   }
 // )
+
+
+
+const cases = [
+  { input: [3, 9, 20, null, null, 15, 7], expected: 3 },
+  { input: [1, null, 2], expected: 2 },
+  { input: [1, 2, null, 3, null, 4], expected: 4 },
+  { input: [1, 2, 3, 4, null, null, null], expected: 3 },
+  { input: [1, 2, 3, 4, 5, null, null, 6], expected: 4 },
+  { input: [1, 2, null, 3, 4, null, null, 5], expected: 4 },
+  { input: [1, 2, null, 3, 4, 6, 7], expected: 4 },
+  { input: [1, 2, null, 3, null, 4, null, 5], expected: 5 },
+  { input: [1, 0, 0, 0], expected: 3 },
+  { input: [1, 2, 3, 4, 5, 6, 7], expected: 3 }
+]
+
+cases.forEach(
+  function ({ input, expected }) {
+
+    const tree = new BinaryTree();
+    tree.buildTree(input);
+    const actual = tree.maxDepthIterativeBFS()
+
+    if (actual!==expected) {
+      console.log(`FAILED TEST with INPUT:${input} and ACTUAL:${actual} but EXPECTED:${expected}`);
+    } else {
+      console.log(`SUCCESS TEST with INPUT:${input} and EXPECTED:${expected}`)
+    }
+
+  }
+)
