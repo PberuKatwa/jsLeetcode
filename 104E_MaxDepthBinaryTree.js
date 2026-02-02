@@ -99,8 +99,12 @@ class BinaryTree{
       depth++;
 
       let levelSize = queue.length();
-
       for (let i = 0; i < levelSize; i++){
+
+        const parent = queue.shift();
+        if (parent) count += 1;
+        if (parent.left) queue.push(parent.left);
+        if (parent.right) queue.push(parent.right);
 
       }
 
