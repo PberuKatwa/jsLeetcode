@@ -96,6 +96,7 @@ class BinaryTree{
     let count = 0;
 
     while (queue.length > 0) {
+      console.log("\nqueue", queue, "depth",depth)
       depth++;
 
       let levelSize = queue.length();
@@ -107,7 +108,6 @@ class BinaryTree{
         if (parent.right) queue.push(parent.right);
 
       }
-
     }
 
     return count;
@@ -160,10 +160,11 @@ cases.forEach(
   function ({ input, expected }) {
 
     const tree = new BinaryTree();
-    const { count } = tree.buildTree(input);
+    tree.buildTree(input);
+    const actual = tree.maxDepthIterative()
 
-    if (count!==expected) {
-      console.log(`FAILED TEST with INPUT:${input} and ACTUAL:${count} but EXPECTED:${expected}`);
+    if (actual!==expected) {
+      console.log(`FAILED TEST with INPUT:${input} and ACTUAL:${actual} but EXPECTED:${expected}`);
     } else {
       console.log(`SUCCESS TEST with INPUT:${input} and EXPECTED:${expected}`)
     }
