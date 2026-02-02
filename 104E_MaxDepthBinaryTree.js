@@ -178,7 +178,9 @@ cases.forEach(
 
     const tree = new BinaryTree();
     tree.buildTree(input);
-    const actual = tree.maxDepthIterativeBFS()
+    // const actual = tree.maxDepthIterativeBFS();
+    const actual = tree.maxDepthRecursiveDFS();
+
 
     if (actual!==expected) {
       console.log(`FAILED TEST with INPUT:${input} and ACTUAL:${actual} but EXPECTED:${expected}`);
