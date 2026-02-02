@@ -124,12 +124,6 @@ const cases = [
   { input: [1, null, 2], expected: [1, null, 2] },
   { input: [1, 0, null, 0, null, 4], expected: [1, 0, null, 0, null, 4] },
   { input: [1, 0, 0, 0, null, null, null], expected: [1, 0, 0, 0, null, null, null] },
-    // { input: [1, 2, 3, 4, 5, null, null, 6], expected: 4 },
-    // { input: [1, 2, null, 3, 4, null, null, 5], expected: 4 },
-    // { input: [1, 2, null, 3, 4, 6, 7], expected: 4 },
-    // { input: [1, 2, null, 3, null, 4, null, 5], expected: 5 },
-    // { input: [1, 0, 0, 0], expected: 3 },
-    // { input: [1, 2, 3, 4, 5, 6, 7], expected: 3 }
 ]
 
 cases.forEach(
@@ -137,9 +131,7 @@ cases.forEach(
 
     const tree = new BinaryTree();
     tree.buildTree(input);
-
     const actual = tree.printTree();
-
     const isMatch = (actual.length === expected.length) && (actual.every( (value, index) => (value === expected[index] )) );
 
     if (!isMatch) {
