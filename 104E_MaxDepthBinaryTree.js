@@ -117,7 +117,18 @@ class BinaryTree{
     return depth;
   }
 
-  maxDepthRecursiveDFS() {
+  /**
+   *
+   * @param {TreeNode} node
+   * @returns {Number}
+   */
+  maxDepthRecursiveDFS(node=this.root) {
+
+    if (!this.root) return 0;
+
+    const left = this.maxDepthRecursiveDFS(node.left);
+    const right = this.maxDepthRecursiveDFS(node.right);
+
 
   }
 
