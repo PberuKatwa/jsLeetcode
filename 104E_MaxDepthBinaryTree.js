@@ -89,6 +89,10 @@ class BinaryTree{
     return result;
   }
 
+  maxDepthIterative() {
+
+  }
+
 }
 
 // const cases = [
@@ -125,7 +129,7 @@ const cases = [
   { input: [1, 2, null, 3, 4, 6, 7], expected: 4 },
   { input: [1, 2, null, 3, null, 4, null, 5], expected: 5 },
   { input: [1, 0, 0, 0], expected: 3 },
-
+  { input: [1, 2, 3, 4, 5, 6, 7], expected: 3 }
 
 
 ]
