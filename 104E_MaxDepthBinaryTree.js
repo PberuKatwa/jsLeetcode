@@ -128,7 +128,7 @@ class BinaryTree{
 
     const left = this.maxDepthRecursiveDFS(node.left);
     const right = this.maxDepthRecursiveDFS(node.right);
-
+    return 1 + Math.max(left,right)
 
   }
 
