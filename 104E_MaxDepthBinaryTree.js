@@ -123,11 +123,15 @@ class BinaryTree{
    * @returns {Number}
    */
   maxDepthRecursiveDFS(node=this.root) {
+    // console.log("\nnode valueee", node)
+    if (!node) return 0;
 
-    if (!this.root) return 0;
+    let left = null;
+    if (node.left) left = this.maxDepthRecursiveDFS(node.left);
 
-    const left = this.maxDepthRecursiveDFS(node.left);
-    const right = this.maxDepthRecursiveDFS(node.right);
+    let right = null;
+    if (node.right) right = this.maxDepthRecursiveDFS(node.right);
+
     return 1 + Math.max(left,right)
 
   }
