@@ -91,6 +91,8 @@ class BinaryTree{
     if (!this.root) return 0;
 
     const root = this.root;
+    const queue = [root];
+    let depth = 0;
 
 
   }
