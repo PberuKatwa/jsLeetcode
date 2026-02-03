@@ -34,7 +34,7 @@ class BinaryTree{
   /**
    * @param {Array<number>} input
    */
-  buildTree(input) {
+  buildBalancedSearchTree(input) {
 
     if (!input) return this.root;
 
@@ -81,7 +81,7 @@ class BinaryTree{
       queue.push(parent.right);
     }
 
-    return tree;
+    return result;
   }
 }
 
@@ -90,3 +90,21 @@ const cases = [
   { input: [1, 3], expected: [1, null, 3] },
 
 ]
+
+cases.forEach(
+  function ({input,expected}) {
+
+    const tree = new BinaryTree();
+    tree.buildBalancedSearchTree(input);
+    const actual = tree.printTree();
+
+    const isMatch = (expected.length === actual.length) && (actual.every((value, index) => (value === expected[index])));
+
+    if (!isMatch) {
+      console.log(`FAILED TEST for INPUT:${input} and ACTUAL:${actual} but EXPECTED:${expected}`)
+    } else {
+      console.log(`SUCCESS TEST for INPUT:${input} with EXPECTED:${expected}`)
+    }
+
+  }
+)
