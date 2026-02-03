@@ -50,6 +50,14 @@ class BinaryTree{
       queue.push(parent.left);
     }
 
+    const rightQueue = [root];
+    for (let i = rootIndex + 1; i <= rootIndex; i++){
+      const parent = rightQueue.shift();
+      parent.right = new TreeNode(i);
+      rightQueue.push(parent.right);
+    }
+
+    return this.root;
   }
 
 }
