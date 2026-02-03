@@ -26,7 +26,24 @@ class TreeNode{
 }
 
 class BinaryTree{
+
   constructor() {
     this.root = null;
   }
+
+  /**
+   * @param {Array<number>} input
+   */
+  buildTree(input) {
+
+    if (!input) return this.root;
+
+    const rootIndex = Math.floor((input.length - 1) / 2);
+    this.root = TreeNode(input[rootIndex]);
+
+    const root = this.root;
+    const queue = [root];
+
+  }
+
 }
