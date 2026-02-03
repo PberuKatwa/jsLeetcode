@@ -39,7 +39,6 @@ class BinaryTree{
     if (!input) return this.root;
 
     const rootIndex = Math.floor((input.length - 1) / 2);
-    console.log("root index", rootIndex)
     this.root = new TreeNode(input[rootIndex]);
 
     const root = this.root;
@@ -56,7 +55,7 @@ class BinaryTree{
       const parent = rightQueue.shift();
       parent.right = new TreeNode(input[i]);
       rightQueue.push(parent.right);
-      console.log("weree at right",parent.val, "queue", rightQueue)
+      // console.log("weree at right",parent.val, "queue", rightQueue)
     }
 
     return this.root;
@@ -95,7 +94,7 @@ class BinaryTree{
 
 const cases = [
   { input: [-10, -3, 0, 5, 9], expected: [0, -3, 5, -10, null, null, 9] },
-  // { input: [1, 3], expected: [1, null, 3] },
+  { input: [1, 3], expected: [1, null, 3] },
 
 ]
 
