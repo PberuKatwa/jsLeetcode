@@ -15,3 +15,12 @@
 // 1 <= nums.length <= 104
 // -104 <= nums[i] <= 104
 // nums is sorted in a strictly increasing order.
+//
+
+class TreeNode{
+  constructor(val) {
+    this.val = val;
+    this.left = null;
+    this.right = null;
+  }
+}
