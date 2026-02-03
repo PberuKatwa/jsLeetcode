@@ -83,5 +83,10 @@ class BinaryTree{
 
     return tree;
   }
-
 }
+
+const cases = [
+  { input: [-10, -3, 0, 5, 9], expected: [0, -3, 5, -10, null, null, 9] },
+  { input: [1, 3], expected: [1, null, 3] },
+
+]
