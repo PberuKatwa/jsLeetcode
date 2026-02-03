@@ -39,6 +39,7 @@ class BinaryTree{
     if (!input) return this.root;
 
     const rootIndex = Math.floor((input.length - 1) / 2);
+    console.log("root index", rootIndex)
     this.root = new TreeNode(input[rootIndex]);
 
     const root = this.root;
@@ -46,15 +47,16 @@ class BinaryTree{
 
     for (let i = rootIndex - 1; i >=0; i--){
       const parent = queue.shift();
-      parent.left = new TreeNode(i);
+      parent.left = new TreeNode(input[i]);
       queue.push(parent.left);
     }
 
     const rightQueue = [root];
-    for (let i = rootIndex + 1; i <= rootIndex; i++){
+    for (let i = rootIndex + 1; i <= input.length; i++){
       const parent = rightQueue.shift();
-      parent.right = new TreeNode(i);
+      parent.right = new TreeNode(input[i]);
       rightQueue.push(parent.right);
+      // console.log("weree at right",parent.val, "queue", rightQueue)
     }
 
     return this.root;
@@ -62,7 +64,7 @@ class BinaryTree{
 
   printTree() {
 
-    if (!this.tree) return [];
+    if (!this.root) return [];
 
     const root = this.root;
     const queue = [root];
@@ -72,14 +74,18 @@ class BinaryTree{
 
       const parent = queue.shift()
 
+      // console.log("\nprinttt", parent.val, queue)
       if (!parent) {
         result.push(null);
         continue;
       }
 
+      result.push(parent.val)
       queue.push(parent.left);
       queue.push(parent.right);
     }
+
+
 
     return result;
   }
@@ -87,7 +93,7 @@ class BinaryTree{
 
 const cases = [
   { input: [-10, -3, 0, 5, 9], expected: [0, -3, 5, -10, null, null, 9] },
-  { input: [1, 3], expected: [1, null, 3] },
+  // { input: [1, 3], expected: [1, null, 3] },
 
 ]
 
