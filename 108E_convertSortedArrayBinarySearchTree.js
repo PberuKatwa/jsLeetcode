@@ -70,6 +70,9 @@ class BinaryTree{
 
     while (queue.length > 0) {
 
+      const parent = queue.shift()
+
+
     }
 
     return tree;
