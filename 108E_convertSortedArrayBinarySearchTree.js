@@ -52,11 +52,11 @@ class BinaryTree{
     }
 
     const rightQueue = [root];
-    for (let i = rootIndex + 1; i <= input.length; i++){
+    for (let i = rootIndex + 1; i < input.length; i++){
       const parent = rightQueue.shift();
       parent.right = new TreeNode(input[i]);
       rightQueue.push(parent.right);
-      // console.log("weree at right",parent.val, "queue", rightQueue)
+      console.log("weree at right",parent.val, "queue", rightQueue)
     }
 
     return this.root;
@@ -74,7 +74,6 @@ class BinaryTree{
 
       const parent = queue.shift()
 
-      // console.log("\nprinttt", parent.val, queue)
       if (!parent) {
         result.push(null);
         continue;
@@ -85,8 +84,11 @@ class BinaryTree{
       queue.push(parent.right);
     }
 
-
-
+    let index = result.length - 1;
+    while (index >= 0 && (result[index] === null)) {
+      result.pop();
+      index--;
+    }
     return result;
   }
 }
