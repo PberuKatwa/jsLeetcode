@@ -72,7 +72,13 @@ class BinaryTree{
 
       const parent = queue.shift()
 
+      if (!parent) {
+        result.push(null);
+        continue;
+      }
 
+      queue.push(parent.left);
+      queue.push(parent.right);
     }
 
     return tree;
