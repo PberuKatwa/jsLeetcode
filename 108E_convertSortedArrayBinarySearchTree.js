@@ -39,10 +39,16 @@ class BinaryTree{
     if (!input) return this.root;
 
     const rootIndex = Math.floor((input.length - 1) / 2);
-    this.root = TreeNode(input[rootIndex]);
+    this.root = new TreeNode(input[rootIndex]);
 
     const root = this.root;
     const queue = [root];
+
+    for (let i = rootIndex - 1; i >=0; i--){
+      const parent = queue.shift();
+      parent.left = new TreeNode(i);
+      queue.push(parent.left);
+    }
 
   }
 
