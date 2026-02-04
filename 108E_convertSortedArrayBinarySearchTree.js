@@ -34,7 +34,7 @@ class BinaryTree{
   /**
    * @param {Array<number>} input
    */
-  buildBalancedSearchTree(input) {
+  buildBalancedSearchTreeNaive(input) {
 
     if (!input) return this.root;
 
@@ -59,6 +59,13 @@ class BinaryTree{
     }
 
     return this.root;
+  }
+
+  /**
+   * @param {number[]} nums
+   */
+  buildBalancedSearchTreeItirative(nums) {
+
   }
 
   printTree() {
@@ -102,7 +109,7 @@ cases.forEach(
   function ({input,expected}) {
 
     const tree = new BinaryTree();
-    tree.buildBalancedSearchTree(input);
+    tree.buildBalancedSearchTreeNaive(input);
     const actual = tree.printTree();
 
     const isMatch = (expected.length === actual.length) && (actual.every((value, index) => (value === expected[index])));
