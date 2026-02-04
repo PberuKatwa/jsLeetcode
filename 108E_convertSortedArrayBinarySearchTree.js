@@ -70,7 +70,11 @@ class BinaryTree{
 
     const stack = [{ left: 0, right: (nums.length) - 1, parent: null, }];
 
+    while (stack.length > 0) {
 
+    };
+
+    return this.root;
   }
 
   printTree() {
