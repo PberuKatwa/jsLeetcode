@@ -78,7 +78,7 @@ class BinaryTree{
       const node = new TreeNode(nums[mid]);
 
       if (!parent) {
-        parent = node
+        this.root = node;
       } else {
         parent[side] = node
       }
@@ -132,7 +132,7 @@ cases.forEach(
   function ({input,expected}) {
 
     const tree = new BinaryTree();
-    tree.buildBalancedSearchTreeNaive(input);
+    tree.buildBalancedSearchTreeItirative(input);
     const actual = tree.printTree();
 
     const isMatch = (expected.length === actual.length) && (actual.every((value, index) => (value === expected[index])));
