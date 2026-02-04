@@ -68,9 +68,20 @@ class BinaryTree{
 
     if (nums.length === 0) return this.root;
 
-    const stack = [{ left: 0, right: (nums.length) - 1, parent: null, }];
+    const stack = [{ left: 0, right: (nums.length) - 1, parent: null, side: null }];
 
     while (stack.length > 0) {
+
+      const { left, right, parent, side } = stack.pop();
+      if (left > right) continue;
+      const mid = Math.floor((left + right) / 2);
+      const node = new TreeNode(nums[mid]);
+
+      if (!parent) {
+        parent = node
+      } else {
+        parent[side] = node
+      }
 
     };
 
