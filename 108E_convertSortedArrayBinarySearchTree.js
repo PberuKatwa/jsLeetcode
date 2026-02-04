@@ -83,6 +83,9 @@ class BinaryTree{
         parent[side] = node
       }
 
+      stack.push({ left: mid + 1, right: right, parent: node, side: "right" })
+      stack.push({ left: left, right: mid - 1, parent: node, side: "left" })
+
     };
 
     return this.root;
