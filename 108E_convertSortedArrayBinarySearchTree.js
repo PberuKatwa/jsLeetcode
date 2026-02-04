@@ -66,6 +66,11 @@ class BinaryTree{
    */
   buildBalancedSearchTreeItirative(nums) {
 
+    if (nums.length === 0) return this.root;
+
+    const stack = [{ left: 0, right: (nums.length) - 1, parent: null, }];
+
+
   }
 
   printTree() {
