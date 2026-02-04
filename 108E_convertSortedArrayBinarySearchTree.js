@@ -72,6 +72,7 @@ class BinaryTree{
 
     while (stack.length > 0) {
 
+      // console.log("\nstack", stack, "floor", Math.floor((4 + 3) / 2));
       const { left, right, parent, side } = stack.pop();
       if (left > right) continue;
       const mid = Math.floor((left + right) / 2);
@@ -124,6 +125,7 @@ class BinaryTree{
 
 const cases = [
   { input: [-10, -3, 0, 5, 9], expected: [0, -10, 5, null, -3, null, 9] },
+  { input: [-10, -5, -3, 0, 5, 9, 12], expected: [0, -5, 9, -10, -3, 5, 12] },
   { input: [1, 3], expected: [1, null, 3] },
 
 ]
