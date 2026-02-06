@@ -122,6 +122,7 @@ class BinaryTree{
     node.left = this._recursiveBuild(nums, left, mid - 1);
     node.right = this._recursiveBuild(nums, mid + 1, right);
 
+    return node;
   }
 
   printTree() {
