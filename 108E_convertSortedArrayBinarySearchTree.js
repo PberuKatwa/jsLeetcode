@@ -107,7 +107,15 @@ class BinaryTree{
 
   }
 
+  /**
+   *
+   * @param {number[]} nums
+   * @param {number} left
+   * @param {number} right
+   */
   _recursiveBuild(nums, left, right) {
+
+    if (left > right) return null;
 
   }
 
