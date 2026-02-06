@@ -102,9 +102,9 @@ class BinaryTree{
     const left = 0;
     const right = nums.length - 1;
 
-    this._recursiveBuild(nums,left,right)
+    const root = this._recursiveBuild(nums,left,right)
 
-
+    this.root = root;
   }
 
   /**
@@ -116,7 +116,7 @@ class BinaryTree{
   _recursiveBuild(nums, left, right) {
 
     if (left > right) return null;
-    const mid = Math.floor((left / right) / 2);
+    const mid = Math.floor((left + right) / 2);
     const node = new TreeNode(mid);
 
     node.left = this._recursiveBuild(nums, left, mid - 1);
@@ -167,7 +167,8 @@ cases.forEach(
   function ({input,expected}) {
 
     const tree = new BinaryTree();
-    tree.buildBalancedSearchTreeItirative(input);
+    // tree.buildBalancedSearchTreeItirative(input);
+    tree.buildBalancedSearchTreeRecursive(input);
     const actual = tree.printTree();
 
     const isMatch = (expected.length === actual.length) && (actual.every((value, index) => (value === expected[index])));
