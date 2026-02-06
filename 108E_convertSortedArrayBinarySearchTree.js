@@ -96,7 +96,10 @@ class BinaryTree{
    * @param {number[]} nums
    */
   buildBalancedSearchTreeRecursive(nums) {
+
     if (nums.length === 0) return this.root;
+
+
   }
 
   printTree() {
