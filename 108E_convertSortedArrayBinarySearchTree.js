@@ -99,6 +99,15 @@ class BinaryTree{
 
     if (nums.length === 0) return this.root;
 
+    const left = 0;
+    const right = nums.length - 1;
+
+    this._recursiveBuild(nums,left,right)
+
+
+  }
+
+  _recursiveBuild(nums, left, right) {
 
   }
 
