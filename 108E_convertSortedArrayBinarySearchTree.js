@@ -116,6 +116,11 @@ class BinaryTree{
   _recursiveBuild(nums, left, right) {
 
     if (left > right) return null;
+    const mid = Math.floor((left / right) / 2);
+    const node = new TreeNode(mid);
+
+    node.left = this._recursiveBuild(nums, left, mid - 1);
+    node.right = this._recursiveBuild(nums, mid + 1, right);
 
   }
 
