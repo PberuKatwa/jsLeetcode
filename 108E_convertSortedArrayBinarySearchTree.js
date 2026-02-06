@@ -105,6 +105,8 @@ class BinaryTree{
     const root = this._recursiveBuild(nums,left,right)
 
     this.root = root;
+
+    return this.root;
   }
 
   /**
