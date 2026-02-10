@@ -102,6 +102,13 @@ class BinaryTree{
 
   }
 
+  _recursiveCheck(node) {
+
+    if (!node) return null;
+    if (node.left) this._recursiveCheck(node.left);
+
+  }
+
 }
 
 const cases = [
