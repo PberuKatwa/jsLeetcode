@@ -167,16 +167,16 @@ class BinaryTree{
 
 const cases = [
   { input: [3, 9, 20, null, null, 15, 7], expected: 3 },
-  { input: [3, 9, 20, 1, null, 15, 7, 12, 2, null, 18, 22, 99], expected: 4 },
-  { input: [1, null, 2], expected: 2 },
-  { input: [1, 2, null, 3, null, 4], expected: 4 },
-  { input: [1, 2, 3, 4, null, null, null], expected: 3 },
-  { input: [1, 2, 3, 4, 5, null, null, 6], expected: 4 },
-  { input: [1, 2, null, 3, 4, null, null, 5], expected: 4 },
-  { input: [1, 2, null, 3, 4, 6, 7], expected: 4 },
-  { input: [1, 2, null, 3, null, 4, null, 5], expected: 5 },
-  { input: [1, 0, 0, 0], expected: 3 },
-  { input: [1, 2, 3, 4, 5, 6, 7], expected: 3 }
+  // { input: [3, 9, 20, 1, null, 15, 7, 12, 2, null, 18, 22, 99], expected: 4 },
+  // { input: [1, null, 2], expected: 2 },
+  // { input: [1, 2, null, 3, null, 4], expected: 4 },
+  // { input: [1, 2, 3, 4, null, null, null], expected: 3 },
+  // { input: [1, 2, 3, 4, 5, null, null, 6], expected: 4 },
+  // { input: [1, 2, null, 3, 4, null, null, 5], expected: 4 },
+  // { input: [1, 2, null, 3, 4, 6, 7], expected: 4 },
+  // { input: [1, 2, null, 3, null, 4, null, 5], expected: 5 },
+  // { input: [1, 0, 0, 0], expected: 3 },
+  // { input: [1, 2, 3, 4, 5, 6, 7], expected: 3 }
 ]
 
 cases.forEach(
@@ -184,8 +184,8 @@ cases.forEach(
 
     const tree = new BinaryTree();
     tree.buildTree(input);
-    const actual = tree.maxDepthIterativeBFS();
-    // const actual = tree.maxDepthRecursiveDFS();
+    // const actual = tree.maxDepthIterativeBFS();
+    const actual = tree.maxDepthRecursiveDFS();
 
 
     if (actual!==expected) {

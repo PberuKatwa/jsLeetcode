@@ -111,9 +111,14 @@ class BinaryTree{
   _recursiveCheck(node) {
 
     if (!node) return null;
-    if (node.left) this._recursiveCheck(node.left);
-    if(node)
 
+    let left = null;
+    if (node.left) left = this._recursiveCheck(node.left);
+
+    let right = null;
+    if (node.right) right = this._recursiveCheck(node.right);
+
+    return 1
   }
 
 }
