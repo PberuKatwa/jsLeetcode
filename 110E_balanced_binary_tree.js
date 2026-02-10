@@ -67,4 +67,13 @@ class BinaryTree{
     return root;
   }
 
+  printTree() {
+
+    if (!this.root) return [];
+
+    const root = this.root;
+
+
+  }
+
 }
