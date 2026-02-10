@@ -99,13 +99,20 @@ class BinaryTree{
   }
 
   checkBalanceRecursive() {
-
+    if (!this.root) return null;
+    this._recursiveCheck(this.root);
   }
 
+  /**
+   *
+   * @param {TreeNode} node
+   * @returns
+   */
   _recursiveCheck(node) {
 
     if (!node) return null;
     if (node.left) this._recursiveCheck(node.left);
+    if(node)
 
   }
 
