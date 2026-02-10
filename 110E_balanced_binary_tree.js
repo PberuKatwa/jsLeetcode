@@ -45,7 +45,7 @@ class BinaryTree{
     const queue = [root];
     index++
 
-    if (queue.length > 0) {
+    while (queue.length > 0 && nums.length > index) {
 
       const parent = queue.shift();
       const left = nums[index] ? nums[index] : null;
@@ -79,7 +79,7 @@ class BinaryTree{
 
       const parent = queue.shift();
 
-      if (!parent) {
+      if (parent=== null) {
         result.push(null);
         continue
       }
