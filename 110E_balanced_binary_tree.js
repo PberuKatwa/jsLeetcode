@@ -72,7 +72,28 @@ class BinaryTree{
     if (!this.root) return [];
 
     const root = this.root;
+    const queue = [root];
+    const result = [];
 
+    while (queue.length > 0) {
+
+      const parent = queue.shift();
+
+      if (!parent) {
+        result.push(null);
+        continue
+      }
+
+      result.push(parent.val);
+      queue.push(parent.left);
+      queue.push(parent.right);
+    }
+
+    let index = result.length - 1;
+    while (index > 0 && !result[index]) {
+      result.pop();
+      index--;
+    }
 
   }
 
