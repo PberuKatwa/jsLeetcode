@@ -17,9 +17,26 @@
 // -104 <= Node.val <= 104
 
 class TreeNode{
+
   constructor(val) {
     this.val = val;
     this.left = null;
     this.right = null;
   }
+
+}
+
+class BinaryTree{
+
+  constructor() {
+    this.root = null;
+  }
+
+  /**
+   * @param {TreeNode} nums
+   */
+  buildTree(nums) {
+
+  }
+
 }
