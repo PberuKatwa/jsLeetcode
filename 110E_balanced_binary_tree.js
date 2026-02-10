@@ -97,6 +97,11 @@ class BinaryTree{
 
     return result;
   }
+
+  checkBalanceRecursive() {
+
+  }
+
 }
 
 const cases = [

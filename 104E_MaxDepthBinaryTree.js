@@ -101,13 +101,14 @@ class BinaryTree{
     let count = 0;
 
     while (queue.length > 0) {
-      // console.log("\nqueue", queue, "depth",depth)
+      // console.log("\n\nqueue", queue, "depth",depth)
       depth++;
 
       let levelSize = queue.length;
       for (let i = 0; i < levelSize; i++){
 
         const parent = queue.shift();
+        // console.log("\nparentt", parent, "level size", levelSize)
         if (parent.left) queue.push(parent.left);
         if (parent.right) queue.push(parent.right);
 
@@ -166,6 +167,7 @@ class BinaryTree{
 
 const cases = [
   { input: [3, 9, 20, null, null, 15, 7], expected: 3 },
+  { input: [3, 9, 20, 1, null, 15, 7, 12, 2, null, 18, 22, 99], expected: 4 },
   { input: [1, null, 2], expected: 2 },
   { input: [1, 2, null, 3, null, 4], expected: 4 },
   { input: [1, 2, 3, 4, null, null, null], expected: 3 },
@@ -182,8 +184,8 @@ cases.forEach(
 
     const tree = new BinaryTree();
     tree.buildTree(input);
-    // const actual = tree.maxDepthIterativeBFS();
-    const actual = tree.maxDepthRecursiveDFS();
+    const actual = tree.maxDepthIterativeBFS();
+    // const actual = tree.maxDepthRecursiveDFS();
 
 
     if (actual!==expected) {
