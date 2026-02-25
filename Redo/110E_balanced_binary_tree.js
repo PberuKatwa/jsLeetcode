@@ -111,6 +111,17 @@ const cases = [
 cases.forEach(
   ({ input, expected })=>{
 
+    const tree = new BinaryTree();
+    const actual = tree.buildTree(input);
+
+    const isMatch = (actual.length === expected.length) && (expected.every((value, index) => (value === actual[index])));
+
+    if (!isMatch) {
+      console.log(`FAILED TEST for INPUT:${input} with ACTUAL:${actual} and EXPECTED:${expected}`);
+    } else {
+      console.log(`SUCCESS TEST for INPUT:${input} and ACTUAL:${actual}`)
+    }
+
   }
 )
 
