@@ -39,7 +39,7 @@ class BinaryTree {
     if (!nums) return this.root;
 
     let index = 0;
-    const root = TreeNode(nums[0]);
+    const root = new TreeNode(nums[0]);
 
     const queue = [root];
     index++;
@@ -50,7 +50,15 @@ class BinaryTree {
       const left = nums[index] ? nums[index] : null;
       const right = nums[index + 1] ? nums[index + 1] : null;
 
-      if()
+      if (left) {
+        parent.left = new TreeNode(left)
+        queue.push(parent.left);
+      }
+
+      if (right) {
+        parent.right = new TreeNode(right);
+        queue.push(parent.right)
+      }
 
     }
 
