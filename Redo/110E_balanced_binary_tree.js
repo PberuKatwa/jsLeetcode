@@ -41,6 +41,18 @@ class BinaryTree {
     let index = 0;
     const root = TreeNode(nums[0]);
 
+    const queue = [root];
+    index++;
+
+    while (queue.length > 0 && nums.length < index) {
+
+      const parent = queue.shift();
+      const left = nums[index] ? nums[index] : null;
+      const right = nums[index + 1] ? nums[index + 1] : null;
+
+      if()
+
+    }
 
   }
 
