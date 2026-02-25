@@ -23,3 +23,26 @@ class TreeNode {
     this.right = null;
   }
 }
+
+class BinaryTree {
+
+  constructor() {
+    this.root = null;
+  }
+
+  /**
+   *
+   * @param {number[]} nums
+   */
+  buildTree(nums) {
+
+    if (!nums) return this.root;
+
+    let index = 0;
+    const root = TreeNode(nums[0]);
+
+
+  }
+
+
+}
