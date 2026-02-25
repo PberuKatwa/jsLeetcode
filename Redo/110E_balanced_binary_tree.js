@@ -88,7 +88,14 @@ class BinaryTree {
       }
 
       result.push(parent.val);
+      queue.push(parent.left);
+      queue.push(parent.right);
+    }
 
+    let index = (result.length) - 1;
+    while (index > 0 && !result[index]) {
+      result.pop();
+      index--;
     }
 
     return result;
