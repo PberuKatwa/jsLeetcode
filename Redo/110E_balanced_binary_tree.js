@@ -44,7 +44,7 @@ class BinaryTree {
     const queue = [root];
     index++;
 
-    while (queue.length > 0 && nums.length < index) {
+    while (queue.length > 0 && index < nums.length ) {
 
       const parent = queue.shift();
       const left = nums[index] ? nums[index] : null;
@@ -112,7 +112,8 @@ cases.forEach(
   ({ input, expected })=>{
 
     const tree = new BinaryTree();
-    const actual = tree.buildTree(input);
+    tree.buildTree(input);
+    const actual = tree.printTree();
 
     const isMatch = (actual.length === expected.length) && (expected.every((value, index) => (value === actual[index])));
 
