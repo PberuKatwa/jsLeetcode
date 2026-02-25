@@ -60,8 +60,11 @@ class BinaryTree {
         queue.push(parent.right)
       }
 
+      index +=2
     }
 
+    this.root = root
+    return this.root;
   }
 
 
