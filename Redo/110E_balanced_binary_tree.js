@@ -106,7 +106,7 @@ class BinaryTree {
    * @returns {boolean}
    */
   checkBalanceRecursively() {
-    if (this.root) return null;
+    if (!this.root) return null;
     const result = this._balanceRecursively(this.root);
 
     if (result === -1) {
@@ -122,7 +122,7 @@ class BinaryTree {
    */
    _balanceRecursively(node) {
      if (!node) return 0;
-     console.log("height")
+     console.log("height", node.val)
      const leftHeight = this._balanceRecursively(node.left);
      if (leftHeight === -1) return -1;
 
