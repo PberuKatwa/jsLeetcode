@@ -100,6 +100,24 @@ class BinaryTree {
 
     return result;
   }
+
+  checkBalanceRecursively() {
+
+  }
+
+  /**
+   *
+   * @param {TreeNode} node
+   */
+  _balanceRecursively(node) {
+    if (!node) return null;
+
+    const left = this._balanceRecursively(node.left);
+    const right = this._balanceRecursively(node.right);
+
+    return 1 + left + right;
+  }
+
 }
 
 const cases = [
