@@ -101,6 +101,10 @@ class BinaryTree {
     return result;
   }
 
+  /**
+   *
+   * @returns {boolean}
+   */
   checkBalanceRecursively() {
     if (this.root) return null;
     const result = this._balanceRecursively(this.root);
@@ -161,6 +165,17 @@ const cases = [
   { input: [1, 2, 2, 3, 3, null, null, 4, 4], expected: false },
   { input: [], expected: true }
 ]
+
+cases.forEach(
+  ({ input, expected }) => {
+
+    const tree = new BinaryTree();
+    tree.buildTree(input);
+
+    const actual = tree.checkBalanceRecursively();
+
+  }
+)
 
 // Example 1:
 // Input: root = [3,9,20,null,null,15,7]
