@@ -174,17 +174,11 @@ cases.forEach(
 
     const actual = tree.checkBalanceRecursively();
 
+    if (expected !== actual) {
+      console.log(`FAILED TEST for INPUT:${input} with ACTUAL:${actual} and EXPECTED:${expected}`);
+    } else {
+      console.log(`SUCCESS TEST for INPUT:${input} and ACTUAL:${actual}`)
+    }
+
   }
 )
-
-// Example 1:
-// Input: root = [3,9,20,null,null,15,7]
-// Output: true
-
-// Example 2:
-// Input: root = [1,2,2,3,3,null,null,4,4]
-// Output: false
-
-// Example 3:
-// Input: root = []
-// Output: true
