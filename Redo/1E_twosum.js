@@ -62,7 +62,9 @@ cases.forEach(
     const isEqual = (actual.length === expected.length) && (actual.every((value, index) => (value === expected[index])));
 
     if (!isEqual) {
-      console.log(`FAILED TEST with ACTUAL:${actual} but EXPECTED:${expected}`)
+      console.log(`FAILED TEST with ACTUAL:${actual} but EXPECTED:${expected}, NUMS:${nums}, TARGET:${target}`);
+    } else {
+      console.log(`SUCCESS TEST with ACTUAL:${actual} , NUMS:${nums}, TARGET:${target}`)
     }
 
   }
