@@ -25,13 +25,15 @@ function isPalindrome(x) {
   // Plan.
   // 1. Check if the number is null, less than 0 and when x is divided by 10 its equal to 0.
   // 2. If so return false.
-  // 3. Initialize a variable compare with the value being equal to x.
+  // 3. Initialize a variable compare with the value being equal to 0 and original with value of x.
   // 4. Initialize a while loop with the exit condition being x > 0.
   // 5.
 
   if (!x | x < 0 | x % 10 === 0) return false;
 
-  const original = x;
-  const compare = 0;
+  let original = x;
+  let compare = 0;
+
+
 
 }
