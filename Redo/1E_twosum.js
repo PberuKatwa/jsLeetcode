@@ -19,19 +19,30 @@
 
 /**
  * @param {number[]} nums
+ * @param {number} target
  */
-function twoSum(nums) {
+function twoSum(nums, target) {
 
   // Plan
-  // 1.
+  // 1. Initialize a hashmap
+  // 2. Create a for loop with the exit condition being the loop being the length of nums.
+  // 3. Check if the current number is in the map.
+  // 4. Calculate the complement.
+  // 5. If the complement is in the hasmap return the value in the map, and the current index.
+  // 6. If missing add the current number as the key and the value as the index.
+  // 7. If the loop terminates return an empty list
 
   const map = {};
 
   for (let i; i < nums.length; i++){
 
-
+    const currentNum = nums[i];
+    const complement = target - nums[i];
+    if (complement in map) {
+      return [ nums[complement],i ]
+    }
 
   }
 
-  return null;
+  return [];
 }
