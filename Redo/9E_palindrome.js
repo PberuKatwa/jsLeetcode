@@ -34,6 +34,11 @@ function isPalindrome(x) {
   let original = x;
   let compare = 0;
 
+  while (original > 0) {
+    compare = (compare + (original % 10)) * 10;
+    original = Math.floor(original / 10);
+  }
+
 
 
 }
