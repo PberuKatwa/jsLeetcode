@@ -40,9 +40,14 @@ function twoSum(nums, target) {
     const complement = target - nums[i];
     if (complement in map) {
       return [ nums[complement],i ]
+    } else {
+      map[currentNum] = i
     }
-
   }
 
   return [];
 }
+
+const cases = [
+
+]
