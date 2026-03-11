@@ -53,7 +53,8 @@ const cases = [
   { nums: [3, 2, 4], target: 6, expected: [1, 2] },
   { nums: [3, 3], target: 6, expected: [0, 1] },
   { nums: [1, 3], target: 6, expected: [] },
-
+  { nums: [], target: 0, expected: [] },
+  { nums: [1, 3, 8, 5, 12 ,4 ,9, 7], target: 8, expected: [1,3] },
 ]
 
 cases.forEach(
