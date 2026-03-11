@@ -57,5 +57,13 @@ const cases = [
 cases.forEach(
   function ({ nums, target, expected }) {
 
+    const actual = twoSum(nums, target, expected);
+
+    const isEqual = (actual.length === expected.length) && (actual.every((value, index) => (value === expected[index])));
+
+    if (!isEqual) {
+      console.log(`FAILED TEST with ACTUAL:${actual} but EXPECTED:${expected}`)
+    }
+
   }
 )
