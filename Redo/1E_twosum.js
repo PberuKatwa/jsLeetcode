@@ -34,12 +34,12 @@ function twoSum(nums, target) {
 
   const map = {};
 
-  for (let i; i < nums.length; i++){
+  for (let i = 0; i < nums.length; i++){
 
     const currentNum = nums[i];
     const complement = target - nums[i];
     if (complement in map) {
-      return [ nums[complement],i ]
+      return [ map[complement],i ]
     } else {
       map[currentNum] = i
     }
