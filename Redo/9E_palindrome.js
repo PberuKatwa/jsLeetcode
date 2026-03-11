@@ -27,7 +27,7 @@ function isPalindrome(x) {
   // 2. If so return false.
   // 3. Initialize a variable compare with the value being equal to 0 and original with value of x.
   // 4. Initialize a while loop with the exit condition being x > 0.
-  // 5.
+  // 5. In each itireation get the  value without decimals
 
   if (!x | x < 0 | x % 10 === 0) return false;
 
@@ -39,6 +39,7 @@ function isPalindrome(x) {
     original = Math.floor(original / 10);
   }
 
+  if (compare === x) return true;
 
-
+  return false;
 }
