@@ -56,9 +56,9 @@ cases.forEach(
     const actual = isPalindrome(input);
 
     if (actual !== expected) {
-      console.log(`FAILED TEST with ACTUAL:${actual} but EXPECTED:${expected}`);
+      console.log(`FAILED TEST with ACTUAL:${actual} and INPUT:${input} but EXPECTED:${expected}`);
     } else {
-      console.log(``)
+      console.log(`SUCCESS TEST with ACTUAL:${actual}`)
     }
 
   }
