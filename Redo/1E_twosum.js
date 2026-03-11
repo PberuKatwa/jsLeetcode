@@ -18,8 +18,20 @@
 // Output: [0,1]
 
 /**
- * @param {number[]} input
+ * @param {number[]} nums
  */
-function twoSum(input) {
+function twoSum(nums) {
 
+  // Plan
+  // 1.
+
+  const map = {};
+
+  for (let i; i < nums.length; i++){
+
+
+
+  }
+
+  return null;
 }
