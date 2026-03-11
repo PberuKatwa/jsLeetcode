@@ -43,3 +43,10 @@ function isPalindrome(x) {
 
   return false;
 }
+
+const cases = [
+  { input: 121, expected: true },
+  { input: -121, expected: false },
+  { input:10 , expected:false }
+
+]
