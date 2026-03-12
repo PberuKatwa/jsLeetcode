@@ -53,6 +53,7 @@ function isParenthesisValid(s) {
     }
   }
 
+  if (stack.length !== 0) return false;
   return true;
 }
 
@@ -62,6 +63,10 @@ const cases = [
   { input: "(]", expected: false },
   { input: "([])", expected: true },
   { input: "([)]", expected: false },
+  { input: "", expected: false },
+  { input: "(", expected: false },
+  { input: "((((((()))))))", expected: true },
+  { input: "([[[{{{", expected: false },
 ]
 
 cases.forEach(
