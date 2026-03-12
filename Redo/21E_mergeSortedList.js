@@ -48,4 +48,16 @@ class LinkedList{
     return this.root
   }
 
+  printList() {
+    if (!this.root) return [];
+
+    const root = this.root;
+    const result = [];
+
+    while (root) {
+
+    }
+    return result;
+  }
+
 }
