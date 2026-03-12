@@ -63,3 +63,16 @@ const cases = [
   { input: "([])", expected: true },
   { input: "([)]", expected: false },
 ]
+
+cases.forEach(
+  function ({ input, expected }) {
+    const actual = isParenthesisValid(input);
+
+    if (actual === expected) {
+      console.log(`FAILED TEST with ACTUAL:${actual}, INPUT:${input} and EXPECTED:${expected}`);
+    } else {
+      console.log(`SUCCESS TEST with ACTUAL:${actual}, INPUT:${input}`)
+    }
+
+  }
+)
