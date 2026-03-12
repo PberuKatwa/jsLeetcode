@@ -75,29 +75,42 @@ class LinkedList{
 function mergeLists(list1, list2) {
 
   if (!list1.root && !list2.root) return new LinkedList();
+  if (!list1.root) return list2;
+  if (!list2.root) return list1;
 
   let dummy1 = list1.root;
   let dummy2 = list2.root;
+
   let result = new LinkedList();
   result.root = new ListNode(0);
   let dummy3 = result.root;
 
-  while (dummy1 && dummy2) {
+  while (dummy1&& dummy2) {
 
-    // console.log(`\ndummy 1`, dummy1.val, "dummy 2", dummy2.val, "\nresult",result)
-    if (dummy1.val >= dummy2.val) {
+    if (dummy1.val <= dummy2.val) {
       dummy3.next = dummy1;
-      dummy3 = dummy3.next;
       dummy1 = dummy1.next;
-    } else if (dummy1.val <= dummy2.val) {
+    } else {
       dummy3.next = dummy2;
-      dummy3 = dummy3.next;
       dummy2 = dummy2.next;
     }
 
+    dummy3 = dummy3.next;
+
   }
 
-  // console.log(`LINKEDDD`, result.root.val, result.root.next.val)
+  while (dummy1) {
+    dummy3.next = dummy1;
+    dummy3 = dummy3.next;
+    dummy1 = dummy1.next;
+  }
+
+  while (dummy2) {
+    dummy3.next = dummy2;
+    dummy3 = dummy3.next;
+    dummy2 = dummy2.next;
+  }
+
   result.root = result.root.next;
   return result;
 }
