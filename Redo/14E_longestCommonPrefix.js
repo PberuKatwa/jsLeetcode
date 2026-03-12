@@ -58,7 +58,6 @@ function longestPrefix(strs) {
     } else {
       high = mid - 1;
     }
-    console.log("high", high, "low",low)
   }
 
   return strs[0].slice(0,high );
@@ -67,6 +66,8 @@ function longestPrefix(strs) {
 const cases = [
   { input: ["flower", "flow", "flight"], expected: "fl" },
   { input: ["dog", "racecar", "car"], expected: "" },
+  { input: ["dog", "date", "dig"], expected: "d" },
+
 ]
 
 cases.forEach(
