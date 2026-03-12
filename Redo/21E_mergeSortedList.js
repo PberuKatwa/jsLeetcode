@@ -37,10 +37,10 @@ class LinkedList{
 
     if (array.length === 0) return this.root;
 
-    const root = ListNode(0);
+    const root = new ListNode(0);
     const dummy = root;
     for (let i = 0; i < array.length; i++){
-      dummy.next = ListNode(array[i])
+      dummy.next = new ListNode(array[i])
       dummy = dummy.next;
     }
 
@@ -49,6 +49,10 @@ class LinkedList{
     return this.root
   }
 
+  /**
+   *
+   * @returns {number[]}
+   */
   printList() {
     if (!this.root) return [];
 
@@ -71,6 +75,19 @@ const cases = [
 
 cases.forEach(
   function ({ input, expected }) {
+
+    const linkedList = new LinkedList();
+    linkedList.createList(input);
+    const actual = linkedList.printList;
+
+    const isEqual = (expected.length === actual.length) && actual.every(({ value, index }) => (value === expected[index]));
+
+    if (!isEqual) {
+      console.log(`FAILED TEST with ACTUAL:${actual}, INPUT:${input} but EXPECTED:${expected}`)
+    } else {
+      console.log(`SUCCESS TEST with ACTUAL:${actual}, INPUT:${input}`)
+    }
+
 
   }
 )
