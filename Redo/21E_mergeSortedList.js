@@ -69,10 +69,16 @@ class LinkedList{
 }
 
 /**
- * @param {ListNode} list1
- * @param {ListNode} list2
+ * @param {LinkedList} list1
+ * @param {LinkedList} list2
  */
-function mergeLists() {
+function mergeLists(list1, list2) {
+
+  let dummy1 = new ListNode(0);
+  dummy1.next = list1.root;
+  let dummy2 = new ListNode(0);
+  dummy2.next = list2.root;
+
 
 }
 
