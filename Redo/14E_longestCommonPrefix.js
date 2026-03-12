@@ -67,6 +67,9 @@ const cases = [
   { input: ["flower", "flow", "flight"], expected: "fl" },
   { input: ["dog", "racecar", "car"], expected: "" },
   { input: ["dog", "date", "dig"], expected: "d" },
+  { input: [], expected: "" },
+  { input: ["dog"], expected: "" },
+
 
 ]
 
