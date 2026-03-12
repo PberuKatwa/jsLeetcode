@@ -74,10 +74,12 @@ class LinkedList{
  */
 function mergeLists(list1, list2) {
 
-  let dummy1 = new ListNode(0);
-  dummy1.next = list1.root;
-  let dummy2 = new ListNode(0);
-  dummy2.next = list2.root;
+  let dummy1 = list1.root;
+  let dummy2 = list2.root;
+
+  while (dummy1 && dummy2) {
+
+  }
 
 
 }
