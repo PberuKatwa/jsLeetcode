@@ -64,6 +64,16 @@ function longestPrefix(strs) {
 }
 
 const cases = [
-  { strs: ["flower", "flow", "flight"], output: "fl" },
-  { strs: ["dog", "racecar", "car"], output: "" },
+  { strs: ["flower", "flow", "flight"], expected: "fl" },
+  { strs: ["dog", "racecar", "car"], expected: "" },
 ]
+
+cases.forEach(
+  function ({ strs, expected }) {
+
+    const actual = longestPrefix(strs);
+
+    if(actual)
+
+  }
+)
