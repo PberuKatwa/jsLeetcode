@@ -41,6 +41,7 @@ class LinkedList{
     const dummy = root;
     for (let i = 0; i < array.length; i++){
       dummy.next = ListNode(array[i])
+      dummy = dummy.next;
     }
 
     this.root = root.next;
@@ -55,8 +56,10 @@ class LinkedList{
     const result = [];
 
     while (root) {
-
+      result.push(root.val);
+      root = root.next
     }
+
     return result;
   }
 
