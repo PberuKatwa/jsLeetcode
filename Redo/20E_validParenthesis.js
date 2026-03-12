@@ -37,9 +37,9 @@ function isParenthesisValid(s) {
   if (s.length <= 1) return false;
 
   const map = {
-    "(": ")",
-    "[": "]",
-    "{":"}"
+    ")": "(",
+    "]": "[",
+    "}":"{"
   }
 
   const stack = [];
@@ -67,8 +67,7 @@ const cases = [
 cases.forEach(
   function ({ input, expected }) {
     const actual = isParenthesisValid(input);
-
-    if (actual === expected) {
+    if (actual !== expected) {
       console.log(`FAILED TEST with ACTUAL:${actual}, INPUT:${input} and EXPECTED:${expected}`);
     } else {
       console.log(`SUCCESS TEST with ACTUAL:${actual}, INPUT:${input}`)
