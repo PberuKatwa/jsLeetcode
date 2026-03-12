@@ -37,14 +37,15 @@ class LinkedList{
 
     if (array.length === 0) return this.root;
 
-    const dummy = ListNode(0);
+    const root = ListNode(0);
+    const dummy = root;
     for (let i = 0; i < array.length; i++){
-
-
-
+      dummy.next = ListNode(array[i])
     }
 
+    this.root = root.next;
 
+    return this.root
   }
 
 }
