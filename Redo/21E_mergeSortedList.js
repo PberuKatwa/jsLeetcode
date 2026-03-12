@@ -76,15 +76,17 @@ function mergeLists(list1, list2) {
 
   let dummy1 = list1.root;
   let dummy2 = list2.root;
-  let result = ListNode(0);
+  let result = new ListNode(0);
 
   while (dummy1 && dummy2) {
 
+    console.log(`dummy 1`, dummy1.val, "dummy 2", dummy2.val, result)
     if (dummy1.val >= dummy2.val) {
-      result = dummy1
+      result.next = dummy1;
+      result = result.next;
       dummy1 = dummy1.next;
     } else {
-      result = dummy2;
+      result.next = dummy2;
       dummy2 = dummy2.next;
     }
 
@@ -115,9 +117,9 @@ cases.forEach(
     const isEqual = (expected.length === actual.length) && actual.every(({ value, index }) => (value === expected[index]));
 
     if (!isEqual) {
-      console.log(`FAILED TEST with ACTUAL:${actual}, INPUT:${input} but EXPECTED:${expected}`)
+      console.log(`FAILED TEST with ACTUAL:${actual}, INPUT1:${input1} and INPUT2:${input2} but EXPECTED:${expected}`)
     } else {
-      console.log(`SUCCESS TEST with ACTUAL:${actual}, INPUT:${input}`)
+      console.log(`SUCCESS TEST with ACTUAL:${actual}, INPUT1:${input1} and INPUT2:${input2} `)
     }
 
 
