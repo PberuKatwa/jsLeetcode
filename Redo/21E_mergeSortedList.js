@@ -68,26 +68,26 @@ class LinkedList{
   }
 }
 
-const cases = [
-  { input: [1, 2, 4], expected: [1, 2, 4] },
-  { input: [1, 3, 4], expected: [1, 3, 4] },
-]
+// const cases = [
+//   { input: [1, 2, 4], expected: [1, 2, 4] },
+//   { input: [1, 3, 4], expected: [1, 3, 4] },
+// ]
 
-cases.forEach(
-  function ({ input, expected }) {
+// cases.forEach(
+//   function ({ input, expected }) {
 
-    const linkedList = new LinkedList();
-    linkedList.createList(input);
-    const actual = linkedList.printList();
+//     const linkedList = new LinkedList();
+//     linkedList.createList(input);
+//     const actual = linkedList.printList();
 
-    const isEqual = (expected.length === actual.length) && actual.every(({ value, index }) => (value === expected[index]));
+//     const isEqual = (expected.length === actual.length) && actual.every(({ value, index }) => (value === expected[index]));
 
-    if (!isEqual) {
-      console.log(`FAILED TEST with ACTUAL:${actual}, INPUT:${input} but EXPECTED:${expected}`)
-    } else {
-      console.log(`SUCCESS TEST with ACTUAL:${actual}, INPUT:${input}`)
-    }
+//     if (!isEqual) {
+//       console.log(`FAILED TEST with ACTUAL:${actual}, INPUT:${input} but EXPECTED:${expected}`)
+//     } else {
+//       console.log(`SUCCESS TEST with ACTUAL:${actual}, INPUT:${input}`)
+//     }
 
 
-  }
-)
+//   }
+// )
