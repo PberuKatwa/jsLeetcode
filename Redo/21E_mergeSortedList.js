@@ -33,12 +33,12 @@ class LinkedList{
   /**
    * @param {number[]} array
    */
-  createLinkedList(array) {
+  createList(array) {
 
     if (array.length === 0) return this.root;
 
     const root = new ListNode(0);
-    const dummy = root;
+    let dummy = root;
     for (let i = 0; i < array.length; i++){
       dummy.next = new ListNode(array[i])
       dummy = dummy.next;
@@ -56,7 +56,7 @@ class LinkedList{
   printList() {
     if (!this.root) return [];
 
-    const root = this.root;
+    let root = this.root;
     const result = [];
 
     while (root) {
@@ -78,7 +78,7 @@ cases.forEach(
 
     const linkedList = new LinkedList();
     linkedList.createList(input);
-    const actual = linkedList.printList;
+    const actual = linkedList.printList();
 
     const isEqual = (expected.length === actual.length) && actual.every(({ value, index }) => (value === expected[index]));
 
