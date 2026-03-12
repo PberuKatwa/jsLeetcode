@@ -11,12 +11,40 @@
 // Input: strs = ["dog","racecar","car"]
 // Output: ""
 // Explanation: There is no common prefix among the input strings.
+//
 
 /**
  * @param {string[]}strs
+ * @param {number} index
+ * @returns {boolean}
+ */
+function isPrefix(strs, index) {
+
+
+}
+
+/**
+ * @param {string[]}strs
+ * @returns {string}
  */
 function longestPrefix(strs) {
 
   if (strs.length === 0 || strs.length === 1) return "";
+
+  let maxLength = 0;
+
+  for (let i = 0; i < strs.length; i++){
+    const curr = strs[i];
+    if (curr.length > maxLength) maxLength = curr.length;
+  }
+
+  let low = 0;
+  let high = maxLength;
+
+  while (low < high) {
+
+    if()
+
+  }
 
 }
