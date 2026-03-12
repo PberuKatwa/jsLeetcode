@@ -27,7 +27,7 @@ class ListNode {
 
 class LinkedList{
   constructor() {
-    this.root = null;
+    this.head = null;
   }
 
   /**
@@ -35,18 +35,18 @@ class LinkedList{
    */
   createList(array) {
 
-    if (array.length === 0) return this.root;
+    if (array.length === 0) return this.head;
 
-    const root = new ListNode(0);
-    let dummy = root;
+    const head = new ListNode(0);
+    let dummy = head;
     for (let i = 0; i < array.length; i++){
       dummy.next = new ListNode(array[i])
       dummy = dummy.next;
     }
 
-    this.root = root.next;
+    this.head = head.next;
 
-    return this.root
+    return this.head
   }
 
   /**
@@ -54,14 +54,14 @@ class LinkedList{
    * @returns {number[]}
    */
   printList() {
-    if (!this.root) return [];
+    if (!this.head) return [];
 
-    let root = this.root;
+    let head = this.head;
     const result = [];
 
-    while (root) {
-      result.push(root.val);
-      root = root.next
+    while (head) {
+      result.push(head.val);
+      head = head.next
     }
 
     return result;
@@ -74,16 +74,16 @@ class LinkedList{
  */
 function mergeLists(list1, list2) {
 
-  if (!list1.root && !list2.root) return new LinkedList();
-  if (!list1.root) return list2;
-  if (!list2.root) return list1;
+  if (!list1.head && !list2.head) return new LinkedList();
+  if (!list1.head) return list2;
+  if (!list2.head) return list1;
 
-  let dummy1 = list1.root;
-  let dummy2 = list2.root;
+  let dummy1 = list1.head;
+  let dummy2 = list2.head;
 
   let result = new LinkedList();
-  result.root = new ListNode(0);
-  let dummy3 = result.root;
+  result.head = new ListNode(0);
+  let dummy3 = result.head;
 
   while (dummy1&& dummy2) {
 
@@ -111,7 +111,7 @@ function mergeLists(list1, list2) {
     dummy2 = dummy2.next;
   }
 
-  result.root = result.root.next;
+  result.head = result.head.next;
   return result;
 }
 
@@ -137,7 +137,7 @@ cases.forEach(
     if (!isEqual) {
       console.log(`FAILED TEST with ACTUAL:${actual}, INPUT1:${input1} and INPUT2:${input2} but EXPECTED:${expected}`)
     } else {
-      console.log(`SUCCESS TEST with ACTUAL:${actual}, INPUT1:${input1} and INPUT2:${input2} `)
+      console.log(`SUCCESS TEST with ACTUAL:${actual}, INPUT1:${input1} and INPUT2:${input2} `);
     }
 
 
