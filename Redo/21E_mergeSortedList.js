@@ -68,6 +68,14 @@ class LinkedList{
   }
 }
 
+/**
+ * @param {ListNode} list1
+ * @param {ListNode} list2
+ */
+function mergeLists() {
+
+}
+
 // const cases = [
 //   { input: [1, 2, 4], expected: [1, 2, 4] },
 //   { input: [1, 3, 4], expected: [1, 3, 4] },
