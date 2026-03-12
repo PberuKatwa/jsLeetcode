@@ -20,7 +20,15 @@
  */
 function isPrefix(strs, index) {
 
+  const stopIndex = index + 1;
+  const prefix = strs[0].slice(0, stopIndex);
 
+  for (let i = 1; i < strs.length; i++){
+    const curr = strs[i].slice(0, stopIndex);
+    if(curr !== prefix) return false
+  }
+
+  return true
 }
 
 /**
@@ -43,7 +51,13 @@ function longestPrefix(strs) {
 
   while (low < high) {
 
-    if()
+    mid = Math.floor((low + high) / 2);
+
+    if (isPrefix(strs, mid)) {
+      low = mid + 1;
+    } else {
+      high = mid - 1;
+    }
 
   }
 
