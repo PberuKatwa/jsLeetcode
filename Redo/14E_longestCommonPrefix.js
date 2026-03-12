@@ -11,3 +11,12 @@
 // Input: strs = ["dog","racecar","car"]
 // Output: ""
 // Explanation: There is no common prefix among the input strings.
+
+/**
+ * @param {string[]}strs
+ */
+function longestPrefix(strs) {
+
+  if (strs.length === 0 || strs.length === 1) return "";
+
+}
