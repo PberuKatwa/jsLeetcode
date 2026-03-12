@@ -90,13 +90,29 @@ function mergeLists(list1, list2) {
 
   }
 
-  return result.next;
+  const linkedList = new LinkedList();
+  linkedList.root = result.next;
+  return linkedList;
 }
 
-// const cases = [
-//   { input: [1, 2, 4], expected: [1, 2, 4] },
-//   { input: [1, 3, 4], expected: [1, 3, 4] },
-// ]
+const cases = [
+  { input1: [1, 2, 4], input2: [1, 3, 4], expected: [1, 1, 2, 3, 4, 4] },
+  { input1: [], input2: [], expected: [] },
+  { input1: [], input2: [0], expected: [0] },
+]
+
+// Example 1:
+
+// Input: list1 = [1,2,4], list2 = [1,3,4]
+// Output: [1,1,2,3,4,4]
+// Example 2:
+
+// Input: list1 = [], list2 = []
+// Output: []
+// Example 3:
+
+// Input: list1 = [], list2 = [0]
+// Output: [0]
 
 // cases.forEach(
 //   function ({ input, expected }) {
