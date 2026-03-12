@@ -101,34 +101,24 @@ const cases = [
   { input1: [], input2: [0], expected: [0] },
 ]
 
-// Example 1:
+cases.forEach(
+  function ({ input1, input2, expected }) {
 
-// Input: list1 = [1,2,4], list2 = [1,3,4]
-// Output: [1,1,2,3,4,4]
-// Example 2:
+    const linkedList1 = new LinkedList();
+    linkedList1.createList(input1);
+    const linkedList2 = new LinkedList();
+    linkedList2.createList(input2);
 
-// Input: list1 = [], list2 = []
-// Output: []
-// Example 3:
+    const actual = linkedList.printList();
 
-// Input: list1 = [], list2 = [0]
-// Output: [0]
+    const isEqual = (expected.length === actual.length) && actual.every(({ value, index }) => (value === expected[index]));
 
-// cases.forEach(
-//   function ({ input, expected }) {
-
-//     const linkedList = new LinkedList();
-//     linkedList.createList(input);
-//     const actual = linkedList.printList();
-
-//     const isEqual = (expected.length === actual.length) && actual.every(({ value, index }) => (value === expected[index]));
-
-//     if (!isEqual) {
-//       console.log(`FAILED TEST with ACTUAL:${actual}, INPUT:${input} but EXPECTED:${expected}`)
-//     } else {
-//       console.log(`SUCCESS TEST with ACTUAL:${actual}, INPUT:${input}`)
-//     }
+    if (!isEqual) {
+      console.log(`FAILED TEST with ACTUAL:${actual}, INPUT:${input} but EXPECTED:${expected}`)
+    } else {
+      console.log(`SUCCESS TEST with ACTUAL:${actual}, INPUT:${input}`)
+    }
 
 
-//   }
-// )
+  }
+)
