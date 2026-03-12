@@ -109,7 +109,8 @@ cases.forEach(
     const linkedList2 = new LinkedList();
     linkedList2.createList(input2);
 
-    const actual = linkedList.printList();
+    const mergedList = mergeLists(linkedList1, linkedList2);
+    const actual = mergedList.printList()
 
     const isEqual = (expected.length === actual.length) && actual.every(({ value, index }) => (value === expected[index]));
 
