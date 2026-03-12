@@ -27,3 +27,12 @@
 // Example 5:
 // Input: s = "([)]"
 // Output: false
+
+/**
+ * @param {string} s
+ */
+function isParenthesisValid(s) {
+
+  if (s.length <= 1) return false;
+
+}
