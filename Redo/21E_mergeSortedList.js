@@ -74,27 +74,32 @@ class LinkedList{
  */
 function mergeLists(list1, list2) {
 
+  if (!list1.root && !list2.root) return new LinkedList();
+
   let dummy1 = list1.root;
   let dummy2 = list2.root;
-  let result = new ListNode(0);
+  let result = new LinkedList();
+  result.root = new ListNode(0);
+  let dummy3 = result.root;
 
   while (dummy1 && dummy2) {
 
-    console.log(`dummy 1`, dummy1.val, "dummy 2", dummy2.val, result)
+    // console.log(`\ndummy 1`, dummy1.val, "dummy 2", dummy2.val, "\nresult",result)
     if (dummy1.val >= dummy2.val) {
-      result.next = dummy1;
-      result = result.next;
+      dummy3.next = dummy1;
+      dummy3 = dummy3.next;
       dummy1 = dummy1.next;
-    } else {
-      result.next = dummy2;
+    } else if (dummy1.val <= dummy2.val) {
+      dummy3.next = dummy2;
+      dummy3 = dummy3.next;
       dummy2 = dummy2.next;
     }
 
   }
 
-  const linkedList = new LinkedList();
-  linkedList.root = result.next;
-  return linkedList;
+  // console.log(`LINKEDDD`, result.root.val, result.root.next.val)
+  result.root = result.root.next;
+  return result;
 }
 
 const cases = [
