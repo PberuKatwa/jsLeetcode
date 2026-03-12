@@ -76,12 +76,21 @@ function mergeLists(list1, list2) {
 
   let dummy1 = list1.root;
   let dummy2 = list2.root;
+  let result = ListNode(0);
 
   while (dummy1 && dummy2) {
 
+    if (dummy1.val >= dummy2.val) {
+      result = dummy1
+      dummy1 = dummy1.next;
+    } else {
+      result = dummy2;
+      dummy2 = dummy2.next;
+    }
+
   }
 
-
+  return result.next;
 }
 
 // const cases = [
