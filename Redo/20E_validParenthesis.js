@@ -43,7 +43,14 @@ function isParenthesisValid(s) {
 
   const stack = [];
   for (let i = 0; i < s.length; i++){
-
+    const curr = s[i];
+    if (map[curr]) {
+      const item = stack.pop();
+      if (item !== map[curr]) return false;
+    } else {
+      stack.push(curr);
+    }
   }
 
+  return true;
 }
