@@ -58,7 +58,7 @@ function longestPrefix(strs) {
     } else {
       high = mid - 1;
     }
-
   }
 
+  return strs[0].slice(0, (high + 1));
 }
