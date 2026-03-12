@@ -62,3 +62,8 @@ function longestPrefix(strs) {
 
   return strs[0].slice(0, (high + 1));
 }
+
+const cases = [
+  { strs: ["flower", "flow", "flight"], output: "fl" },
+  { strs: ["dog", "racecar", "car"], output: "" },
+]
