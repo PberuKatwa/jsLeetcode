@@ -7,3 +7,16 @@
 // Example 2:
 // Input: numRows = 1
 // Output: [[1]]
+//
+
+/**
+ * @param {number} numRows
+ */
+
+function createPascalsTriangle(numRows) {
+
+  if (!numRows) return [];
+  if (numRows === 1) return [[1]];
+  if (numRows === 2) return [[1], [1, 1]];
+
+}
