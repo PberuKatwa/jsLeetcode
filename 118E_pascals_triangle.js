@@ -32,9 +32,8 @@ function createPascalsTriangle(numRows) {
     currArray[i] = 1;
 
     let index = 1;
-
     while (!currArray[index]) {
-      currArray[index] = refArray[index] + refArray[index + 1];
+      currArray[index] = refArray[index] + refArray[index - 1];
       index ++
     }
 
@@ -43,3 +42,5 @@ function createPascalsTriangle(numRows) {
 
   return triangle;
 }
+
+console.log("5 rows", createPascalsTriangle(5));
