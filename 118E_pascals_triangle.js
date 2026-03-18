@@ -11,6 +11,7 @@
 
 /**
  * @param {number} numRows
+ * @returns {number[][]}
  */
 
 function createPascalsTriangle(numRows) {
@@ -27,5 +28,18 @@ function createPascalsTriangle(numRows) {
     const refArray = triangle[i - 1];
     const currArray = new Array(size).fill(null);
 
+    currArray[0] = 1;
+    currArray[i] = 1;
+
+    let index = 1;
+
+    while (!currArray[index]) {
+      currArray[index] = refArray[index] + refArray[index + 1];
+      index ++
+    }
+
+    triangle.push(currArray);
   }
+
+  return triangle;
 }
