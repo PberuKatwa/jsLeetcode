@@ -19,4 +19,13 @@ function createPascalsTriangle(numRows) {
   if (numRows === 1) return [[1]];
   if (numRows === 2) return [[1], [1, 1]];
 
+  const triangle = [[1], [1, 1]];
+
+  for (let i = 2; i < numRows; i++){
+
+    const size = i + 1;
+    const refArray = triangle[i - 1];
+    const currArray = new Array(size).fill(null);
+
+  }
 }
