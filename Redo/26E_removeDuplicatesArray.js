@@ -49,6 +49,7 @@ function removeDuplicates(nums) {
 
   let p1 = 0;
   let p2 = 1;
+  let k = 1;
 
   while (p2 < nums.length) {
 
@@ -58,10 +59,12 @@ function removeDuplicates(nums) {
       p1 += 1;
       nums[p1] = nums[p2];
       p2 += 1;
+      k += 1;
     }
 
   }
 
-
-
+  return k, nums;
 }
+
+console.log("firsttt", removeDuplicates([1, 1, 2]));
