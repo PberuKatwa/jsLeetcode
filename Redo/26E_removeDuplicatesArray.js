@@ -46,8 +46,22 @@ function removeDuplicates(nums) {
   if (!nums) return [];
   if (nums.length === 1) return nums;
 
+
   let p1 = 0;
   let p2 = 1;
+
+  while (p2 < nums.length) {
+
+    if (nums[p1] === nums[p2]) {
+      p2 += 1;
+    } else {
+      p1 += 1;
+      nums[p1] = nums[p2];
+      p2 += 1;
+    }
+
+  }
+
 
 
 }
