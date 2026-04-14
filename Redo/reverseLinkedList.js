@@ -47,11 +47,7 @@ class LinkedList{
     }
 
     this.head = current.next
-
-    console.log("headddd", this.head)
-
     return this.head
-
   }
 
   /**
@@ -65,8 +61,6 @@ class LinkedList{
     let output = "";
 
     while (current) {
-
-      console.log("current", current);
       output += `${current.val}->`
       current = current.next
     }
@@ -80,13 +74,18 @@ class LinkedList{
 
     let dummy = new ListNode(0);
     let current = this.head;
-    let reversed = current;
 
     while (current) {
 
+      let temp = current.next;
+      current.next = dummy.next;
+      dummy.next = current;
+      current = temp
+
     }
 
-
+    this.head = dummy;
+    return this.head
   }
 
 }
@@ -94,3 +93,6 @@ class LinkedList{
 
 const linkedList = new LinkedList()
 linkedList.buildLinkedList([1, 2, 3, 4, 5]);
+linkedList.reverseList();
+
+console.log("printtt", linkedList.printList());
