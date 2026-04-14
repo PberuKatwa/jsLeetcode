@@ -75,6 +75,20 @@ class LinkedList{
     return output;
   }
 
+  reverseList() {
+    if (!this.head) return null;
+
+    let dummy = new ListNode(0);
+    let current = this.head;
+    let reversed = current;
+
+    while (current) {
+
+    }
+
+
+  }
+
 }
 
 
