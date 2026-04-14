@@ -36,7 +36,8 @@ class LinkedList{
    */
   buildLinkedList(array) {
 
-    const dummy = new ListNode(0);
+    let dummy = new ListNode(0);
+    let current = dummy;
 
     for (let i = 0; i < array.length; i++){
 
@@ -45,7 +46,9 @@ class LinkedList{
 
     }
 
-    this.head = dummy.next
+    this.head = current.next
+
+    console.log("headddd", this.head)
 
     return this.head
 
@@ -56,17 +59,19 @@ class LinkedList{
    */
   printList() {
 
-    if (this.head) return "";
+    if (!this.head) return "";
 
-    const current = this.head;
+    let current = this.head;
     let output = "";
 
     while (current) {
 
+      console.log("current", current);
       output += `${current.val}->`
       current = current.next
     }
 
+    output += "NULL"
     return output;
   }
 
@@ -75,5 +80,3 @@ class LinkedList{
 
 const linkedList = new LinkedList()
 linkedList.buildLinkedList([1, 2, 3, 4, 5]);
-
-console.log("print listt", linkedList.printList());
