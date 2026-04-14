@@ -25,7 +25,30 @@ class ListNode{
 }
 
 class LinkedList{
+
   constructor() {
     this.head = null;
   }
+
+  /**
+   *
+   * @param {number[]} array
+   */
+  buildLinkedList(array) {
+
+    const dummy = new ListNode(0);
+
+    for (let i = 0; i < array.length; i++){
+
+      dummy.next = new ListNode(array[i])
+      dummy =  dummy.next
+
+    }
+
+    this.head = dummy.next
+
+    return this.head
+
+  }
+
 }
