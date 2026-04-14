@@ -64,7 +64,8 @@ function removeDuplicates(nums) {
 
   }
 
-  return k, nums;
+  return { k, nums };
 }
 
 console.log("firsttt", removeDuplicates([1, 1, 2]));
+console.log("firsttt", removeDuplicates([0,0,1,1,1,2,2,3,3,4]));
