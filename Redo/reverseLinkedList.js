@@ -77,14 +77,17 @@ class LinkedList{
 
     while (current) {
 
-      let temp = current.next;
+      console.log("\ncurrent", current, "\n\ndummy", dummy);
+      let nextNode = current.next;
       current.next = dummy.next;
       dummy.next = current;
-      current = temp
+      console.log("\ncurrent 33333", current);
+
+      current = nextNode
 
     }
 
-    this.head = dummy;
+    this.head = dummy.next;
     return this.head
   }
 
