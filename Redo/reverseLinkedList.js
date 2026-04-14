@@ -51,4 +51,23 @@ class LinkedList{
 
   }
 
+  /**
+   * @returns {string}
+   */
+  printList() {
+
+    if (this.head) return "";
+
+    const current = this.head;
+    let output = "";
+
+    while (current) {
+
+      output += `${current.val}->`
+      current = current.next
+    }
+
+    return output;
+  }
+
 }
