@@ -71,3 +71,9 @@ class LinkedList{
   }
 
 }
+
+
+const linkedList = new LinkedList()
+linkedList.buildLinkedList([1, 2, 3, 4, 5]);
+
+console.log("print listt", linkedList.printList());
